@@ -1,53 +1,56 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-public class GroundDetector : MonoBehaviour
+namespace CapybaraCrossing
 {
-    int groundContactCount = 0;
-    Vector3 contactNormal = Vector3.zero;
-
-    public bool OnGround { get => groundContactCount > 0; }
-    public Vector3 Normal { get => contactNormal; }
-
-    [SerializeField, Range(0f, 90f)] float maxGroundAngle = 25f;
-    float minGroundDotProduct = 0;
-
-    void OnValidate() => SetMinGroundDotProduct();
-
-    private void Awake()
+    [RequireComponent(typeof(Rigidbody))]
+    public class GroundDetector : MonoBehaviour
     {
-        GetComponent<Rigidbody>().sleepThreshold = 0;
-        SetMinGroundDotProduct();
-    }
+        int groundContactCount = 0;
+        Vector3 contactNormal = Vector3.zero;
 
-    private void FixedUpdate()
-    {
-        contactNormal = OnGround ? contactNormal.normalized : Vector3.up;
-        ClearState();
-    }
+        public bool OnGround { get => groundContactCount > 0; }
+        public Vector3 Normal { get => contactNormal; }
 
-    void ClearState()
-    {
-        groundContactCount = 0;
-        contactNormal = Vector3.zero;
-    }
+        [SerializeField, Range(0f, 90f)] float maxGroundAngle = 25f;
+        float minGroundDotProduct = 0;
 
-    private void OnCollisionEnter(Collision collision) => EvaluateCollision(collision);
+        void OnValidate() => SetMinGroundDotProduct();
 
-    private void OnCollisionStay(Collision collision) => EvaluateCollision(collision);
-
-    private void EvaluateCollision(Collision collision)
-    {
-        for (int i = 0; i < collision.contactCount; i++)
+        private void Awake()
         {
-            Vector3 normal = collision.GetContact(i).normal;
-            if (normal.y >= minGroundDotProduct)
+            GetComponent<Rigidbody>().sleepThreshold = 0;
+            SetMinGroundDotProduct();
+        }
+
+        private void FixedUpdate()
+        {
+            contactNormal = OnGround ? contactNormal.normalized : Vector3.up;
+            ClearState();
+        }
+
+        void ClearState()
+        {
+            groundContactCount = 0;
+            contactNormal = Vector3.zero;
+        }
+
+        private void OnCollisionEnter(Collision collision) => EvaluateCollision(collision);
+
+        private void OnCollisionStay(Collision collision) => EvaluateCollision(collision);
+
+        private void EvaluateCollision(Collision collision)
+        {
+            for (int i = 0; i < collision.contactCount; i++)
             {
-                groundContactCount++;
-                contactNormal += normal;
+                Vector3 normal = collision.GetContact(i).normal;
+                if (normal.y >= minGroundDotProduct)
+                {
+                    groundContactCount++;
+                    contactNormal += normal;
+                }
             }
         }
-    }
 
-    private void SetMinGroundDotProduct() => minGroundDotProduct = Mathf.Cos(maxGroundAngle * Mathf.Deg2Rad);
+        private void SetMinGroundDotProduct() => minGroundDotProduct = Mathf.Cos(maxGroundAngle * Mathf.Deg2Rad);
+    }
 }

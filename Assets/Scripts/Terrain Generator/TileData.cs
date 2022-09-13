@@ -1,14 +1,17 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Terrain Generator/ Tile Data")]
-public class TileData : ScriptableObject
+namespace CapybaraCrossing
 {
-    [SerializeField] GameObject[] tileObjects;
-
-    public GameObject GetRandomTileObject(int rnd)
+    [CreateAssetMenu(menuName = "Terrain Generator/ Tile Data")]
+    public class TileData : ScriptableObject
     {
-        Random.InitState(rnd);
+        [SerializeField] GameObject[] tileObjects;
 
-        return tileObjects[Random.Range(0, tileObjects.Length)];
+        public GameObject GetRandomTileObject(int rnd)
+        {
+            Random.InitState(rnd);
+
+            return tileObjects[Random.Range(0, tileObjects.Length)];
+        }
     }
 }

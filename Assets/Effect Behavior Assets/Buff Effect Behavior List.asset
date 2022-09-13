@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f130c5404f1e54fa748ce7c926efe3, type: 3}
+  m_Name: Buff Effect Behavior List
+  m_EditorClassIdentifier: 
+  effectBehaviors:
+  - {fileID: 11400000, guid: 4a6bd5235c3a5814093c27f20bd30628, type: 2}
+  - {fileID: 11400000, guid: db08057e2ba0fe74bbee31659c7fd296, type: 2}
+  - {fileID: 11400000, guid: 85e168314ff81914e87a7f06db6a965e, type: 2}
+  - {fileID: 11400000, guid: a5f16f426c5430c498bfe18b801a2a89, type: 2}
+  - {fileID: 11400000, guid: 25bca4ddd1eac7a4f875fcde2829c0c2, type: 2}

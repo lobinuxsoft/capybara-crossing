@@ -1,17 +1,20 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HeighChecker : MonoBehaviour
+namespace CapybaraCrossing
 {
-    [SerializeField] float heighCheck = -5;
-
-    public UnityEvent onBeforeDestroy;
-
-    private void LateUpdate()
+    public class HeighChecker : MonoBehaviour
     {
-        if(transform.position.y < heighCheck)
-            Destroy(gameObject);
-    }
+        [SerializeField] float heighCheck = -5;
 
-    private void OnDestroy() => onBeforeDestroy?.Invoke();
+        public UnityEvent onBeforeDestroy;
+
+        private void LateUpdate()
+        {
+            if(transform.position.y < heighCheck)
+                Destroy(gameObject);
+        }
+
+        private void OnDestroy() => onBeforeDestroy?.Invoke();
+    }
 }

@@ -1,58 +1,61 @@
 using System.Collections;
 using UnityEngine;
 
-public class TileGenerator : MonoBehaviour
+namespace CapybaraCrossing
 {
-    [SerializeField] TileData tileData;
-    [SerializeField] private int tileWidth = 50;
-
-    public TileData TileData
+    public class TileGenerator : MonoBehaviour
     {
-        get => tileData;
-        set => tileData = value;
-    }
+        [SerializeField] TileData tileData;
+        [SerializeField] private int tileWidth = 50;
 
-    public int TileWidth 
-    {
-        get => tileWidth;
-        set => tileWidth = value;
-    }
-
-    public IEnumerator GenerateTile()
-    {
-        yield return StartCoroutine(DestroyTile());
-
-        for (int i = 0; i < TileWidth; i++)
+        public TileData TileData
         {
-            GameObject go = Instantiate(tileData.GetRandomTileObject(Mathf.RoundToInt(Time.time)), transform);
-            go.transform.localPosition = transform.right * i;
+            get => tileData;
+            set => tileData = value;
         }
 
-        yield return new WaitForEndOfFrame();
-
-        Recenter();
-    }
-
-    void Recenter()
-    {
-        if(transform.childCount > 0)
+        public int TileWidth 
         {
-            float distance = Vector3.Distance(transform.GetChild(0).position, transform.GetChild(transform.childCount - 1).position);
+            get => tileWidth;
+            set => tileWidth = value;
+        }
 
-            for (int i = 0; i < transform.childCount; i++)
+        public IEnumerator GenerateTile()
+        {
+            yield return StartCoroutine(DestroyTile());
+
+            for (int i = 0; i < TileWidth; i++)
             {
-                transform.GetChild(i).localPosition += (-transform.right * distance / 2);
+                GameObject go = Instantiate(tileData.GetRandomTileObject(Mathf.RoundToInt(Time.time)), transform);
+                go.transform.localPosition = transform.right * i;
+            }
+
+            yield return new WaitForEndOfFrame();
+
+            Recenter();
+        }
+
+        void Recenter()
+        {
+            if(transform.childCount > 0)
+            {
+                float distance = Vector3.Distance(transform.GetChild(0).position, transform.GetChild(transform.childCount - 1).position);
+
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    transform.GetChild(i).localPosition += (-transform.right * distance / 2);
+                }
             }
         }
-    }
 
-    IEnumerator DestroyTile()
-    {
-        while (transform.childCount > 0)
+        IEnumerator DestroyTile()
         {
-            DestroyImmediate(transform.GetChild(0).gameObject);
-        }
+            while (transform.childCount > 0)
+            {
+                DestroyImmediate(transform.GetChild(0).gameObject);
+            }
 
-        yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
+        }
     }
 }
