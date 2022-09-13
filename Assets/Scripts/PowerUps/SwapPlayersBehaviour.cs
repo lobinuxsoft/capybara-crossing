@@ -1,4 +1,5 @@
 using UnityEngine;
+using CapybaraCrossing;
 
 public class SwapPlayersBehaviour : PowerUp
 {

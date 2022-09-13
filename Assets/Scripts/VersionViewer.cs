@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
 using TMPro;
 
-[RequireComponent(typeof(TextMeshProUGUI))]
-public class VersionViewer : MonoBehaviour
+namespace CapybaraCrossing.Utils
 {
-    private TextMeshProUGUI versionTextField;
-
-    void Awake()
+    [RequireComponent(typeof(TextMeshProUGUI))]
+    public class VersionViewer : MonoBehaviour
     {
-        versionTextField = GetComponent<TextMeshProUGUI>();
-        versionTextField.text = $"version - {Application.version}";
+        private TextMeshProUGUI versionTextField;
+
+        void Awake()
+        {
+            versionTextField = GetComponent<TextMeshProUGUI>();
+            versionTextField.text = $"version - {Application.version}";
 
 #if CHEATS
             versionTextField.text += " (CHEATS ENABLED)";
 #endif
+        }
     }
 }

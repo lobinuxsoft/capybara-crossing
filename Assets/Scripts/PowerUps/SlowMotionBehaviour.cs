@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using CapybaraCrossing;
 
 public class SlowMotionBehaviour : PowerUp
 {
