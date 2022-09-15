@@ -22,6 +22,8 @@ namespace CapybaraCrossing
 
         public EffectBehaviorList EffectBehaviorList => effectBehaviorList;
 
+        public void SetRandomEffect() => index = Random.Range(0, effectBehaviorList.GetBehaviorNames().Length);
+
         private void OnTriggerEnter(Collider other)
         {
             EffectBehaviorComponent effectBehaviorComponent = other.gameObject.AddComponent<EffectBehaviorComponent>();
