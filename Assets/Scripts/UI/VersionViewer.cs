@@ -11,7 +11,7 @@ namespace CapybaraCrossing.Utils
         void Awake()
         {
             versionTextField = GetComponent<TextMeshProUGUI>();
-            versionTextField.text = $"version - {Application.version}";
+            versionTextField.text = $"{Application.version}";
 
 #if CHEATS
             versionTextField.text += " (CHEATS ENABLED)";
