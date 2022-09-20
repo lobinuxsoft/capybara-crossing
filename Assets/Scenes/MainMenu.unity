@@ -236,6 +236,16 @@ MonoBehaviour:
       url: https://linktr.ee/rouxy
     - name: Juan Brutti
       url: https://www.linkedin.com/in/juanbrutti/
+  - name: Team QA
+    people:
+    - name: Maria Barbalace
+      url: 
+    - name: Andres Corvetto
+      url: 
+    - name: Maximiliano Vrancken
+      url: 
+    - name: Diego Acosta
+      url: 
 --- !u!225 &41799640
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1941,7 +1951,7 @@ MonoBehaviour:
     m_Top: 160
     m_Bottom: 160
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 20
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
