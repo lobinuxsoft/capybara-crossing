@@ -37,6 +37,11 @@ namespace CapybaraCrossing
             }
         }
 
+        private void OnDestroy()
+        {
+            PlayerMovement.OnJump -= CheckSpawnTerrain;
+        }
+
         private void SpawnTerrain()
         {
             GameObject temp = pool.GetFromPool();
