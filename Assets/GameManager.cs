@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] Gradient fadeIn;
+    [SerializeField] Gradient fadeOut;
+    [SerializeField] UIPopup popup;
+
+
     private List<GameObject> players = new List<GameObject>();
-    [SerializeField] private GameObject titleLoseScreen;
-    [SerializeField] private GameObject buttonsLoseScreen;
 
     private void Start()
     {
@@ -24,7 +27,12 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene(string scene)
     {
-        SceneManager.LoadScene(scene);
+        popup.Hide(()=> {
+            TimelineUITransition.Instance.FadeStart(fadeIn, fadeOut, 1, () =>
+            {
+                SceneManager.LoadScene(scene);
+            });
+        });
     }
 
     public void RemovePlayer(Transform t)
@@ -32,14 +40,7 @@ public class GameManager : MonoBehaviour
         players.Remove(t.gameObject);
         if(players.Count <= 0)
         {
-            titleLoseScreen.SetActive(true);
-            StartCoroutine(ShowLoseScreen());
+            popup.Show();
         }
-    }
-
-    private IEnumerator ShowLoseScreen()
-    {
-        yield return new WaitForSeconds(0.5f);
-        buttonsLoseScreen.SetActive(true);
     }
 }
