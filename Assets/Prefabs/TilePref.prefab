@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileData: {fileID: 0}
-  tileLenght: 50
+  tileWidth: 50
+  power: {fileID: 5547477192286778031, guid: ba5319411538a484e9b3307e2d84611e, type: 3}
+  obst: {fileID: 3022891322355839466, guid: 24ab70260e749914caf7ae1767dc3309, type: 3}

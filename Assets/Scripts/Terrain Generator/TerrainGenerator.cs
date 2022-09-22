@@ -29,7 +29,7 @@ namespace CapybaraCrossing
                 {
                     tileGenerator.TileWidth = tileWidth;
                     tileGenerator.TileData = tileData;
-                    StartCoroutine(tileGenerator.GenerateTile());
+                    StartCoroutine(tileGenerator.GenerateTile((currentPosition.z % 10 == 0 && currentPosition.z != 0) ? true : false , currentPosition.z != 0 ? true : false));
                 }
 
                 pool.ReturnToPool(temp, true);
@@ -51,7 +51,7 @@ namespace CapybaraCrossing
             {
                 tileGenerator.TileWidth = tileWidth;
                 tileGenerator.TileData = tileData;
-                StartCoroutine(tileGenerator.GenerateTile());
+                StartCoroutine(tileGenerator.GenerateTile((currentPosition.z != 0 && currentPosition.z % 10 == 0) ? true : false, true));
             }
 
             pool.ReturnToPool(temp, true);

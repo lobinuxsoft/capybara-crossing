@@ -27,6 +27,7 @@ namespace CapybaraCrossing
         private void OnTriggerEnter(Collider other)
         {
             EffectBehaviorComponent effectBehaviorComponent = other.gameObject.AddComponent<EffectBehaviorComponent>();
+            SetRandomEffect();
             effectBehaviorComponent.Behavior = effectBehaviorList.GetEffectBehaviorInstance(index);
 
             Destroy(this.gameObject);

@@ -25,7 +25,7 @@ MonoBehaviour:
   ManualVersionOverride: 0
   releaseVersion: 0
   majorPatchVersion: 0
-  minorPatchVersion: 1
+  minorPatchVersion: 2
   bundleVersion: 1
   useGlobalDefineSymbols: 0
   globalDefineSymbols:
