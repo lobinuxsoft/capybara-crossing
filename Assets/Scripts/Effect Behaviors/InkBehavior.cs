@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -10,28 +12,55 @@ namespace CapybaraCrossing
     {
         [Tooltip("Effect duration in seconds")]
         [SerializeField] float effectDuration = 5;
+
         EffectBehaviorComponent behaviorComponent;
-        private Vignette vig;
+        Volume[] volumes;
 
         public override void OnInit(EffectBehaviorComponent behaviorComponent)
         {
+            volumes = FindObjectsOfType<Volume>()
+                            .Where(x => x.transform.parent.gameObject.GetHashCode() != behaviorComponent.gameObject.GetHashCode()).ToArray();
+
             this.behaviorComponent = behaviorComponent;
-
-            Volume vol = FindObjectOfType<Volume>();
-
-            if (vol.profile.TryGet<Vignette>(out vig))
-            {
-                vig.intensity.value = 1;
-            }
 
             StartCountdown(effectDuration);
         }
 
         private async void StartCountdown(float seconds)
         {
-            await Task.Delay(Mathf.RoundToInt(seconds * 1000));   // Se realiza esa multiplicacion porque son milisegundos
+            float lerp = 0;
 
-            vig.intensity.value = 0;
+            while (lerp < 1)
+            {
+                for (int i = 0; i < volumes.Length; i++)
+                {
+                    if (volumes[i].profile.TryGet(out Vignette vig))
+                    {
+                        vig.intensity.value = Mathf.Lerp(0, 1, lerp / 1);
+                        await Task.Yield();
+                    }
+                }
+
+                lerp += Time.deltaTime;
+            }
+
+            await Task.Delay(Mathf.RoundToInt(seconds * 1000));   // Se realiza esa multiplicacion porque son milisegundos
+            lerp = 0;
+
+            while (lerp < 1)
+            {
+                for (int j = 0; j < volumes.Length; j++)
+                {
+                    if (volumes[j].profile.TryGet(out Vignette vig))
+                    {
+                        vig.intensity.value = Mathf.Lerp(1, 0, lerp / 1);
+                        await Task.Yield();
+                    }
+                }
+
+                lerp += Time.deltaTime;
+            }
+
             Destroy(behaviorComponent);
         }
     }

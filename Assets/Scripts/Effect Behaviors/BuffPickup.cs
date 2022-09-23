@@ -26,9 +26,24 @@ namespace CapybaraCrossing
 
         private void OnTriggerEnter(Collider other)
         {
-            EffectBehaviorComponent effectBehaviorComponent = other.gameObject.AddComponent<EffectBehaviorComponent>();
+            EffectBehaviorComponent effectBehaviorComponent;
             SetRandomEffect();
-            effectBehaviorComponent.Behavior = effectBehaviorList.GetEffectBehaviorInstance(index);
+            EffectBehavior effectBehavior = effectBehaviorList.GetEffectBehaviorInstance(index);
+
+            // Ahora lo que hace es primero ver si ya hay un EffectBehaviorComponent
+            // si existe se fija que tipo de effect behavior tiene, si es el mismo el cual iba a ser activado,
+            // directamente cancela todo, si no lo es le agrega uno nuevo
+            if (other.gameObject.TryGetComponent<EffectBehaviorComponent>(out effectBehaviorComponent))
+            {
+                if(effectBehavior.GetType() == effectBehaviorComponent.Behavior.GetType())
+                {
+                    Destroy(this.gameObject);
+                    return;
+                }
+            }
+
+            effectBehaviorComponent = other.gameObject.AddComponent<EffectBehaviorComponent>();
+            effectBehaviorComponent.Behavior = effectBehavior;
 
             Destroy(this.gameObject);
         }
