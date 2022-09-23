@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e30e9e55bb7a144810f3dc6b494017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showBehavior: {fileID: 11400000, guid: 47c5d04915b59d148873113f154915bb, type: 2}
+  showBehavior: {fileID: 11400000, guid: 4d3231506c700ad4695b404b515f42cc, type: 2}
   hideBehavior: {fileID: 11400000, guid: d047083b9a252944587982349f4252e0, type: 2}
 --- !u!320 &41799642
 PlayableDirector:
@@ -263,6 +263,8 @@ PlayableDirector:
   - key: {fileID: -6284216957211212694, guid: d047083b9a252944587982349f4252e0, type: 2}
     value: {fileID: 41799644}
   - key: {fileID: -3884892098672912541, guid: 47c5d04915b59d148873113f154915bb, type: 2}
+    value: {fileID: 41799644}
+  - key: {fileID: -3884892098672912541, guid: 4d3231506c700ad4695b404b515f42cc, type: 2}
     value: {fileID: 41799644}
   m_ExposedReferences:
     m_References: []
