@@ -1,5 +1,4 @@
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -41,7 +40,7 @@ namespace CapybaraCrossing
                     }
                 }
 
-                lerp += Time.deltaTime;
+                lerp += Time.fixedUnscaledDeltaTime;
             }
 
             await Task.Delay(Mathf.RoundToInt(seconds * 1000));   // Se realiza esa multiplicacion porque son milisegundos
@@ -58,7 +57,7 @@ namespace CapybaraCrossing
                     }
                 }
 
-                lerp += Time.deltaTime;
+                lerp += Time.fixedUnscaledDeltaTime;
             }
 
             Destroy(behaviorComponent);

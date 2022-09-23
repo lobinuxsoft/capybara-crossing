@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c487cc36e7a4dae4a84e94d3bf4dc92b, type: 3}
-  m_Name: Swap Positions Behavior
+  m_Name: Swap Positions
   m_EditorClassIdentifier: 
   playersTag: Player

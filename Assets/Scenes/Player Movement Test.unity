@@ -1121,7 +1121,7 @@ MonoBehaviour:
     ModeOverride: 2
     LensShift: {x: 0, y: 0}
     GateFit: 1
-    m_SensorSize: {x: 0.5621079, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1266,7 +1266,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 46.337708
+  field of view: 51.385933
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
