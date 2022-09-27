@@ -45,7 +45,7 @@ namespace CapybaraCrossing
                         );
 
                     Destroy(effectBehavior);
-                    Destroy(this.gameObject);
+                    gameObject.SetActive(false);
                     return;
                 }
             }
@@ -57,7 +57,7 @@ namespace CapybaraCrossing
                     $"<b><color=#{ColorUtility.ToHtmlStringRGB(color)}>{other.gameObject.name}</color></b> activate <b><color=green>{effectBehavior.name}</color></b>"
                 );
 
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
