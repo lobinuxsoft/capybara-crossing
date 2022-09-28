@@ -22,7 +22,12 @@ namespace CapybaraCrossing
 
         private async void StartCountdown(float duration)
         {
-            await Task.Delay(Mathf.RoundToInt(duration * 1000));
+            float lerp = 0;
+            while (lerp < duration)
+            {
+                lerp += Time.unscaledDeltaTime;
+                await Task.Yield();
+            }
 
             Time.timeScale = 1;
             playerMovement.SlowMotion = false;

@@ -28,7 +28,6 @@ namespace CapybaraCrossing
         private async void StartCountdown(float seconds)
         {
             float lerp = 0;
-
             while (lerp < 1)
             {
                 for (int i = 0; i < volumes.Length; i++)
@@ -40,12 +39,17 @@ namespace CapybaraCrossing
                     }
                 }
 
-                lerp += Time.fixedUnscaledDeltaTime;
+                lerp += Time.unscaledDeltaTime;
             }
 
-            await Task.Delay(Mathf.RoundToInt(seconds * 1000));   // Se realiza esa multiplicacion porque son milisegundos
             lerp = 0;
+            while (lerp < seconds)
+            {
+                lerp += Time.unscaledDeltaTime;
+                await Task.Yield();
+            }
 
+            lerp = 0;
             while (lerp < 1)
             {
                 for (int j = 0; j < volumes.Length; j++)
@@ -57,7 +61,7 @@ namespace CapybaraCrossing
                     }
                 }
 
-                lerp += Time.fixedUnscaledDeltaTime;
+                lerp += Time.unscaledDeltaTime;
             }
 
             Destroy(behaviorComponent);

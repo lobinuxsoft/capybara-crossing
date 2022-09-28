@@ -112,7 +112,7 @@ namespace CapybaraCrossing
 
             while (lerp < duration)
             {
-                lerp += slowMotion ? Time.fixedUnscaledDeltaTime : Time.fixedDeltaTime;
+                lerp += slowMotion ? Time.unscaledDeltaTime : Time.deltaTime;
                 Vector3 XZ = Vector3.Lerp(startPosition, destination, Mathf.Clamp01(lerp / duration));
                 XZ.y = destHeight + jumpHeightBehaviour.Evaluate(Mathf.Clamp01(lerp / duration));
 
