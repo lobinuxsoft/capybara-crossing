@@ -7,7 +7,18 @@ using UnityEngine.UI;
 
 public class TimelineUITransition : MonoBehaviour
 {
-    public static TimelineUITransition Instance;
+    private static TimelineUITransition instance;
+
+    public static TimelineUITransition Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = Instantiate(Resources.Load<TimelineUITransition>(nameof(TimelineUITransition)));
+
+            return instance;
+        }
+    }
 
     [SerializeField] TimelineAsset fadeIn;
     [SerializeField] TimelineAsset fadeOut;
@@ -21,17 +32,8 @@ public class TimelineUITransition : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            DestroyImmediate(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-
-            director = GetComponent<PlayableDirector>();
-        }
+        DontDestroyOnLoad(this.gameObject);
+        director = GetComponent<PlayableDirector>();
     }
 
     /// <summary>
