@@ -532,7 +532,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175595654}
-  m_LocalRotation: {x: 0.34727672, y: -0.21462883, z: 0.0819809, w: 0.90918237}
+  m_LocalRotation: {x: 0.34727675, y: -0.21462885, z: 0.08198093, w: 0.9091823}
   m_LocalPosition: {x: 5, y: 12.15, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -649,8 +649,8 @@ RectTransform:
   m_Father: {fileID: 2111150959}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.15833361, y: 0.4191905}
-  m_AnchorMax: {x: 0.8416667, y: 0.55659074}
+  m_AnchorMin: {x: 0.055555895, y: 0.36843476}
+  m_AnchorMax: {x: 0.94444454, y: 0.55659074}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -672,7 +672,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 30
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1575,7 +1575,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946864533}
-  m_LocalRotation: {x: 0.34727672, y: -0.21462883, z: 0.0819809, w: 0.90918237}
+  m_LocalRotation: {x: 0.34727675, y: -0.21462885, z: 0.08198093, w: 0.9091823}
   m_LocalPosition: {x: 5, y: 12.15, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1668,7 +1668,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 266.35
+  m_fontSize: 93.65
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1759,7 +1759,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1135523316}
   - component: {fileID: 1135523318}
-  - component: {fileID: 1135523317}
   m_Layer: 5
   m_Name: Aspect Ratio
   m_TagString: Untagged
@@ -1789,21 +1788,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1135523317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135523315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8a7577a39df2e14091362c2d12a4ed5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aspectRatio: 0
-  screenSize: {x: 0, y: 0}
-  aspectMode: 3
 --- !u!114 &1135523318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2599,7 +2583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 2
-  m_AspectRatio: 0.4
+  m_AspectRatio: 0.5
 --- !u!1 &2135873146
 GameObject:
   m_ObjectHideFlags: 0
