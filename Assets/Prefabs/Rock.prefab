@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2501933249514777424}
   - component: {fileID: 1519820415614985461}
   - component: {fileID: 3671431865783210047}
-  m_Layer: 0
-  m_Name: piedra_low
+  - component: {fileID: -6125323053766018994}
+  m_Layer: 8
+  m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-6125323053766018994
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022891322355839466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6329158148709259305, guid: 79aab612ca682634c8f9a54e2a4ec5ce, type: 3}

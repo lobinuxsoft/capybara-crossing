@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEditor;
 
 namespace CapybaraCrossing
 {
@@ -11,6 +12,7 @@ namespace CapybaraCrossing
         [SerializeField] InputActionReference moveAction;
         [SerializeField] float jumpDuration = 1;
         [SerializeField] AnimationCurve jumpHeightBehaviour;
+        [SerializeField] LayerMask obstacleMask;
 
         Rigidbody rb;
         GroundDetector groundDetector;
@@ -74,34 +76,30 @@ namespace CapybaraCrossing
 
             Vector2 input = context.ReadValue<Vector2>();
 
-            if (input.sqrMagnitude > 0)
+            // Se fija si el input fue un slide o un tap para decidir como moverse
+            viewDir = input.sqrMagnitude > 0
+                ? (Mathf.Abs(input.x) > Mathf.Abs(input.y)) ? new Vector3(input.x, 0, 0) : new Vector3(0, 0, input.y)
+                : Vector3.forward;
+
+            transform.rotation = Quaternion.LookRotation(viewDir, transform.up);
+
+            Vector3 destination = rb.position + transform.forward;
+            destination.x = Mathf.RoundToInt(destination.x);
+            destination.z = Mathf.RoundToInt(destination.z);
+
+            if(CheckCanJump(rb.position, (destination - rb.position).normalized, .5f))
             {
-                viewDir = (Mathf.Abs(input.x) > Mathf.Abs(input.y)) ? new Vector3(input.x, 0, 0) : new Vector3(0, 0, input.y);
-
-                transform.rotation = Quaternion.LookRotation(viewDir, transform.up);
-
-                Vector3 destination = rb.position + transform.forward;
-                destination.x = Mathf.RoundToInt(destination.x);
-                destination.z = Mathf.RoundToInt(destination.z);
-
                 StartCoroutine(JumpRoutine(destination, jumpDuration));
 
                 OnJump?.Invoke((int)rb.position.z);
             }
-            else
-            {
-                viewDir = new Vector3(0, 0, 1);
+        }
 
-                transform.rotation = Quaternion.LookRotation(viewDir, transform.up);
+        bool CheckCanJump(Vector3 origin, Vector3 direction, float distance)
+        {
+            Ray ray = new Ray(origin, direction);
 
-                Vector3 destination = rb.position + transform.forward;
-                destination.x = Mathf.RoundToInt(destination.x);
-                destination.z = Mathf.RoundToInt(destination.z);
-
-                StartCoroutine(JumpRoutine(destination, jumpDuration));
-
-                OnJump?.Invoke((int)rb.position.z);
-            }
+            return !Physics.SphereCast(ray, .5f, distance, obstacleMask);
         }
 
         IEnumerator JumpRoutine(Vector3 destination, float duration)

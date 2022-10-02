@@ -211,6 +211,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!54 &2896185728374899395
 Rigidbody:
   m_ObjectHideFlags: 0
