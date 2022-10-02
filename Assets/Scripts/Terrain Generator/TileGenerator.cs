@@ -1,9 +1,8 @@
-using System.Collections;
 using UnityEngine;
 
 namespace CapybaraCrossing
 {
-    public class TileGeneratorOptimizado : MonoBehaviour
+    public class TileGenerator : MonoBehaviour
     {
         [SerializeField] TileData tileData;
         [SerializeField] private int tileWidth = 50;

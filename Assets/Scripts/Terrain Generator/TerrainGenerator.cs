@@ -5,11 +5,11 @@ using UnityEngine;
 namespace CapybaraCrossing
 {
     [RequireComponent(typeof(ObjectPool))]
-    public class TerrainGeneratorOptimizado : MonoBehaviour
+    public class TerrainGenerator : MonoBehaviour
     {
         [SerializeField] private int maxTerrainCount;
         [SerializeField] private int tileWidth = 20;
-        [SerializeField] private TileGeneratorOptimizado terrainPref;
+        [SerializeField] private TileGenerator terrainPref;
         [SerializeField] TileData tileData;
 
         private ObjectPool pool;
@@ -29,7 +29,7 @@ namespace CapybaraCrossing
                 GameObject temp = pool.GetFromPool();
                 temp.transform.localPosition = currentPosition;
 
-                if (temp.TryGetComponent(out TileGeneratorOptimizado tileGenerator))
+                if (temp.TryGetComponent(out TileGenerator tileGenerator))
                 {
                     tileGenerator.TileWidth = tileWidth;
                     tileGenerator.TileData = tileData;

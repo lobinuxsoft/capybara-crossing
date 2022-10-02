@@ -1692,7 +1692,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 89.65
+  m_fontSize: 283.5
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2169,7 +2169,7 @@ MonoBehaviour:
   exitButton: {fileID: 1382664858}
   creditsPopup: {fileID: 41799641}
   settingsPopup: {fileID: 0}
-  singlePlayerSceneName: Gameplay Optimizado
+  singlePlayerSceneName: Gameplay
   multyPlayerSceneName: 
   fadeInGradient:
     serializedVersion: 2
@@ -2447,7 +2447,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 109.35
+  m_fontSize: 345.75
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
