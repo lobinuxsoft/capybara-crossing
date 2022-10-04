@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Tile Data
   m_EditorClassIdentifier: 
   tileObjects:
-  - {fileID: 8832289997623306051, guid: acee0190ae575c44bbd1734eb0642532, type: 3}
-  - {fileID: 8333092454770253127, guid: a9aba8c51b6796a428aa551828cba26d, type: 3}
-  - {fileID: 3371746274862536420, guid: ea3b4926e806dcf4cb0b2c84027e09dc, type: 3}
+  - mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    material: {fileID: 2100000, guid: 70e84cae0376b1441b2215ae48a0b83d, type: 2}
+  - mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    material: {fileID: 2100000, guid: daa63281a2ba2d54baae6c2b90d81600, type: 2}
+  - mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    material: {fileID: 2100000, guid: ebf65c03d10174a44a15cff3f271bee4, type: 2}

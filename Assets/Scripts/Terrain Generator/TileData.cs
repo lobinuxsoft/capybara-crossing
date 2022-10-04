@@ -5,15 +5,18 @@ namespace CapybaraCrossing
     [CreateAssetMenu(menuName = "Terrain Generator/ Tile Data")]
     public class TileData : ScriptableObject
     {
-        [SerializeField] GameObject[] tileObjects;
+        [SerializeField] TileStruct[] tileObjects;
 
-        public GameObject GetRandomTileObject(int rnd)
+        public TileStruct[] TileObjects
         {
-            Random.InitState(rnd);
-
-            return tileObjects[Random.Range(0, tileObjects.Length)];
+            get => tileObjects;
         }
+    }
 
-        
+    [System.Serializable]
+    public struct TileStruct
+    {
+        public Mesh mesh;
+        public Material material;
     }
 }

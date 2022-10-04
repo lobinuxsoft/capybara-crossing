@@ -32,8 +32,8 @@ namespace CapybaraCrossing
                 if (temp.TryGetComponent(out TileGenerator tileGenerator))
                 {
                     tileGenerator.TileWidth = tileWidth;
-                    tileGenerator.TileData = tileData;
                     tileGenerator.GenerateTile();
+                    tileGenerator.TileData = tileData;
                 }
 
                 pool.ReturnToPool(temp, true);
@@ -55,18 +55,13 @@ namespace CapybaraCrossing
                 for(int i = 0; i < middleOfMap - tilePosition; i++)
                 {
                     GameObject tile = pool.GetFromPool();
+                    tile.GetComponent<TileGenerator>().UpdateTileData();
                     tile.transform.position += new Vector3(0, 0, maxTerrainCount);
-                    if(currentPosition.z % 10 == 0)
-                    {
-                        int posX = Random.Range((int)tile.transform.GetChild(0).position.x, (int)tile.transform.GetChild(tile.transform.childCount - 1).position.x);
-                        PowerUpSpawner.SpawnPowerUp(new Vector3(posX, 1, currentPosition.z));
-                    }
                     currentPosition.z++;
                     pool.ReturnToPool(tile, true);
                     yield return new WaitForEndOfFrame();
                 }
             }
-            
         }
 
         void CheckSpawnTerrain(int playerZ)
@@ -77,25 +72,8 @@ namespace CapybaraCrossing
         private void SpawnOneTile()
         {
             GameObject tile = pool.GetFromPool();
+            tile.GetComponent<TileGenerator>().UpdateTileData();
             tile.transform.position += new Vector3(0, 0, maxTerrainCount);
-            if (currentPosition.z % 10 == 0)
-            {
-                int posX = Random.Range((int)tile.transform.GetChild(0).position.x, (int)tile.transform.GetChild(tile.transform.childCount - 1).position.x);
-                PowerUpSpawner.SpawnPowerUp(new Vector3(posX, 1, currentPosition.z));
-            }
-            else
-            {
-                if(currentPosition.z != 0)
-                {
-                    for(int i = 0; i < 3; i++)
-                    {
-                        int posX = Random.Range((int)tile.transform.GetChild(0).position.x, (int)tile.transform.GetChild(tile.transform.childCount - 1).position.x);
-                        ObstaclesSpawner.SpawnObstacle(new Vector3(posX, 0.6f, currentPosition.z));
-                    }
-                    
-                }
-            }
-            
             currentPosition.z++;
             pool.ReturnToPool(tile, true);
         }

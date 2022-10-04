@@ -13,7 +13,11 @@ namespace CapybaraCrossing
         public TileData TileData
         {
             get => tileData;
-            set => tileData = value;
+            set
+            {
+                tileData = value;
+                UpdateTileData();
+            }
         }
 
         public int TileWidth
@@ -26,10 +30,32 @@ namespace CapybaraCrossing
         {
             for (int i = 0; i < TileWidth; i++)
             {
-                GameObject go = Instantiate(tileData.GetRandomTileObject(Mathf.RoundToInt(Time.time)), transform);
+                GameObject go = new GameObject($"{i}");
+                go.transform.SetParent(transform);
+                go.AddComponent<MeshFilter>();
+                go.AddComponent<MeshRenderer>();
+                go.AddComponent<BoxCollider>();
+                
                 go.transform.localPosition = transform.right * i;
             }
             Recenter();
+        }
+
+        public void UpdateTileData()
+        {
+            Random.InitState(Mathf.RoundToInt(Time.time));
+            int rand = Random.Range(0,tileData.TileObjects.Length);
+            for (int i = 0; i < TileWidth; i++)
+            { 
+                if(transform.GetChild(i).TryGetComponent(out MeshFilter filter))
+                {
+                    filter.mesh = tileData.TileObjects[rand].mesh;
+                }
+                if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
+                {
+                    renderer.material = tileData.TileObjects[rand].material;
+                }
+            }
         }
 
         void Recenter()
