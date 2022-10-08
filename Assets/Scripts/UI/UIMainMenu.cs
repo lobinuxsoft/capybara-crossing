@@ -13,16 +13,9 @@ public class UIMainMenu : MonoBehaviour
 
     [Space(10)]
     [Header("Popups")]
+    [SerializeField] UIPopup playPopup;
     [SerializeField] UIPopup creditsPopup;
     [SerializeField] UIPopup settingsPopup;
-
-    [Space(10)]
-    [Header("Change Scene Setting")]
-    [SerializeField] string singlePlayerSceneName;
-    [SerializeField] string multyPlayerSceneName;
-    [SerializeField] Gradient fadeInGradient;
-    [SerializeField] Gradient fadeOutGradient;
-
 
     UIPopup popup;
 
@@ -46,13 +39,8 @@ public class UIMainMenu : MonoBehaviour
 
     private void ToGamePlay()
     {
-        popup.Hide(() => 
-        {
-            TimelineUITransition.Instance.FadeStart(fadeInGradient, fadeOutGradient, 1.25f, () => 
-            {
-                SceneManager.LoadScene(singlePlayerSceneName);
-            });
-        });
+        popup.Hide();
+        playPopup.Show();
     }
 
     private void ToCredits()
