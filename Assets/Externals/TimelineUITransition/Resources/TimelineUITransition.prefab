@@ -225,7 +225,7 @@ PlayableDirector:
   m_PlayableAsset: {fileID: 11400000, guid: 49ea8ceb4be68164ebff5979d43708d4, type: 2}
   m_InitialState: 1
   m_WrapMode: 0
-  m_DirectorUpdateMode: 1
+  m_DirectorUpdateMode: 2
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 3851001541289320606, guid: 70a2e399d38693e47bf671fb370668bd, type: 2}
