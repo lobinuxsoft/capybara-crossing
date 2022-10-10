@@ -10,19 +10,27 @@ namespace CapybaraCrossing
         private int maxSize = 90;
         private static ObjectPool obstaclePool;
 
-        private void Start()
+        private void Awake()
         {
             obstaclePool = GetComponent<ObjectPool>();
             obstaclePool.InitPool(obs, maxSize);
         }
 
-        public ObjectPool SpawnObstacle(Vector3 pos, out GameObject obstacle)
+        public GameObject SpawnObstacle(Vector3 pos)
         {
-            obstacle = obstaclePool.GetFromPool();
+            GameObject obstacle = obstaclePool.GetFromPool();
             obstacle.transform.position = pos;
             obstacle.transform.rotation = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
-            //obstaclePool.ReturnToPool(obstacle, true);
-            return obstaclePool;
+            return obstacle;
+        }
+
+        public void DespawnObstacle(List<GameObject> obstacles)
+        {
+            foreach(GameObject obs in obstacles)
+            {
+                obstaclePool.ReturnToPool(obs, false);
+            }
+            obstacles.Clear();            
         }
     }
 }

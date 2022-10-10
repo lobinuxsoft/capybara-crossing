@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using System;
 
 namespace CapybaraCrossing
 {
@@ -14,6 +14,8 @@ namespace CapybaraCrossing
 
         private ObjectPool pool;
         private Vector3 currentPosition = Vector3.zero;
+
+        public static Action<GameObject> OnTileChange;
 
         private void Start()
         {
@@ -34,8 +36,8 @@ namespace CapybaraCrossing
                     tileGenerator.TileWidth = tileWidth;
                     tileGenerator.GenerateTile();
                     tileGenerator.TileData = tileData;
+                    tileGenerator.UpdateFirstTileData();
                 }
-
                 pool.ReturnToPool(temp, true);
                 currentPosition.z++;
             }
@@ -55,9 +57,10 @@ namespace CapybaraCrossing
                 for(int i = 0; i < middleOfMap - tilePosition; i++)
                 {
                     GameObject tile = pool.GetFromPool();
-                    tile.GetComponent<TileGenerator>().UpdateTileData();
+                    OnTileChange(tile);
                     tile.transform.position += new Vector3(0, 0, maxTerrainCount);
                     currentPosition.z++;
+                    tile.GetComponent<TileGenerator>().UpdateTileData();
                     pool.ReturnToPool(tile, true);
                     yield return new WaitForEndOfFrame();
                 }
@@ -72,9 +75,10 @@ namespace CapybaraCrossing
         private void SpawnOneTile()
         {
             GameObject tile = pool.GetFromPool();
-            tile.GetComponent<TileGenerator>().UpdateTileData();
+            OnTileChange(tile);
             tile.transform.position += new Vector3(0, 0, maxTerrainCount);
             currentPosition.z++;
+            tile.GetComponent<TileGenerator>().UpdateTileData();
             pool.ReturnToPool(tile, true);
         }
     }

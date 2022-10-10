@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace CapybaraCrossing
@@ -10,13 +11,21 @@ namespace CapybaraCrossing
         [SerializeField] GameObject power;
         [SerializeField] GameObject obst;
 
+        private TypeOfTile type;
+
+        private List<GameObject> obstacles = new List<GameObject>();
+
+        public List<GameObject> Obstacles
+        {
+            get => obstacles;
+        }
+
         public TileData TileData
         {
             get => tileData;
             set
             {
                 tileData = value;
-                UpdateTileData();
             }
         }
 
@@ -24,6 +33,16 @@ namespace CapybaraCrossing
         {
             get => tileWidth;
             set => tileWidth = value;
+        }
+
+        private void Start()
+        {
+            TerrainGenerator.OnTileChange += RemoveObstacles;   
+        }
+
+        private void OnDestroy()
+        {
+            TerrainGenerator.OnTileChange -= RemoveObstacles;
         }
 
         public void GenerateTile()
@@ -35,25 +54,71 @@ namespace CapybaraCrossing
                 go.AddComponent<MeshFilter>();
                 go.AddComponent<MeshRenderer>();
                 go.AddComponent<BoxCollider>();
-                
                 go.transform.localPosition = transform.right * i;
             }
             Recenter();
         }
 
+        public void UpdateFirstTileData()
+        {
+            type = (TypeOfTile)1;
+            int maxObstaclePerLine = 3;
+            int currentAmountOfObstacles = 0;
+            for (int i = 0; i < TileWidth; i++)
+            {
+                if (transform.GetChild(i).TryGetComponent(out MeshFilter filter))
+                {
+                    filter.mesh = tileData.TileObjects[(int)type].mesh;
+                }
+                if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
+                {
+                    renderer.material = tileData.TileObjects[(int)type].material;
+                }
+                if (currentAmountOfObstacles < maxObstaclePerLine)
+                {
+                    if (Random.Range(0, 5) == 1)
+                    {
+                        obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z)));
+                        currentAmountOfObstacles++;
+                    }
+                }
+            }
+        }
+
         public void UpdateTileData()
         {
-            Random.InitState(Mathf.RoundToInt(Time.time));
-            int rand = Random.Range(0,tileData.TileObjects.Length);
+            Random.InitState(System.DateTime.Now.Millisecond);
+            type = (TypeOfTile)Random.Range(0,tileData.TileObjects.Length);
+            int maxObstaclePerLine = 3;
+            int currentAmountOfObstacles = 0;
             for (int i = 0; i < TileWidth; i++)
             { 
                 if(transform.GetChild(i).TryGetComponent(out MeshFilter filter))
                 {
-                    filter.mesh = tileData.TileObjects[rand].mesh;
+                    filter.mesh = tileData.TileObjects[(int)type].mesh;
                 }
                 if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
                 {
-                    renderer.material = tileData.TileObjects[rand].material;
+                    renderer.material = tileData.TileObjects[(int)type].material;
+                }
+                switch (type)
+                {
+                    case TypeOfTile.GRASS:
+                        if(currentAmountOfObstacles < maxObstaclePerLine)
+                        {
+                            if(Random.Range(0, 5) == 1)
+                            {
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z)));
+                                currentAmountOfObstacles++;
+                            }
+                        }
+                        break;
+                    case TypeOfTile.ROAD:
+                        break;
+                    case TypeOfTile.WATER:
+                        break;
+                    case TypeOfTile.TRAIN:
+                        break;
                 }
             }
         }
@@ -69,6 +134,25 @@ namespace CapybaraCrossing
                     transform.GetChild(i).localPosition += (-transform.right * distance / 2 + Vector3.right / 2);
                 }
             }
+        }
+
+        private void RemoveObstacles(GameObject tile)
+        {
+            if(tile == transform.gameObject)
+            {
+                switch (type)
+                {
+                    case TypeOfTile.GRASS:
+                        ObstacleSpawnerManager.Instance.DespawnObstacle("RockPool", obstacles);
+                        break;
+                    case TypeOfTile.ROAD:
+                        break;
+                    case TypeOfTile.WATER:
+                        break;
+                    case TypeOfTile.TRAIN:
+                        break;
+                }
+            } 
         }
 
     }

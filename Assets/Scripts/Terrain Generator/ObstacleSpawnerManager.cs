@@ -24,8 +24,14 @@ public class ObstacleSpawnerManager : MonoBehaviour
         }
     }
 
-    public ObjectPool SpawnObstacle(string spawnerName, Vector3 posToSpawn, out GameObject obstacle)
+    public GameObject SpawnObstacle(string spawnerName, Vector3 posToSpawn)
     {
-        return spawners[spawnerName].SpawnObstacle(posToSpawn, out obstacle);
+        GameObject obstacle = spawners[spawnerName].SpawnObstacle(posToSpawn);
+        return obstacle;
+    }
+
+    public void DespawnObstacle(string spawnerName, List<GameObject> obstacles)
+    {
+        spawners[spawnerName].DespawnObstacle(obstacles);
     }
 }
