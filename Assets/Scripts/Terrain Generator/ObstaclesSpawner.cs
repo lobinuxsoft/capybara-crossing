@@ -7,8 +7,8 @@ namespace CapybaraCrossing
     public class ObstaclesSpawner : MonoBehaviour
     {
         [SerializeField] private GameObject obs;
-        private int maxSize = 90;
-        private static ObjectPool obstaclePool;
+        [SerializeField] private int maxSize = 90;
+        private ObjectPool obstaclePool;
 
         private void Awake()
         {
@@ -20,7 +20,6 @@ namespace CapybaraCrossing
         {
             GameObject obstacle = obstaclePool.GetFromPool();
             obstacle.transform.position = pos;
-            obstacle.transform.rotation = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
             return obstacle;
         }
 

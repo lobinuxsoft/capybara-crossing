@@ -26,7 +26,13 @@ public class ObstacleSpawnerManager : MonoBehaviour
 
     public GameObject SpawnObstacle(string spawnerName, Vector3 posToSpawn)
     {
-        GameObject obstacle = spawners[spawnerName].SpawnObstacle(posToSpawn);
+        GameObject obstacle = null;
+        if (spawners.ContainsKey(spawnerName))
+        {
+            ObstaclesSpawner a = spawners[spawnerName];
+            Debug.Log(a.gameObject.name, a.gameObject);
+            obstacle = spawners[spawnerName].SpawnObstacle(posToSpawn);
+        }
         return obstacle;
     }
 

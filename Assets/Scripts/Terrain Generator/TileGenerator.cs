@@ -35,7 +35,7 @@ namespace CapybaraCrossing
             set => tileWidth = value;
         }
 
-        private void Start()
+        private void Awake()
         {
             TerrainGenerator.OnTileChange += RemoveObstacles;   
         }
@@ -89,8 +89,8 @@ namespace CapybaraCrossing
         {
             Random.InitState(System.DateTime.Now.Millisecond);
             type = (TypeOfTile)Random.Range(0,tileData.TileObjects.Length);
-            int maxObstaclePerLine = 3;
-            int currentAmountOfObstacles = 0;
+            int maxRockPerLine = 3;
+            int currentAmountOfRock = 0;
             for (int i = 0; i < TileWidth; i++)
             { 
                 if(transform.GetChild(i).TryGetComponent(out MeshFilter filter))
@@ -104,16 +104,20 @@ namespace CapybaraCrossing
                 switch (type)
                 {
                     case TypeOfTile.GRASS:
-                        if(currentAmountOfObstacles < maxObstaclePerLine)
+                        if(currentAmountOfRock < maxRockPerLine)
                         {
                             if(Random.Range(0, 5) == 1)
                             {
                                 obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z)));
-                                currentAmountOfObstacles++;
+                                currentAmountOfRock++;
                             }
                         }
                         break;
                     case TypeOfTile.ROAD:
+                        if(i == 0)
+                        {
+                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CarPool", new Vector3(0,0, transform.position.z)));
+                        }
                         break;
                     case TypeOfTile.WATER:
                         break;
@@ -146,6 +150,7 @@ namespace CapybaraCrossing
                         ObstacleSpawnerManager.Instance.DespawnObstacle("RockPool", obstacles);
                         break;
                     case TypeOfTile.ROAD:
+                        ObstacleSpawnerManager.Instance.DespawnObstacle("CarPool", obstacles);
                         break;
                     case TypeOfTile.WATER:
                         break;
