@@ -15,4 +15,4 @@ MonoBehaviour:
   Target: 5
   extension: .exe
   folderName: Windows
-  buildOptions: 0
+  buildOptions: 4

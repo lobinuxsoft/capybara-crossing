@@ -14,7 +14,7 @@ public class UIScoreControl : MonoBehaviour
         scores.Sort((ScoreData a, ScoreData b) => a.Score.CompareTo(b.Score));
 
         for (int i = 0; i < scores.Count; i++)
-            scores[i].SetScaleText(i == scores.Count-1 ? Vector3.one * 2 : Vector3.one);
+            scores[i].SetScaleText(i == scores.Count-1 ? Vector3.one * 1.25f : Vector3.one);
     }
 }
 
@@ -32,6 +32,7 @@ public class ScoreData
         if(player != null)
         {
             score = Mathf.RoundToInt(player.position.z);
+            score = score < 0 ? 0 : score;
             textMesh.text = $"{score:0}";
         }
     }
