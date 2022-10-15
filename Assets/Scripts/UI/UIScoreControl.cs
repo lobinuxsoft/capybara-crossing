@@ -1,3 +1,4 @@
+using CryingOnionTools.ScriptableVariables;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -21,19 +22,19 @@ public class UIScoreControl : MonoBehaviour
 [System.Serializable]
 public class ScoreData
 {
-    [SerializeField] int score;
+    [SerializeField] UIntVariable score;
     [SerializeField] Transform player;
     [SerializeField] TextMeshProUGUI textMesh;
 
-    public int Score => score;
+    public uint Score => score.Value;
 
     public void UpdateScore() 
     {
         if(player != null)
         {
-            score = Mathf.RoundToInt(player.position.z);
-            score = score < 0 ? 0 : score;
-            textMesh.text = $"{score:0}";
+            int temp = Mathf.RoundToInt(player.position.z);
+            score.Value = (uint)(temp > 0 ? temp : 0);
+            textMesh.text = $"{score.Value:0}";
         }
     }
 

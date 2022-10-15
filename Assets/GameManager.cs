@@ -3,13 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Gradient fadeIn;
-    [SerializeField] Gradient fadeOut;
-    [SerializeField] UIPopup popup;
+    [SerializeField] UIGameOver uIGameOver;
 
     private List<GameObject> players = new List<GameObject>();
     [SerializeField] private List<CinemachineBrain> cameraBrains = new List<CinemachineBrain>();
@@ -23,16 +20,6 @@ public class GameManager : MonoBehaviour
     {
         players = GameObject.FindGameObjectsWithTag("Player").ToList();
         cameraBrains = FindObjectsOfType<CinemachineBrain>().ToList();
-    }
-
-    public void ChangeScene(string scene)
-    {
-        popup.Hide(()=> {
-            TimelineUITransition.Instance.FadeStart(fadeIn, fadeOut, 1, () =>
-            {
-                SceneManager.LoadScene(scene);
-            });
-        });
     }
 
     public void RemovePlayer()
@@ -49,7 +36,7 @@ public class GameManager : MonoBehaviour
 
         if (players.Count <= 0)
         {
-            popup.Show();
+            uIGameOver.Show();
         }
 
         yield return new WaitForEndOfFrame();
