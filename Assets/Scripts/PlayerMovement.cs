@@ -41,6 +41,7 @@ namespace CapybaraCrossing
         }
 
         public static Action<int> OnJump;
+        public static Action OnDeath;
 
         private void Awake()
         {
@@ -57,6 +58,7 @@ namespace CapybaraCrossing
         {
             moveAction.action.Disable();
             moveAction.action.performed -= JumpToDirection;
+            OnDeath();
         }
 
         public void SubscribeToAction()

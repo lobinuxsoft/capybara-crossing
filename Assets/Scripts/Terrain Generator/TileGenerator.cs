@@ -8,12 +8,14 @@ namespace CapybaraCrossing
         [SerializeField] TileData tileData;
         [SerializeField] private int tileWidth = 50;
 
-        [SerializeField] GameObject power;
-        [SerializeField] GameObject obst;
-
         private TypeOfTile type;
 
         private List<GameObject> obstacles = new List<GameObject>();
+
+        private GameObject powerUp;
+
+        private static int lastPowerUpPositionZ = 0;
+
 
         public List<GameObject> Obstacles
         {
@@ -74,7 +76,7 @@ namespace CapybaraCrossing
                 {
                     renderer.material = tileData.TileObjects[(int)type].material;
                 }
-                if (currentAmountOfObstacles < maxObstaclePerLine)
+                if (currentAmountOfObstacles < maxObstaclePerLine && transform.position.z != 0)
                 {
                     if (Random.Range(0, 5) == 1)
                     {
@@ -104,7 +106,15 @@ namespace CapybaraCrossing
                 switch (type)
                 {
                     case TypeOfTile.GRASS:
-                        if(currentAmountOfRock < maxRockPerLine)
+                        if(transform.position.z - lastPowerUpPositionZ >= 10 && powerUp == null)
+                        {
+                            if(Random.Range(0, 5) == 1)
+                            {
+                                lastPowerUpPositionZ = (int)transform.position.z;
+                                powerUp = PowerUpSpawner.SpawnPowerUp(new Vector3(transform.GetChild(i).position.x, 1, transform.position.z));
+                            }
+                        }
+                        else if(currentAmountOfRock < maxRockPerLine)
                         {
                             if(Random.Range(0, 5) == 1)
                             {
@@ -148,6 +158,10 @@ namespace CapybaraCrossing
                 {
                     case TypeOfTile.GRASS:
                         ObstacleSpawnerManager.Instance.DespawnObstacle("RockPool", obstacles);
+                        if (powerUp)
+                        {
+                            PowerUpSpawner.DespawnPowerUp(powerUp);
+                        }
                         break;
                     case TypeOfTile.ROAD:
                         ObstacleSpawnerManager.Instance.DespawnObstacle("CarPool", obstacles);
