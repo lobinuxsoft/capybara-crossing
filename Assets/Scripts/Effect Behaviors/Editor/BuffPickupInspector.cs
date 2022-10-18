@@ -16,7 +16,11 @@ namespace CapybaraCrossing
         {
             if(!behaviourPickup) return;
 
-            EditorGUILayout.ObjectField(serializedObject.FindProperty("effectBehaviorList"));
+            EditorGUILayout.ObjectField(serializedObject.FindProperty("currentEffectBehaviorList"));
+            EditorGUILayout.Space(5);
+            EditorGUILayout.ObjectField(serializedObject.FindProperty("singleplayerEffectBehaviorList"));
+            EditorGUILayout.Space(5);
+            EditorGUILayout.ObjectField(serializedObject.FindProperty("multiplayerEffectBehaviorList"));
 
             EditorGUILayout.Space(20);
 

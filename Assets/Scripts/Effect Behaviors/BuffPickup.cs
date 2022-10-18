@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace CapybaraCrossing
@@ -6,12 +7,22 @@ namespace CapybaraCrossing
     public class BuffPickup : MonoBehaviour
     {
         [SerializeField] protected int index;
-        [SerializeField] protected EffectBehaviorList effectBehaviorList;
+        [SerializeField] protected EffectBehaviorList currentEffectBehaviorList;
+        [SerializeField] protected EffectBehaviorList singleplayerEffectBehaviorList;
+        [SerializeField] protected EffectBehaviorList multiplayerEffectBehaviorList;
+
 
         private void Awake()
         {
+            currentEffectBehaviorList = multiplayerEffectBehaviorList;
             SphereCollider sc = GetComponent<SphereCollider>();
             sc.isTrigger = true;
+            PlayerMovement.OnDeath += RemoveMultiplayerEffects;
+        }
+
+        private void OnDestroy()
+        {
+            PlayerMovement.OnDeath -= RemoveMultiplayerEffects;
         }
 
         public int Index
@@ -20,9 +31,9 @@ namespace CapybaraCrossing
             set => index = value;
         }
 
-        public EffectBehaviorList EffectBehaviorList => effectBehaviorList;
+        public EffectBehaviorList EffectBehaviorList => currentEffectBehaviorList;
 
-        public void SetRandomEffect() => index = Random.Range(0, effectBehaviorList.GetBehaviorNames().Length);
+        public void SetRandomEffect() => index = Random.Range(0, currentEffectBehaviorList.GetBehaviorNames().Length);
 
         private void OnTriggerEnter(Collider other)
         {
@@ -30,7 +41,7 @@ namespace CapybaraCrossing
 
             EffectBehaviorComponent effectBehaviorComponent;
             SetRandomEffect();
-            EffectBehavior effectBehavior = effectBehaviorList.GetEffectBehaviorInstance(index);
+            EffectBehavior effectBehavior = currentEffectBehaviorList.GetEffectBehaviorInstance(index);
             effectBehavior.name = effectBehavior.name.Replace("(Clone)", "").Trim();
 
             // Ahora lo que hace es primero ver si ya hay un EffectBehaviorComponent
@@ -58,6 +69,11 @@ namespace CapybaraCrossing
                 );
 
             gameObject.SetActive(false);
+        }
+
+        private void RemoveMultiplayerEffects()
+        {
+            currentEffectBehaviorList = singleplayerEffectBehaviorList;
         }
     }
 }

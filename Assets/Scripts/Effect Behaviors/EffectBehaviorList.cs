@@ -21,5 +21,10 @@ namespace CapybaraCrossing
 
             return result.ToArray();
         }
+
+        public List<EffectBehavior> GetEffectList()
+        {
+            return effectBehaviors;
+        }
     }
 }

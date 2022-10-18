@@ -111,4 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  effectBehaviorList: {fileID: 11400000, guid: 16be1519b1957ad4bb1995d1fb7a5cd4, type: 2}
+  currentEffectBehaviorList: {fileID: 0}
+  singleplayerEffectBehaviorList: {fileID: 11400000, guid: 2e012d7211895e84489c6e43b8d38405,
+    type: 2}
+  multiplayerEffectBehaviorList: {fileID: 11400000, guid: 16be1519b1957ad4bb1995d1fb7a5cd4,
+    type: 2}

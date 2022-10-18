@@ -56,9 +56,9 @@ namespace CapybaraCrossing
 
         private void OnDestroy()
         {
+            OnDeath?.Invoke();
             moveAction.action.Disable();
             moveAction.action.performed -= JumpToDirection;
-            OnDeath();
         }
 
         public void SubscribeToAction()
