@@ -14,6 +14,8 @@ namespace CapybaraCrossing
 
         private GameObject powerUp;
 
+        private List<GameObject> deepWaters = new List<GameObject>();
+
         private static int lastPowerUpPositionZ = 0;
 
 
@@ -93,6 +95,8 @@ namespace CapybaraCrossing
             type = (TypeOfTile)Random.Range(0,tileData.TileObjects.Length);
             int maxRockPerLine = 3;
             int currentAmountOfRock = 0;
+            int maxDeepWaterPerLine = 12;
+            int currentAmountOfDeepWaters = 0;
             for (int i = 0; i < TileWidth; i++)
             { 
                 if(transform.GetChild(i).TryGetComponent(out MeshFilter filter))
@@ -130,6 +134,24 @@ namespace CapybaraCrossing
                         }
                         break;
                     case TypeOfTile.WATER:
+                        if (currentAmountOfDeepWaters < maxDeepWaterPerLine)
+                        {
+                            if (Random.Range(0, 2) == 1)
+                            {
+                                GameObject deepWater = transform.GetChild(i).gameObject;
+                                deepWater.transform.GetComponent<Collider>().enabled = false;
+                                deepWaters.Add(deepWater);
+                                currentAmountOfDeepWaters++;
+                            }
+                            else
+                            {
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.5f, transform.position.z)));
+                            }
+                        }
+                        else
+                        {
+                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.5f, transform.position.z)));
+                        }
                         break;
                     case TypeOfTile.TRAIN:
                         break;
@@ -167,6 +189,11 @@ namespace CapybaraCrossing
                         ObstacleSpawnerManager.Instance.DespawnObstacle("CarPool", obstacles);
                         break;
                     case TypeOfTile.WATER:
+                        ObstacleSpawnerManager.Instance.DespawnObstacle("CamalotePool", obstacles);
+                        foreach (GameObject deepWater in deepWaters)
+                        {
+                            deepWater.transform.GetComponent<Collider>().enabled = true;
+                        }
                         break;
                     case TypeOfTile.TRAIN:
                         break;

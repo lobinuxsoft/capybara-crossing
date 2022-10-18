@@ -71,6 +71,13 @@ namespace CapybaraCrossing
             moveAction.action.performed -= JumpToDirection;
         }
 
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.transform.CompareTag("Movable Obstacle"))
+            {
+                Destroy(this.gameObject);
+            }
+        }
 
         public void JumpToDirection(InputAction.CallbackContext context)
         {
