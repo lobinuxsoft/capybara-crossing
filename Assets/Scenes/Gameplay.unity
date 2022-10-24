@@ -786,7 +786,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175595654}
-  m_LocalRotation: {x: 0.34727672, y: -0.21462877, z: 0.081980884, w: 0.90918237}
+  m_LocalRotation: {x: 0.34727672, y: -0.21462883, z: 0.081980914, w: 0.9091823}
   m_LocalPosition: {x: 5, y: 12.15, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTerrainCount: 30
-  tileWidth: 20
+  tileWidth: 34
   terrainPref: {fileID: 2630345148209612492, guid: 8dfa8771bfec571499d797360a011151,
     type: 3}
   tileData: {fileID: 11400000, guid: 5f04dbf6d6bb3c44db4b3fe8fb6d5459, type: 2}
@@ -2389,7 +2389,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946864533}
-  m_LocalRotation: {x: 0.34727672, y: -0.21462877, z: 0.081980884, w: 0.90918237}
+  m_LocalRotation: {x: 0.34727672, y: -0.21462883, z: 0.081980914, w: 0.9091823}
   m_LocalPosition: {x: 5, y: 12.15, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4186,7 +4186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obs: {fileID: 3022891322355839466, guid: 24ab70260e749914caf7ae1767dc3309, type: 3}
-  maxSize: 90
+  maxSize: 150
 --- !u!1 &1929591833
 GameObject:
   m_ObjectHideFlags: 0

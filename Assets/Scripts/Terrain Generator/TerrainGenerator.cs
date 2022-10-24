@@ -8,7 +8,7 @@ namespace CapybaraCrossing
     public class TerrainGenerator : MonoBehaviour
     {
         [SerializeField] private int maxTerrainCount;
-        [SerializeField] private int tileWidth = 20;
+        [SerializeField] private int tileWidth = 34;
         [SerializeField] private TileGenerator terrainPref;
         [SerializeField] TileData tileData;
 
