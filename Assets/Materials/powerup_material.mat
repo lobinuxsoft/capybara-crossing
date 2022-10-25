@@ -99,8 +99,8 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 5
-    - _CellDensity: 100
-    - _CellPower: 2
+    - _CellDensity: 50
+    - _CellPower: 4
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -134,6 +134,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _VoronoidColorA: {r: 1.8232114, g: 0, b: 15.999998, a: 0}
-    - _VoronoidColorB: {r: 0, g: 6.211765, b: 8, a: 0}
+    - _VoronoidColorA: {r: 0, g: 0.03529412, b: 0.7490196, a: 0}
+    - _VoronoidColorB: {r: 0.29803923, g: 0, b: 1.4980392, a: 0}
   m_BuildTextureStacks: []
