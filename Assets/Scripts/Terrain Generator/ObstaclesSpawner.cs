@@ -6,7 +6,7 @@ namespace CapybaraCrossing
 {
     public class ObstaclesSpawner : MonoBehaviour
     {
-        [SerializeField] private GameObject obs;
+        [SerializeField] private List<GameObject> obs = new List<GameObject>();
         [SerializeField] private int maxSize = 90;
         private ObjectPool obstaclePool;
 

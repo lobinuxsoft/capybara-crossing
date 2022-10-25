@@ -19,6 +19,14 @@ namespace CapybaraCrossing
             GrowPool();
         }
 
+        public void InitPool(List<GameObject> objs, int amount = 30)
+        {
+            maxPoolSize = amount;
+            prefab = objs[0];
+            pool = new Queue<GameObject>();
+            GrowPool(objs);
+        }
+
         /// <summary>
         /// Devuelve un objeto de la pool
         /// </summary>
@@ -68,6 +76,16 @@ namespace CapybaraCrossing
             for (int i = 0; i < maxPoolSize; i++)
             {
                 var newObj = Instantiate(prefab, transform);
+                newObj.SetActive(false);
+                pool.Enqueue(newObj);
+            }
+        }
+
+        private void GrowPool(List<GameObject> prefabs)
+        {
+            for (int i = 0; i < maxPoolSize; i++)
+            {
+                var newObj = Instantiate(prefabs[Random.Range(0, prefabs.Count)], transform);
                 newObj.SetActive(false);
                 pool.Enqueue(newObj);
             }

@@ -82,13 +82,13 @@ namespace CapybaraCrossing
                 {
                     if (Random.Range(0, 5) == 1)
                     {
-                        obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z),true));
+                        obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z),true));
                         currentAmountOfObstacles++;
                     }
                 }
                 else if(transform.GetChild(i).position.x == -10 || transform.GetChild(i).position.x == 11)
                 {
-                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z), true));
+                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
                 }
             }
         }
@@ -126,13 +126,13 @@ namespace CapybaraCrossing
                         {
                             if(Random.Range(0, 5) == 1)
                             {
-                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z), true));
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
                                 currentAmountOfRock++;
                             }
                         }
                         else if(transform.GetChild(i).position.x == -10 || transform.GetChild(i).position.x == 11) 
                         {
-                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z), true));
+                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
                         }
                         break;
                     case TypeOfTile.ROAD:
