@@ -108,7 +108,7 @@ namespace CapybaraCrossing
         {
             Ray ray = new Ray(origin, direction);
 
-            return !Physics.SphereCast(ray, .5f, distance, obstacleMask);
+            return !Physics.SphereCast(ray, .4f, distance, obstacleMask);
         }
 
         IEnumerator JumpRoutine(Vector3 destination, float duration)
