@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace CapybaraCrossing
 {
@@ -14,7 +15,14 @@ namespace CapybaraCrossing
 
         private void Awake()
         {
-            currentEffectBehaviorList = multiplayerEffectBehaviorList;
+            if(SceneManager.GetActiveScene().name == "Gameplay-Single")
+            {
+                currentEffectBehaviorList = singleplayerEffectBehaviorList;
+            }
+            else
+            {
+                currentEffectBehaviorList = multiplayerEffectBehaviorList;
+            }
             SphereCollider sc = GetComponent<SphereCollider>();
             sc.isTrigger = true;
             PlayerMovement.OnDeath += RemoveMultiplayerEffects;
