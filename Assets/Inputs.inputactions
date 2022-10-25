@@ -11,7 +11,7 @@
                     "id": "6c956c53-47de-4243-9763-86ca4b72f2a7",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": true
                 },
                 {
@@ -20,7 +20,7 @@
                     "id": "97b7268b-f722-4585-8a44-6de3a580c016",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": true
                 }
             ],
@@ -140,7 +140,7 @@
                     "id": "1d1b6ceb-ff50-4ee2-be14-c3148be013fe",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "NormalizeVector2",
+                    "processors": "",
                     "groups": "Inputs",
                     "action": "MoveP2",
                     "isComposite": false,
@@ -151,7 +151,7 @@
                     "id": "dccdfca1-a8a8-4e63-97d3-02bab552295a",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
-                    "processors": "NormalizeVector2",
+                    "processors": "",
                     "groups": "Inputs",
                     "action": "MoveP1",
                     "isComposite": false,

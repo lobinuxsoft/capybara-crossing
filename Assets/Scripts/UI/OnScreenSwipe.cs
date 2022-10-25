@@ -2,17 +2,17 @@ using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.InputSystem.Layouts;
 
-////TODO: custom icon for OnScreenStick component
-
 namespace UnityEngine.InputSystem.OnScreen
 {
     /// <summary>
     /// A stick control displayed on screen and moved around by touch or other pointer
     /// input.
     /// </summary>
-    [AddComponentMenu("Input/On-Screen Action")]
-    public class OnScreenAction : OnScreenControl, IPointerDownHandler, IPointerUpHandler, IDragHandler, IPointerClickHandler
+    [AddComponentMenu("Input/On-Screen Swipe")]
+    public class OnScreenSwipe : OnScreenControl, IPointerDownHandler, IPointerUpHandler, IDragHandler, IPointerClickHandler
     {
+        Vector2 newPos;
+
         public void OnPointerDown(PointerEventData eventData)
         {
             if (eventData == null)
@@ -32,14 +32,14 @@ namespace UnityEngine.InputSystem.OnScreen
             delta = Vector2.ClampMagnitude(delta, movementRange);
             ((RectTransform)transform).anchoredPosition = m_StartPos + (Vector3)delta;
 
-            var newPos = new Vector2(delta.x / movementRange, delta.y / movementRange);
-            SendValueToControl(newPos);
+            newPos = new Vector2(delta.x / movementRange, delta.y / movementRange);
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
             ((RectTransform)transform).anchoredPosition = m_StartPos;
-            SendValueToControl(Vector2.zero);
+            SendValueToControl(newPos);
+            newPos = Vector2.zero;
         }
 
         private void Start()
