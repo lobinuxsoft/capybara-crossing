@@ -82,13 +82,13 @@ namespace CapybaraCrossing
                 {
                     if (Random.Range(0, 5) == 1)
                     {
-                        obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z)));
+                        obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z),true));
                         currentAmountOfObstacles++;
                     }
                 }
                 else if(transform.GetChild(i).position.x == -10 || transform.GetChild(i).position.x == 11)
                 {
-                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z)));
+                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z), true));
                 }
             }
         }
@@ -126,19 +126,19 @@ namespace CapybaraCrossing
                         {
                             if(Random.Range(0, 5) == 1)
                             {
-                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z)));
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z), true));
                                 currentAmountOfRock++;
                             }
                         }
                         else if(transform.GetChild(i).position.x == -10 || transform.GetChild(i).position.x == 11) 
                         {
-                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z)));
+                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.65f, transform.position.z), true));
                         }
                         break;
                     case TypeOfTile.ROAD:
                         if(i == 0)
                         {
-                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CarPool", new Vector3(0,0, transform.position.z)));
+                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CarPool", new Vector3(0,0, transform.position.z), false));
                         }
                         break;
                     case TypeOfTile.WATER:
@@ -155,12 +155,12 @@ namespace CapybaraCrossing
                                 }
                                 else
                                 {
-                                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.5f, transform.position.z)));
+                                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.5f, transform.position.z), true));
                                 }
                             }
                             else
                             {
-                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.5f, transform.position.z)));
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.5f, transform.position.z), true));
                             }
                         }
                         break;

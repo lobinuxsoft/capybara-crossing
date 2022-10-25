@@ -16,10 +16,12 @@ namespace CapybaraCrossing
             obstaclePool.InitPool(obs, maxSize);
         }
 
-        public GameObject SpawnObstacle(Vector3 pos)
+        public GameObject SpawnObstacle(Vector3 pos, bool IsRotated)
         {
             GameObject obstacle = obstaclePool.GetFromPool();
             obstacle.transform.position = pos;
+            if(IsRotated)
+                obstacle.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
             return obstacle;
         }
 
