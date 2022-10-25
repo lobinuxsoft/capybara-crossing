@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
             uIGameOver.Show();
         }
 
-        yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
         StartCoroutine(CheckCameras());
     }
 

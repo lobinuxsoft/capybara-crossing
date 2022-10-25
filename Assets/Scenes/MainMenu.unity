@@ -2069,7 +2069,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 168.95
+  m_fontSize: 168.9
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2271,8 +2271,8 @@ MonoBehaviour:
   mainmenuPopup: {fileID: 1569730493}
   playButton: {fileID: 1825641505}
   backButton: {fileID: 1796020949}
-  singlePlayerSceneName: Gameplay
-  multyPlayerSceneName: Gameplay
+  singlePlayerSceneName: Gameplay-Single
+  multyPlayerSceneName: Gameplay-Multi
   fadeInGradient:
     serializedVersion: 2
     key0: {r: 0.72156864, g: 0.53333336, b: 0.27058825, a: 1}
@@ -3273,7 +3273,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 206.1
+  m_fontSize: 206
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1

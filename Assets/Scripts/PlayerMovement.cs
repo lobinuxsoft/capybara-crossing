@@ -96,7 +96,7 @@ namespace CapybaraCrossing
             destination.x = Mathf.RoundToInt(destination.x);
             destination.z = Mathf.RoundToInt(destination.z);
 
-            if(CheckCanJump(rb.position, (destination - rb.position).normalized, .5f) && destination.x >= -9 && destination.x <= 10)
+            if(CheckCanJump(rb.position, (destination - rb.position).normalized, 1f) && destination.x >= -9 && destination.x <= 10)
             {
                 StartCoroutine(JumpRoutine(destination, jumpDuration));
 

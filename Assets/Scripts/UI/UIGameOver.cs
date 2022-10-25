@@ -10,6 +10,7 @@ public class UIGameOver : MonoBehaviour
     [SerializeField] UIntVariable p1Score;
     [SerializeField] UIntVariable p2Score;
     [SerializeField] UIntVariable highScore;
+    [SerializeField] string singlePlayerSceneName = "Gameplay-Single";
 
     [Space(10), Header("Labels")]
     [SerializeField] TextMeshProUGUI label;
@@ -46,7 +47,13 @@ public class UIGameOver : MonoBehaviour
     {
         highScore.Value = 0;
 
-        if (p1Score.Value == p2Score.Value)
+        if(SceneManager.GetActiveScene().name == singlePlayerSceneName)
+        {
+            highScore.Value = p1Score.Value;
+            label.text = $"¡Nice try!";
+            score.text = $"{highScore.Value}";
+        }
+        else if (p1Score.Value == p2Score.Value)
         {
             highScore.Value = p1Score.Value;
             label.text = $"¡Tied game!";
