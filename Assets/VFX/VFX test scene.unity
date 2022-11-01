@@ -771,6 +771,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameRate: 60
+--- !u!1001 &243285024466705212
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 243285023758227321, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_Name
+      value: Revive Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227321, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243285023758227323, guid: 7398ac0c14bba0c48b04aac626f34f55,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7398ac0c14bba0c48b04aac626f34f55, type: 3}
 --- !u!1001 &4897396682323875143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -994,6 +1068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Respawn Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965581847161478506, guid: 8ec6d6939c3426e4aba3b959b45e40a6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ec6d6939c3426e4aba3b959b45e40a6, type: 3}
