@@ -4880,6 +4880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8965581847161478420}
   - component: {fileID: 8965581847161478507}
+  - component: {fileID: 5956809830810370334}
   m_Layer: 0
   m_Name: Respawn Effect
   m_TagString: Untagged
@@ -4931,6 +4932,18 @@ PlayableDirector:
     - 13377301947671040a4b54ecbfae0155: {fileID: 8965581846368699040}
     - 220c62eeae621af4aa05a1e90c0a4ef5: {fileID: 8965581847354385499}
     - b5046636afc8b774bb3e9a07ba3fe47e: {fileID: 8965581846368699040}
+--- !u!114 &5956809830810370334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965581847161478506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a1ed2eab05d4f48a186effe29022f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8965581847354385499
 GameObject:
   m_ObjectHideFlags: 0
