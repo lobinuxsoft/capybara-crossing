@@ -18,6 +18,10 @@ namespace CapybaraCrossing
         GroundDetector groundDetector;
         Vector3 viewDir = Vector3.forward;
 
+        [SerializeField] EffectBehavior effectBehavior;
+        EffectBehaviorComponent effectBehaviorComponent;
+        private bool isDead = false;
+
         private bool slowMotion;
 
         public InputActionReference MoveAction
@@ -40,8 +44,21 @@ namespace CapybaraCrossing
             }
         }
 
+        public bool IsDead
+        {
+            get
+            {
+                return isDead;
+            }
+            set
+            {
+                isDead = value;
+            }
+        }
+
         public static Action<int> OnJump;
         public static Action OnDeath;
+        public static Action OnResurrectNeed;
 
         private void Awake()
         {
@@ -73,15 +90,48 @@ namespace CapybaraCrossing
 
         private void OnCollisionEnter(Collision collision)
         {
-            if(collision.transform.CompareTag("Movable Obstacle"))
+            if(collision.transform.CompareTag("Movable Obstacle") && !isDead)
             {
-                Destroy(this.gameObject);
+                EffectBehavior deathEffect = ScriptableObject.Instantiate(effectBehavior);
+                effectBehaviorComponent = gameObject.AddComponent<EffectBehaviorComponent>();
+                effectBehaviorComponent.Behavior = deathEffect;
+                OnResurrectNeed();
+                UINotificationManager.Instance.ShowMessage(
+                    $"A resurrect item has spawned"
+                );
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.transform.CompareTag("Resurrect") && isDead)
+            {
+                other.gameObject.SetActive(false);
+                isDead = false;
             }
         }
 
         public void JumpToDirection(InputAction.CallbackContext context)
         {
-            if (!context.performed || !groundDetector.OnGround) return;
+            
+            if (!isDead)
+            {
+                if (!context.performed || !groundDetector.OnGround) return;
+            }
+            else
+            {
+                bool onGround = false;
+                RaycastHit hit;
+                Ray ray = new Ray(transform.position, -transform.up);
+                if (Physics.Raycast(ray, out hit, 0.2f))
+                {
+                    if (hit.collider)
+                    {
+                        onGround = true;
+                    }
+                }
+                if (!context.performed || !onGround) return;
+            }
 
             Vector2 input = context.ReadValue<Vector2>();
 
@@ -96,7 +146,7 @@ namespace CapybaraCrossing
             destination.x = Mathf.RoundToInt(destination.x);
             destination.z = Mathf.RoundToInt(destination.z);
 
-            if(CheckCanJump(rb.position, (destination - rb.position).normalized, 1f) && destination.x >= -9 && destination.x <= 10)
+            if(isDead || CheckCanJump(rb.position, (destination - rb.position).normalized, 1f) && destination.x >= -9 && destination.x <= 10)
             {
                 StartCoroutine(JumpRoutine(destination, jumpDuration));
 
