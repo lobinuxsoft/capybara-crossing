@@ -14,10 +14,13 @@ namespace CapybaraCrossing
 
         private GameObject powerUp;
 
+        private GameObject resurrectItem;
+
         private List<GameObject> deepWaters = new List<GameObject>();
 
         private static int lastPowerUpPositionZ = 0;
 
+        private static int resurrectItemNeed = 0;
 
         public List<GameObject> Obstacles
         {
@@ -41,7 +44,7 @@ namespace CapybaraCrossing
 
         private void Awake()
         {
-            TerrainGenerator.OnTileChange += RemoveObstacles;   
+            TerrainGenerator.OnTileChange += RemoveObstacles;
         }
 
         private void OnDestroy()
@@ -114,7 +117,15 @@ namespace CapybaraCrossing
                 switch (type)
                 {
                     case TypeOfTile.GRASS:
-                        if(transform.position.z - lastPowerUpPositionZ >= 10 && powerUp == null && transform.GetChild(i).position.x >= -9 && transform.GetChild(i).position.x <= 10)
+                        if (transform.GetChild(i).position.x == 0)
+                        {
+                            if (resurrectItemNeed > 0)
+                            {
+                                resurrectItem = ResurrectSpawner.SpawnResurrectItem(new Vector3(transform.GetChild(i).position.x, 1, transform.position.z));
+                                resurrectItemNeed -= 1;
+                            }
+                        }
+                        if (transform.position.z - lastPowerUpPositionZ >= 10 && powerUp == null && transform.GetChild(i).position.x >= -9 && transform.GetChild(i).position.x <= 10)
                         {
                             if(Random.Range(0, 5) == 1)
                             {
@@ -149,7 +160,7 @@ namespace CapybaraCrossing
                                 if (Random.Range(0, 2) == 1)
                                 {
                                     GameObject deepWater = transform.GetChild(i).gameObject;
-                                    deepWater.transform.GetComponent<Collider>().enabled = false;
+                                    deepWater.transform.GetComponent<Collider>().isTrigger = true;
                                     deepWaters.Add(deepWater);
                                     currentAmountOfDeepWaters++;
                                 }
@@ -195,6 +206,10 @@ namespace CapybaraCrossing
                         {
                             PowerUpSpawner.DespawnPowerUp(powerUp);
                         }
+                        if (resurrectItem)
+                        {
+                            ResurrectSpawner.DespawnResurrectItem(resurrectItem);
+                        }
                         break;
                     case TypeOfTile.ROAD:
                         ObstacleSpawnerManager.Instance.DespawnObstacle("CarPool", obstacles);
@@ -203,7 +218,7 @@ namespace CapybaraCrossing
                         ObstacleSpawnerManager.Instance.DespawnObstacle("CamalotePool", obstacles);
                         foreach (GameObject deepWater in deepWaters)
                         {
-                            deepWater.transform.GetComponent<Collider>().enabled = true;
+                            deepWater.transform.GetComponent<Collider>().isTrigger = false;
                         }
                         break;
                     case TypeOfTile.TRAIN:
@@ -212,5 +227,9 @@ namespace CapybaraCrossing
             } 
         }
 
+        public static void AddSpawnResurrect()
+        {
+            resurrectItemNeed++;
+        }
     }
 }
