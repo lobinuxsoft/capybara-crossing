@@ -27,7 +27,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 10f62d3b44cdf184dac4f1f716eaf28c, type: 2}
   ManualVersionOverride: 1
   releaseVersion: 0
-  majorPatchVersion: 4
+  majorPatchVersion: 6
   minorPatchVersion: 0
   bundleVersion: 1
   useGlobalDefineSymbols: 0
