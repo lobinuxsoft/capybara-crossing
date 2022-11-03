@@ -8,8 +8,16 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] UIGameOver uIGameOver;
 
-    private List<GameObject> players = new List<GameObject>();
+    private static List<GameObject> players = new List<GameObject>();
     [SerializeField] private List<CinemachineBrain> cameraBrains = new List<CinemachineBrain>();
+
+    static public List<GameObject> Players
+    {
+        get
+        {
+            return players;
+        }
+    }
 
     private void Start()
     {

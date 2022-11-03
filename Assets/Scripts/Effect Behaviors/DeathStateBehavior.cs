@@ -16,8 +16,6 @@ namespace CapybaraCrossing
         {
             this.behaviorComponent = behaviorComponent;
             playerMovement = behaviorComponent.GetComponent<PlayerMovement>();
-            behaviorComponent.GetComponent<Rigidbody>().isKinematic = true;
-            //behaviorComponent.GetComponent<Collider>().enabled = false;
             playerMovement.IsDead = true;
             resurrectText = behaviorComponent.transform.GetChild(0).gameObject.GetComponent<TMPro.TextMeshPro>();
             resurrectText.gameObject.SetActive(true);
@@ -31,18 +29,17 @@ namespace CapybaraCrossing
             {
                 if (!playerMovement.IsDead)
                 {
-                    if(behaviorComponent)
-                    behaviorComponent.GetComponent<Rigidbody>().isKinematic = false;
                     resurrectText.gameObject.SetActive(false);
-                    Destroy(behaviorComponent);
+                    Destroy(behaviorComponent,0.2f);
+                    break;
                 }
                 lerp += Time.unscaledDeltaTime;
-                resurrectText.text = (effectDuration - lerp).ToString("F2");
+                resurrectText.text = $"{effectDuration - lerp:0}";
                 resurrectText.gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-                behaviorComponent.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 await Task.Yield();
             }
-            Destroy(playerMovement.gameObject);
+            if(playerMovement.IsDead)
+                Destroy(playerMovement.gameObject);
         }
     }
 }

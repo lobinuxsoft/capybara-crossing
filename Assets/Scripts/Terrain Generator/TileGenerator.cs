@@ -125,7 +125,7 @@ namespace CapybaraCrossing
                                 resurrectItemNeed -= 1;
                             }
                         }
-                        if (transform.position.z - lastPowerUpPositionZ >= 10 && powerUp == null && transform.GetChild(i).position.x >= -9 && transform.GetChild(i).position.x <= 10)
+                        else if (transform.position.z - lastPowerUpPositionZ >= 10 && powerUp == null && transform.GetChild(i).position.x >= -9 && transform.GetChild(i).position.x <= 10)
                         {
                             if(Random.Range(0, 5) == 1)
                             {
@@ -166,12 +166,12 @@ namespace CapybaraCrossing
                                 }
                                 else
                                 {
-                                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.5f, transform.position.z), true));
+                                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
                                 }
                             }
                             else
                             {
-                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.5f, transform.position.z), true));
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
                             }
                         }
                         break;

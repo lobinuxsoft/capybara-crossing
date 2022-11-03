@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40869b94d9ac9ac4a91490451ce1d184, type: 3}
   m_Name: Death State
   m_EditorClassIdentifier: 
-  effectDuration: 20
+  effectDuration: 12
