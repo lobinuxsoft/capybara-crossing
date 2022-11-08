@@ -10,6 +10,7 @@ namespace CapybaraCrossing
         [SerializeField] protected EffectBehaviorList singleplayerEffectBehaviorList;
         [SerializeField] protected EffectBehaviorList multiplayerEffectBehaviorList;
         [SerializeField] private SpriteRenderer[] spriteRenderers;
+        [SerializeField] GameObject explodeFvx;
 
         protected int index;
 
@@ -86,6 +87,7 @@ namespace CapybaraCrossing
                     $"<b><color=#{ColorUtility.ToHtmlStringRGB(color)}>{other.gameObject.name}</color></b> activate <b><color=green>{effectBehavior.name}</color></b>"
                 );
 
+            Instantiate(explodeFvx, transform.position, transform.rotation);
             gameObject.SetActive(false);
         }
 

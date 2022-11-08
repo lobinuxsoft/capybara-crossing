@@ -245,6 +245,8 @@ MonoBehaviour:
   - {fileID: 3693828422868551086}
   - {fileID: 6002664228838106412}
   - {fileID: 8805902938392997752}
+  explodeFvx: {fileID: 3725759139424748908, guid: 636bc0d537c020f41a657abaf66b8a8d,
+    type: 3}
 --- !u!1 &6174750551816728248
 GameObject:
   m_ObjectHideFlags: 0
