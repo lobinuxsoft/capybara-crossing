@@ -2069,7 +2069,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 168.9
+  m_fontSize: 159.45
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3273,7 +3273,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 206
+  m_fontSize: 194.45
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1

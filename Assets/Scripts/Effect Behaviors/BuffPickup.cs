@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,11 +6,12 @@ namespace CapybaraCrossing
     [RequireComponent(typeof(SphereCollider))]
     public class BuffPickup : MonoBehaviour
     {
-        [SerializeField] protected int index;
         [SerializeField] protected EffectBehaviorList currentEffectBehaviorList;
         [SerializeField] protected EffectBehaviorList singleplayerEffectBehaviorList;
         [SerializeField] protected EffectBehaviorList multiplayerEffectBehaviorList;
+        [SerializeField] private SpriteRenderer[] spriteRenderers;
 
+        protected int index;
 
         private void Awake()
         {
@@ -23,6 +23,7 @@ namespace CapybaraCrossing
             {
                 currentEffectBehaviorList = multiplayerEffectBehaviorList;
             }
+
             SphereCollider sc = GetComponent<SphereCollider>();
             sc.isTrigger = true;
             PlayerMovement.OnDeath += RemoveMultiplayerEffects;
@@ -31,6 +32,15 @@ namespace CapybaraCrossing
         private void OnDestroy()
         {
             PlayerMovement.OnDeath -= RemoveMultiplayerEffects;
+        }
+
+        private void OnEnable()
+        {
+            SetRandomEffect();
+            for (int i = 0; i < spriteRenderers.Length; i++)
+            {
+                spriteRenderers[i].sprite = currentEffectBehaviorList.GetEffectSprite(index);
+            }
         }
 
         public int Index
@@ -48,7 +58,7 @@ namespace CapybaraCrossing
             Color color = other.name.Contains("1") ? Color.blue : Color.red;
 
             EffectBehaviorComponent effectBehaviorComponent;
-            SetRandomEffect();
+            //SetRandomEffect();
             EffectBehavior effectBehavior = currentEffectBehaviorList.GetEffectBehaviorInstance(index);
             effectBehavior.name = effectBehavior.name.Replace("(Clone)", "").Trim();
 

@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f03e31374a372940b37d3e8ad7cc759, type: 3}
   m_Name: Freezing
   m_EditorClassIdentifier: 
+  effectIcon: {fileID: 21300000, guid: 8020950e24c4695498210ceea69f24fd, type: 3}
+  interactionAmount: 5

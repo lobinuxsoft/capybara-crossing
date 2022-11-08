@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c487cc36e7a4dae4a84e94d3bf4dc92b, type: 3}
   m_Name: Swap Positions
   m_EditorClassIdentifier: 
-  playersTag: Player
+  effectIcon: {fileID: 21300000, guid: 7997b1241c8d7f147b13060a1edf69da, type: 3}
+  otherPlayersTag: Player

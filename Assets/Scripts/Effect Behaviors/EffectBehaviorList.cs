@@ -10,6 +10,8 @@ namespace CapybaraCrossing
 
         public EffectBehavior GetEffectBehaviorInstance(int index) => ScriptableObject.Instantiate(effectBehaviors[index]);
 
+        public Sprite GetEffectSprite(int index) => effectBehaviors[index].EffectIcon;
+
         public string[] GetBehaviorNames()
         {
             List<string> result = new List<string>();
