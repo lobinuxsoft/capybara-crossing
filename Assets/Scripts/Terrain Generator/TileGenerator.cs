@@ -79,7 +79,7 @@ namespace CapybaraCrossing
                 }
                 if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
                 {
-                    renderer.material = tileData.TileObjects[(int)type].material;
+                    renderer.materials = tileData.TileObjects[(int)type].material;
                 }
                 if (currentAmountOfObstacles < maxObstaclePerLine && transform.position.z != 0 && transform.GetChild(i).position.x >= -9 && transform.GetChild(i).position.x <= 10)
                 {
@@ -112,7 +112,7 @@ namespace CapybaraCrossing
                 }
                 if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
                 {
-                    renderer.material = tileData.TileObjects[(int)type].material;
+                    renderer.materials = tileData.TileObjects[(int)type].material;
                 }
                 switch (type)
                 {

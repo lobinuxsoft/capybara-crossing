@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileObjects:
   - mesh: {fileID: -9192915431466503631, guid: a11cf69ecdc342440a9e7507e94acdd6, type: 3}
-    material: {fileID: 2100000, guid: 70e84cae0376b1441b2215ae48a0b83d, type: 2}
-  - mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-    material: {fileID: 2100000, guid: daa63281a2ba2d54baae6c2b90d81600, type: 2}
+    material:
+    - {fileID: 2100000, guid: 70e84cae0376b1441b2215ae48a0b83d, type: 2}
+  - mesh: {fileID: -5781240365698342874, guid: eda4ad1dc5b69654b8e98bc68420cf02, type: 3}
+    material:
+    - {fileID: 2100000, guid: 4ee24e2c04c3fb840b85fb9e245c62b6, type: 2}
+    - {fileID: 2100000, guid: 752274033e1686e4ba8e1c87b68c560d, type: 2}
   - mesh: {fileID: -6042154445682792472, guid: 6429de35e3b826642a7185ccb0a651c9, type: 3}
-    material: {fileID: 2100000, guid: ebf65c03d10174a44a15cff3f271bee4, type: 2}
-  - mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-    material: {fileID: 2100000, guid: 2efa94839c565c54a84bba1e17bf77e5, type: 2}
+    material:
+    - {fileID: 2100000, guid: ebf65c03d10174a44a15cff3f271bee4, type: 2}

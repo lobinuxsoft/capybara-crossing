@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace CapybaraCrossing
@@ -17,6 +18,6 @@ namespace CapybaraCrossing
     public struct TileStruct
     {
         public Mesh mesh;
-        public Material material;
+        public Material[] material;
     }
 }
