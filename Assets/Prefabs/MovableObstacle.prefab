@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8742791898608030238}
   - component: {fileID: 8742791898608030237}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MovableObstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 8742791899051206191}
   - component: {fileID: 8742791899051206190}
   - component: {fileID: 8742791899051206189}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EndPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8742791899603165361}
   - component: {fileID: 8742791899603165362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: InitPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,10 +167,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8742791898608030238}
     m_Modifications:
+    - target: {fileID: 1652861844539767210, guid: 4eac81e9b0331e7488ed78cd19ebdcc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057863531424885372, guid: 4eac81e9b0331e7488ed78cd19ebdcc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998637626123529799, guid: 4eac81e9b0331e7488ed78cd19ebdcc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5891250281244337273, guid: 4eac81e9b0331e7488ed78cd19ebdcc6,
         type: 3}
       propertyPath: m_Name
       value: Auto_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891250281244337273, guid: 4eac81e9b0331e7488ed78cd19ebdcc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5891250281244337273, guid: 4eac81e9b0331e7488ed78cd19ebdcc6,
         type: 3}
@@ -251,6 +271,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479154095880347685, guid: 4eac81e9b0331e7488ed78cd19ebdcc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eac81e9b0331e7488ed78cd19ebdcc6, type: 3}
