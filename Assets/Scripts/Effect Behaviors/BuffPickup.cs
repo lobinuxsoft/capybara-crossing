@@ -14,6 +14,8 @@ namespace CapybaraCrossing
 
         protected int index;
 
+        public event System.Action<GameObject> onPickup;
+
         private void Awake()
         {
             if(SceneManager.GetActiveScene().name == "Gameplay-Single")
@@ -88,7 +90,8 @@ namespace CapybaraCrossing
                 );
 
             Instantiate(explodeFvx, transform.position, transform.rotation);
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            onPickup?.Invoke(this.gameObject);
         }
 
         private void RemoveMultiplayerEffects()
