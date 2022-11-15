@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
 
         if (players.Count <= 0)
         {
+            Time.timeScale = 0;
             uIGameOver.Show();
         }
 

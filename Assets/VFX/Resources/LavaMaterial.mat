@@ -47,7 +47,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EmmisivePower: 2
+    - _EmmisivePower: 5.94
     - _NormalStrength: 5.54
     - _QueueControl: 0
     - _QueueOffset: 0

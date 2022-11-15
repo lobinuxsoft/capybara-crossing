@@ -11,6 +11,7 @@ namespace CapybaraCrossing
         [SerializeField] private int tileWidth = 34;
         [SerializeField] private TileGenerator terrainPref;
         [SerializeField] TileData tileData;
+        [SerializeField] GameObject lava;
 
         private ObjectPool pool;
         private Vector3 currentPosition = Vector3.zero;
@@ -61,6 +62,7 @@ namespace CapybaraCrossing
                     tile.transform.position += new Vector3(0, 0, maxTerrainCount);
                     currentPosition.z++;
                     tile.GetComponent<TileGenerator>().UpdateTileData();
+                    lava.transform.position += Vector3.forward;
                     pool.ReturnToPool(tile, true);
                     yield return new WaitForEndOfFrame();
                 }
@@ -79,6 +81,7 @@ namespace CapybaraCrossing
             tile.transform.position += new Vector3(0, 0, maxTerrainCount);
             currentPosition.z++;
             tile.GetComponent<TileGenerator>().UpdateTileData();
+            lava.transform.position += Vector3.forward;
             pool.ReturnToPool(tile, true);
         }
     }
