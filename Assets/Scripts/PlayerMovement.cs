@@ -20,7 +20,6 @@ namespace CapybaraCrossing
 
         [SerializeField] EffectBehavior effectBehavior;
         EffectBehaviorComponent effectBehaviorComponent;
-        private bool isDead = false;
 
         private bool slowMotion;
 
@@ -44,21 +43,8 @@ namespace CapybaraCrossing
             }
         }
 
-        public bool IsDead
-        {
-            get
-            {
-                return isDead;
-            }
-            set
-            {
-                isDead = value;
-            }
-        }
-
         public static Action<int> OnJump;
         public static Action OnDeath;
-        public static Action OnResurrectNeed;
 
         private void Awake()
         {
@@ -90,26 +76,10 @@ namespace CapybaraCrossing
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.CompareTag("Resurrect") && isDead)
+            if (other.transform.CompareTag("Movable Obstacle"))
             {
-                other.gameObject.SetActive(false);
-                isDead = false;
+                Destroy(gameObject);
             }
-            if (other.transform.CompareTag("Movable Obstacle") && !isDead)
-            {
-                AddDeathState();
-            }
-        }
-
-        public void AddDeathState()
-        {
-            EffectBehavior deathEffect = ScriptableObject.Instantiate(effectBehavior);
-            effectBehaviorComponent = gameObject.AddComponent<EffectBehaviorComponent>();
-            effectBehaviorComponent.Behavior = deathEffect;
-            OnResurrectNeed();
-            UINotificationManager.Instance.ShowMessage(
-                $"A resurrect item has spawned"
-            );
         }
 
         public void JumpToDirection(InputAction.CallbackContext context)

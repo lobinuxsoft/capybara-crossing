@@ -21,7 +21,6 @@ namespace CapybaraCrossing
         {
             InvokeRepeating("SpawnOneTile", 10f, 1f);
 
-            PlayerMovement.OnResurrectNeed += AddResurrectItem;
             PlayerMovement.OnJump += CheckSpawnTerrain;
 
             pool = GetComponent<ObjectPool>();
@@ -46,7 +45,6 @@ namespace CapybaraCrossing
 
         private void OnDestroy()
         {
-            PlayerMovement.OnResurrectNeed -= AddResurrectItem;
             PlayerMovement.OnJump -= CheckSpawnTerrain;
         }
 
@@ -82,11 +80,6 @@ namespace CapybaraCrossing
             currentPosition.z++;
             tile.GetComponent<TileGenerator>().UpdateTileData();
             pool.ReturnToPool(tile, true);
-        }
-
-        private void AddResurrectItem()
-        {
-            TileGenerator.AddSpawnResurrect();
         }
     }
 }
