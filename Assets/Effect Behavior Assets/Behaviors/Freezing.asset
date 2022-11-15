@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectIcon: {fileID: 21300000, guid: 8020950e24c4695498210ceea69f24fd, type: 3}
   interactionAmount: 5
+  effect: {fileID: 4897396681203023112, guid: 7f072bfc3b552d744bb10f01d4a1d8a9, type: 3}
