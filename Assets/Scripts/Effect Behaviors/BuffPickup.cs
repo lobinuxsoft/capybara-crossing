@@ -11,6 +11,7 @@ namespace CapybaraCrossing
         [SerializeField] protected EffectBehaviorList multiplayerEffectBehaviorList;
         [SerializeField] private SpriteRenderer[] spriteRenderers;
         [SerializeField] GameObject explodeFvx;
+        private string name;
 
         protected int index;
 
@@ -40,6 +41,7 @@ namespace CapybaraCrossing
         private void OnEnable()
         {
             SetRandomEffect();
+            name = currentEffectBehaviorList.GetNameByIndex(index);
             for (int i = 0; i < spriteRenderers.Length; i++)
             {
                 spriteRenderers[i].sprite = currentEffectBehaviorList.GetEffectSprite(index);
@@ -97,6 +99,15 @@ namespace CapybaraCrossing
         private void RemoveMultiplayerEffects()
         {
             currentEffectBehaviorList = singleplayerEffectBehaviorList;
+            if (index >= currentEffectBehaviorList.GetBehaviorNames().Length || currentEffectBehaviorList.GetBehaviorNames()[index] != name)
+            {
+                SetRandomEffect();
+                name = currentEffectBehaviorList.GetNameByIndex(index);
+                for (int i = 0; i < spriteRenderers.Length; i++)
+                {
+                    spriteRenderers[i].sprite = currentEffectBehaviorList.GetEffectSprite(index);
+                }
+            }
         }
     }
 }

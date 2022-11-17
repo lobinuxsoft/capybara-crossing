@@ -14,14 +14,12 @@ namespace CapybaraCrossing
 
         public string[] GetBehaviorNames()
         {
-            List<string> result = new List<string>();
+            return effectBehaviors.ConvertAll(x => x.name).ToArray();
+        }
 
-            foreach (var item in effectBehaviors)
-            {
-                result.Add(item.name);
-            }
-
-            return result.ToArray();
+        public string GetNameByIndex(int index)
+        {
+            return effectBehaviors[index].name;
         }
 
         public List<EffectBehavior> GetEffectList()
