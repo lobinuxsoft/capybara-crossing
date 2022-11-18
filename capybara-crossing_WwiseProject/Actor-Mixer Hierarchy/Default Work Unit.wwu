@@ -1,6 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C1C3F980-A60A-496C-98F1-469544D21D40}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{C1C3F980-A60A-496C-98F1-469544D21D40}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C1C3F980-A60A-496C-98F1-469544D21D40}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Car" ID="{53BCC83F-1C5D-44E5-9335-2871B1C0E8C8}" ShortID="487558530">
+					<ChildrenList>
+						<Sound Name="Car_Crash" ID="{3D6DA445-F1CB-4587-BA06-7D1BBCDA3C12}" ShortID="110051529">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{56005ED2-2EDB-4D30-8271-382F70ECD835}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="300"/>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Car Crash" ID="{769A992E-ADCD-49C2-8AF8-07284B3ABA36}">
+									<Language>SFX</Language>
+									<AudioFile>Car Crash.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="81961824"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Car Crash" ID="{769A992E-ADCD-49C2-8AF8-07284B3ABA36}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Car_Engine" ID="{A2E93033-39CF-4A8C-A781-4B50518649E0}" ShortID="1038741722">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>29</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Car_Distance" ID="{2038A591-734D-4DED-831A-E34BAA578DFC}" WorkUnitID="{2CC06C99-F25F-408D-A576-5E4F5C94E874}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Car_Loop" ID="{0DEB0E08-782F-4741-A991-808C2A6D9756}">
+									<Language>SFX</Language>
+									<AudioFile>Car_Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="377828086"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Car_Loop" ID="{0DEB0E08-782F-4741-A991-808C2A6D9756}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Honk" ID="{AEFC8724-8B23-4447-818B-F208F50320F3}" ShortID="862623225">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Honk_1" ID="{CB5B8D7E-491F-4329-BC65-73674670D77A}" ShortID="180200475">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Honk_1" ID="{F48DB91F-6B6A-4A42-9167-A5AEC5C6B9D8}">
+											<Language>SFX</Language>
+											<AudioFile>Honk_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="413848803"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Honk_1" ID="{F48DB91F-6B6A-4A42-9167-A5AEC5C6B9D8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Honk_2" ID="{B0EBD6BE-C66C-4348-9419-55818A3A3285}" ShortID="649634089">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Honk_2" ID="{41F8D425-C569-423F-8BF6-154079037EA3}">
+											<Language>SFX</Language>
+											<AudioFile>Honk_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="580263710"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Honk_2" ID="{41F8D425-C569-423F-8BF6-154079037EA3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Honk_3" ID="{1301C041-A338-4CE8-A033-479EDEFADA70}" ShortID="623228521">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Honk_3" ID="{8B72650E-03A7-45A9-8885-D27D5151B0A0}">
+											<Language>SFX</Language>
+											<AudioFile>Honk_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="632710624"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Honk_3" ID="{8B72650E-03A7-45A9-8885-D27D5151B0A0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Honk_4" ID="{A1E70BE7-3CF8-480C-8C63-B561BC8FE5C0}" ShortID="1042335299">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Honk_4" ID="{B20E54C4-E2C9-494C-B8E2-513A2EBF45D0}">
+											<Language>SFX</Language>
+											<AudioFile>Honk_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="537660211"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Honk_4" ID="{B20E54C4-E2C9-494C-B8E2-513A2EBF45D0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Power_Ups" ID="{2259DC36-F539-4514-958F-8441098B8220}" ShortID="573634611">
+					<ChildrenList>
+						<Sound Name="Freeze" ID="{5E1D488B-210A-46E0-9C72-489B6DF67DAB}" ShortID="616097774">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Freeze" ID="{78C31218-6A90-4B96-A1D2-4152595778F2}">
+									<Language>SFX</Language>
+									<AudioFile>Freeze.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="792070828"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Freeze" ID="{78C31218-6A90-4B96-A1D2-4152595778F2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Slow_Mo" ID="{0AFDFFA1-DC6F-46DE-A539-5289D7806CB9}" ShortID="714778980">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>26</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Slow_Mo" ID="{88106517-0DF9-4B7E-8632-522CB6BE3B21}">
+									<Language>SFX</Language>
+									<AudioFile>Slow_Mo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="240289798"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Slow_Mo" ID="{88106517-0DF9-4B7E-8632-522CB6BE3B21}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
