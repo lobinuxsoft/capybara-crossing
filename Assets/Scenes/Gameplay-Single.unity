@@ -609,6 +609,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8847756907753886500}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &145334250 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3229745172337827157, guid: a0784539ad64c9f42ab19d3a051fcb5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8234879857641411242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &156335884
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +723,7 @@ RectTransform:
   m_Children:
   - {fileID: 1506031360}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -817,7 +823,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.05
+  m_fontSize: 81.1
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1077,12 +1083,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   m_LocalRotation: {x: 0.34727675, y: -0.21462883, z: 0.08198093, w: 0.9091823}
-  m_LocalPosition: {x: 3, y: 12.15, z: -10}
+  m_LocalPosition: {x: 5, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -1238,14 +1244,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &356504066 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2896185728374899401, guid: a0784539ad64c9f42ab19d3a051fcb5e,
-    type: 3}
-  m_PrefabInstance: {fileID: 8234879857641411242}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1339,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
@@ -1531,7 +1531,7 @@ RectTransform:
   m_Children:
   - {fileID: 1889238332}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scores:
   - score: {fileID: 11400000, guid: 4da33228f8cce7c4eb6a934ac7e5c3a7, type: 2}
-    player: {fileID: 1718377043}
+    player: {fileID: 145334250}
     textMesh: {fileID: 908768701}
 --- !u!1 &554136739
 GameObject:
@@ -1775,7 +1775,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &908768699
 PrefabInstance:
@@ -2019,7 +2019,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72.25
+  m_fontSize: 146.35
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2134,7 +2134,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 207.8
+  m_fontSize: 300
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2233,7 +2233,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1084663568
 PrefabInstance:
@@ -2835,7 +2835,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 83.1
+  m_fontSize: 168.3
   m_fontSizeBase: 253.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2930,7 +2930,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1502742594
 AudioListener:
@@ -3363,26 +3363,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1718377043 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2896185728374899404, guid: a0784539ad64c9f42ab19d3a051fcb5e,
-    type: 3}
-  m_PrefabInstance: {fileID: 8234879857641411242}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1718377044
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356504066}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 741eccf7c71c1924f96a71a78f6bc54c, type: 3}
 --- !u!1 &1724067616
 GameObject:
   m_ObjectHideFlags: 3
@@ -3525,7 +3505,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862682738
 GameObject:
@@ -3713,8 +3693,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1718377043}
-  m_Follow: {fileID: 1718377043}
+  m_LookAt: {fileID: 145334250}
+  m_Follow: {fileID: 145334250}
   m_Lens:
     FieldOfView: 28.072487
     OrthographicSize: 5
@@ -3741,13 +3721,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959291052}
   m_LocalRotation: {x: 0.34727675, y: -0.21462883, z: 0.08198093, w: 0.9091823}
-  m_LocalPosition: {x: 3, y: 12.15, z: -10}
+  m_LocalPosition: {x: 5, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1724067617}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1987214229
 GameObject:
@@ -4219,7 +4199,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2135873148
 MonoBehaviour:

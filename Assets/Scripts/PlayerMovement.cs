@@ -114,7 +114,7 @@ namespace CapybaraCrossing
             return !Physics.SphereCast(ray, .4f, distance, obstacleMask);
         }
 
-        IEnumerator JumpRoutine(Vector3 destination, float duration)
+        public IEnumerator JumpRoutine(Vector3 destination, float duration, Action endAction = null)
         {
             float lerp = 0;
             float destHeight = destination.y;
@@ -132,6 +132,7 @@ namespace CapybaraCrossing
             }
 
             rb.MovePosition(destination);
+            endAction?.Invoke();
         }
     }
 }

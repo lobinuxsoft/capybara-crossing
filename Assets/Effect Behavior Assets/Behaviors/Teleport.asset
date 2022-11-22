@@ -16,3 +16,5 @@ MonoBehaviour:
   minDistance: 4
   maxDistance: 10
   teleportDirection: {x: 0, y: 0, z: 1}
+  effectPref: {fileID: 4135143856476859008, guid: d968abf1424682747b0cd6b46901ba4c,
+    type: 3}
