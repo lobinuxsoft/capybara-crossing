@@ -18,7 +18,6 @@ namespace CapybaraCrossing
 
         private static int lastPowerUpPositionZ = 0;
 
-
         public List<GameObject> Obstacles
         {
             get => obstacles;
@@ -41,7 +40,7 @@ namespace CapybaraCrossing
 
         private void Awake()
         {
-            TerrainGenerator.OnTileChange += RemoveObstacles;   
+            TerrainGenerator.OnTileChange += RemoveObstacles;
         }
 
         private void OnDestroy()
@@ -76,7 +75,7 @@ namespace CapybaraCrossing
                 }
                 if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
                 {
-                    renderer.material = tileData.TileObjects[(int)type].material;
+                    renderer.materials = tileData.TileObjects[(int)type].material;
                 }
                 if (currentAmountOfObstacles < maxObstaclePerLine && transform.position.z != 0 && transform.GetChild(i).position.x >= -9 && transform.GetChild(i).position.x <= 10)
                 {
@@ -97,9 +96,9 @@ namespace CapybaraCrossing
         {
             Random.InitState(System.DateTime.Now.Millisecond);
             type = (TypeOfTile)Random.Range(0,tileData.TileObjects.Length);
-            int maxRockPerLine = 3;
+            int maxRockPerLine = 2;
             int currentAmountOfRock = 0;
-            int maxDeepWaterPerLine = 12;
+            int maxDeepWaterPerLine = 6;
             int currentAmountOfDeepWaters = 0;
             for (int i = 0; i < TileWidth; i++)
             { 
@@ -109,12 +108,12 @@ namespace CapybaraCrossing
                 }
                 if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
                 {
-                    renderer.material = tileData.TileObjects[(int)type].material;
+                    renderer.materials = tileData.TileObjects[(int)type].material;
                 }
                 switch (type)
                 {
                     case TypeOfTile.GRASS:
-                        if(transform.position.z - lastPowerUpPositionZ >= 10 && powerUp == null && transform.GetChild(i).position.x >= -9 && transform.GetChild(i).position.x <= 10)
+                        if (transform.position.z - lastPowerUpPositionZ >= 10 && powerUp == null && transform.GetChild(i).position.x >= -9 && transform.GetChild(i).position.x <= 10)
                         {
                             if(Random.Range(0, 5) == 1)
                             {
@@ -149,18 +148,18 @@ namespace CapybaraCrossing
                                 if (Random.Range(0, 2) == 1)
                                 {
                                     GameObject deepWater = transform.GetChild(i).gameObject;
-                                    deepWater.transform.GetComponent<Collider>().enabled = false;
+                                    deepWater.transform.GetComponent<Collider>().isTrigger = true;
                                     deepWaters.Add(deepWater);
                                     currentAmountOfDeepWaters++;
                                 }
                                 else
                                 {
-                                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.5f, transform.position.z), true));
+                                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
                                 }
                             }
                             else
                             {
-                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.5f, transform.position.z), true));
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
                             }
                         }
                         break;
@@ -203,7 +202,7 @@ namespace CapybaraCrossing
                         ObstacleSpawnerManager.Instance.DespawnObstacle("CamalotePool", obstacles);
                         foreach (GameObject deepWater in deepWaters)
                         {
-                            deepWater.transform.GetComponent<Collider>().enabled = true;
+                            deepWater.transform.GetComponent<Collider>().isTrigger = false;
                         }
                         break;
                     case TypeOfTile.TRAIN:
@@ -211,6 +210,5 @@ namespace CapybaraCrossing
                 }
             } 
         }
-
     }
 }

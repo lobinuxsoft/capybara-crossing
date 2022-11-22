@@ -18,6 +18,9 @@ namespace CapybaraCrossing
         GroundDetector groundDetector;
         Vector3 viewDir = Vector3.forward;
 
+        [SerializeField] EffectBehavior effectBehavior;
+        EffectBehaviorComponent effectBehaviorComponent;
+
         private bool slowMotion;
 
         public InputActionReference MoveAction
@@ -71,11 +74,11 @@ namespace CapybaraCrossing
             moveAction.action.performed -= JumpToDirection;
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if(collision.transform.CompareTag("Movable Obstacle"))
+            if (other.transform.CompareTag("Movable Obstacle"))
             {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
 
@@ -96,7 +99,7 @@ namespace CapybaraCrossing
             destination.x = Mathf.RoundToInt(destination.x);
             destination.z = Mathf.RoundToInt(destination.z);
 
-            if(CheckCanJump(rb.position, (destination - rb.position).normalized, 1f) && destination.x >= -9 && destination.x <= 10)
+            if (CheckCanJump(rb.position, (destination - rb.position).normalized, 1f) && destination.x >= -9 && destination.x <= 10)
             {
                 StartCoroutine(JumpRoutine(destination, jumpDuration));
 
@@ -111,7 +114,7 @@ namespace CapybaraCrossing
             return !Physics.SphereCast(ray, .4f, distance, obstacleMask);
         }
 
-        IEnumerator JumpRoutine(Vector3 destination, float duration)
+        public IEnumerator JumpRoutine(Vector3 destination, float duration, Action endAction = null)
         {
             float lerp = 0;
             float destHeight = destination.y;
@@ -129,6 +132,7 @@ namespace CapybaraCrossing
             }
 
             rb.MovePosition(destination);
+            endAction?.Invoke();
         }
     }
 }

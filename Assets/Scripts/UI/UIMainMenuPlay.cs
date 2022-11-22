@@ -53,6 +53,15 @@ public class UIMainMenuPlay : MonoBehaviour
     {
         string nextScene = playersCount > 1 ? multyPlayerSceneName : singlePlayerSceneName;
 
+        if(playersCount == 1 && p1Hold.IsSelected)
+        {
+            PlayerPrefs.SetInt("player", 1);
+        }
+        else if (playersCount == 1 && p2Hold.IsSelected)
+        {
+            PlayerPrefs.SetInt("player", 2);
+        }
+
         TimelineUITransition.Instance.FadeStart(fadeInGradient, fadeOutGradient, 1.25f, () =>
         {
             SceneManager.LoadScene(nextScene);

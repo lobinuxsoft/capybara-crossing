@@ -5,7 +5,7 @@
   <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
   <CreatedPicker>true</CreatedPicker>
   <CreateWwiseGlobal>true</CreateWwiseGlobal>
-  <CreateWwiseListener>true</CreateWwiseListener>
+  <CreateWwiseListener>false</CreateWwiseListener>
   <ObjectReferenceAutoCleanup>true</ObjectReferenceAutoCleanup>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>

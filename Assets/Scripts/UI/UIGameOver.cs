@@ -88,7 +88,7 @@ public class UIGameOver : MonoBehaviour
     private void PlayAgain()
     {
         popup.Hide();
-
+        Time.timeScale = 1;
         TimelineUITransition.Instance.FadeStart(fadeInGradient, fadeOutGradient, 1.25f, () =>
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -98,7 +98,7 @@ public class UIGameOver : MonoBehaviour
     private void ToLeaderboard()
     {
         popup.Hide();
-
+        Time.timeScale = 1;
         TimelineUITransition.Instance.FadeStart(fadeInGradient, fadeOutGradient, 1.25f, () =>
         {
             SceneManager.LoadScene(leaderboardSceneName);
@@ -108,7 +108,7 @@ public class UIGameOver : MonoBehaviour
     private void ToMainMenu()
     {
         popup.Hide();
-
+        Time.timeScale = 1;
         TimelineUITransition.Instance.FadeStart(fadeInGradient, fadeOutGradient, 1.25f, () =>
         {
             SceneManager.LoadScene(mainmenuSceneName);

@@ -6,7 +6,18 @@ using UnityEngine.UI;
 public class UISelectionHold : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] float fillSpeed = 1;
+    [SerializeField] Sprite normalState;
+    [SerializeField] Sprite selectedState;
+    [SerializeField] Image avatar;
     [SerializeField] Image fillImage;
+
+    private bool isSelected;
+
+
+    public bool IsSelected
+    {
+        get { return isSelected; }
+    }
 
     bool isHold;
 
@@ -14,7 +25,9 @@ public class UISelectionHold : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     private void Update()
     {
-        if(!isHold)
+        avatar.sprite = normalState;
+
+        if (!isHold)
         {
             fillImage.fillAmount -= Time.deltaTime * fillSpeed;
         }
@@ -25,6 +38,9 @@ public class UISelectionHold : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             if (fillImage.fillAmount >= 1f)
             {
                 onSelected?.Invoke();
+
+                isSelected = true;
+                avatar.sprite = selectedState;
                 enabled = false;
             }
         }
