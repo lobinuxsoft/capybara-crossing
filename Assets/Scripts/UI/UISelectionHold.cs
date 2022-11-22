@@ -11,6 +11,14 @@ public class UISelectionHold : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     [SerializeField] Image avatar;
     [SerializeField] Image fillImage;
 
+    private bool isSelected;
+
+
+    public bool IsSelected
+    {
+        get { return isSelected; }
+    }
+
     bool isHold;
 
     public UnityEvent onSelected;
@@ -31,6 +39,7 @@ public class UISelectionHold : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             {
                 onSelected?.Invoke();
 
+                isSelected = true;
                 avatar.sprite = selectedState;
                 enabled = false;
             }
