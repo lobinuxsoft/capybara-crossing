@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0C943A79-1ECB-4E5D-91E4-56A03326AF56}" SchemaVersion="103">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{0C943A79-1ECB-4E5D-91E4-56A03326AF56}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0C943A79-1ECB-4E5D-91E4-56A03326AF56}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{001C197C-59E7-4B4C-AFB3-95D509A9EF03}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Menu_Play" ID="{91AC002D-D627-42FD-9651-FCE1E81B1017}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Freeze" ID="{67931160-43D7-442D-928A-A41F120FD200}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Resurrection" ID="{F2B763F7-07E9-450D-9D96-6B5222FD9990}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Honk" ID="{A0C841EE-C8F2-452E-B884-E431A71EE845}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Menu_Hold_to_Play" ID="{80100D87-1D99-453A-9D61-3C5CA936BF7D}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Car_Crash" ID="{36B9A495-292E-46D3-99B9-F47BE328A7AD}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Menu_Back_Click" ID="{0F69C996-03B8-488D-B890-F27B392FA62B}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Car_Engine" ID="{9148AF35-2553-48F4-BD11-A797DD14E0B9}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Menu_Hold_to_Play_Reverse" ID="{54355EE0-7582-498D-AD03-D5C7253C2C69}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Teleport" ID="{5BAC35E5-8E25-4AD0-AAA3-A8FAF18D801A}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Menu_Click" ID="{C760A4CA-511C-4DBE-AC9D-F033152A0DEF}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Slow_Mo" ID="{B697FA5C-9F68-4EEE-AD73-7527BA31E07E}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Menu_Hover_Click" ID="{C934CA8A-1322-4FB7-849A-36A23D480C6A}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>
