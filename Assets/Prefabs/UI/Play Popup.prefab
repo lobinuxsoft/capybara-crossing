@@ -293,6 +293,16 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0af8f71d52661fc4cbbc70e8dc7e3244,
+      type: 2}
+  backSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b83a2635af31c0048a0c83d75d6377b2,
+      type: 2}
 --- !u!1001 &349368063230848625
 PrefabInstance:
   m_ObjectHideFlags: 0

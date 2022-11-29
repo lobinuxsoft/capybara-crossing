@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Honk" ID="{A0C841EE-C8F2-452E-B884-E431A71EE845}">
+					<ChildrenList>
+						<Action Name="" ID="{48CF6AB9-5FA7-4374-8557-4E278E2BAB28}" ShortID="701934202">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Honk" ID="{AEFC8724-8B23-4447-818B-F208F50320F3}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Car_Crash" ID="{36B9A495-292E-46D3-99B9-F47BE328A7AD}">
+					<ChildrenList>
+						<Action Name="" ID="{79BC8DEB-47F6-4C54-881F-93F510B423E2}" ShortID="361235348">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Car_Crash" ID="{3D6DA445-F1CB-4587-BA06-7D1BBCDA3C12}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Car_Engine" ID="{9148AF35-2553-48F4-BD11-A797DD14E0B9}">
+					<ChildrenList>
+						<Action Name="" ID="{8D732364-CA02-469C-A1B6-A02D12525335}" ShortID="241514238">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Car_Engine" ID="{A2E93033-39CF-4A8C-A781-4B50518649E0}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Freeze" ID="{67931160-43D7-442D-928A-A41F120FD200}">
+					<ChildrenList>
+						<Action Name="" ID="{D90FAEE9-798A-4FA0-A4CB-5DBBE45BC862}" ShortID="1055635101">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Freeze" ID="{5E1D488B-210A-46E0-9C72-489B6DF67DAB}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Slow_Mo" ID="{B697FA5C-9F68-4EEE-AD73-7527BA31E07E}">
+					<ChildrenList>
+						<Action Name="" ID="{81CBF876-3909-48D7-8C33-246EFA2BF05F}" ShortID="1038147864">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slow_Mo" ID="{0AFDFFA1-DC6F-46DE-A539-5289D7806CB9}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Back_Click" ID="{0F69C996-03B8-488D-B890-F27B392FA62B}">
+					<ChildrenList>
+						<Action Name="" ID="{88EAF766-4367-4E30-83C8-406332DDC6DF}" ShortID="524352642">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Back Click" ID="{E667E2B1-6F34-4473-8F5B-D6BDE971AC73}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Click" ID="{C760A4CA-511C-4DBE-AC9D-F033152A0DEF}">
+					<ChildrenList>
+						<Action Name="" ID="{1D3E7CFF-65A5-4BE2-BD06-FF95D5A4FA20}" ShortID="899843266">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Click" ID="{0E17B4CF-0A33-4AF6-9B09-B787870439FD}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Hold_to_Play" ID="{80100D87-1D99-453A-9D61-3C5CA936BF7D}">
+					<ChildrenList>
+						<Action Name="" ID="{348BDFFE-7FDA-4BC0-A0A9-63668CDD90C5}" ShortID="898878499">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Hold to Play" ID="{24C51617-90F4-41C9-8AC3-EB6B11618C6C}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Hold_to_Play_Reverse" ID="{54355EE0-7582-498D-AD03-D5C7253C2C69}">
+					<ChildrenList>
+						<Action Name="" ID="{AF9589E4-AAD6-4D65-A93F-0C198503FC48}" ShortID="1038828181">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Hold to Play Reverse" ID="{2CF39009-2369-43BA-A689-D099181E6B9A}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Hover_Click" ID="{C934CA8A-1322-4FB7-849A-36A23D480C6A}">
+					<ChildrenList>
+						<Action Name="" ID="{F32EB808-B47B-4003-9544-FC3282046205}" ShortID="430000762">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Hover Click" ID="{9FAF84B9-0F09-42A5-BEBA-096AC9D1C90E}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Play" ID="{91AC002D-D627-42FD-9651-FCE1E81B1017}">
+					<ChildrenList>
+						<Action Name="" ID="{17EA307D-D4A2-4DBA-B4A1-36CE89A419D0}" ShortID="1027743959">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Play" ID="{C85DE4F1-D7DF-43BD-BAC1-66CB38BCF2D2}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Resurrection" ID="{F2B763F7-07E9-450D-9D96-6B5222FD9990}">
+					<ChildrenList>
+						<Action Name="" ID="{281B36A4-1856-4A66-83EC-76D591C99C69}" ShortID="768852629">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Resurrection" ID="{8DE8A988-0B80-47D9-82FC-DBB6161B8171}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Teleport" ID="{5BAC35E5-8E25-4AD0-AAA3-A8FAF18D801A}">
+					<ChildrenList>
+						<Action Name="" ID="{2C121635-D403-432F-A21D-C4E73D3F0F22}" ShortID="304036397">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Teleport" ID="{CE3D00D9-4266-4C3B-9B31-8A1AD601D846}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

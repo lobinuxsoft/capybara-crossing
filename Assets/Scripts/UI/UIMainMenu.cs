@@ -20,10 +20,18 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] UIPopup creditsPopup;
     [SerializeField] UIPopup settingsPopup;
 
+    [Space(10)]
+    [Header("Wwise settings")]
+    [SerializeField] AK.Wwise.Bank bank;
+    [SerializeField] AK.Wwise.Event playSfx;
+    [SerializeField] AK.Wwise.Event clickSfx;
+
     UIPopup popup;
 
     private void Awake()
     {
+        bank.Load();
+
         popup = GetComponent<UIPopup>();
 
         playButton.onClick.AddListener(ToGamePlay);
@@ -54,27 +62,36 @@ public class UIMainMenu : MonoBehaviour
 
     private void ToGamePlay()
     {
+        playSfx.Post(this.gameObject);
         popup.Hide();
         playPopup.Show();
     }
 
     private void ToCredits()
     {
+        clickSfx.Post(this.gameObject);
         popup.Hide();
         creditsPopup.Show();
     }
 
     private void ToSettings()
     {
+        clickSfx.Post(this.gameObject);
         popup.Hide();
         settingsPopup.Show();
     }
 
-    private void ExitGame() => popup.Hide(null, () => { Application.Quit(); });
+    private void ExitGame()
+    {
+        clickSfx.Post(this.gameObject);
+        popup.Hide(null, () => { Application.Quit(); });
+    }
 
 
     private void ShowAchievements()
     {
+        clickSfx.Post(this.gameObject);
+
         #if UNITY_ANDROID
         PlayGamesPlatform.Instance.ShowAchievementsUI();
         #endif
@@ -82,6 +99,8 @@ public class UIMainMenu : MonoBehaviour
 
     private void ShowLeaderboard()
     {
+        clickSfx.Post(this.gameObject);
+
         #if UNITY_ANDROID
         PlayGamesPlatform.Instance.ShowLeaderboardUI();
         #endif

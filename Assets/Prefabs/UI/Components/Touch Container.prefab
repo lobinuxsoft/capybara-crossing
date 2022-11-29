@@ -96,6 +96,16 @@ MonoBehaviour:
   selectedState: {fileID: 21300000, guid: 85efcff4e28cabe4f8ddc71a274934ed, type: 3}
   avatar: {fileID: 5718754197727768034}
   fillImage: {fileID: 3362350637997812089}
+  holdSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 32b0735686cc94145945600e9a80701a,
+      type: 2}
+  releaseSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 63141a68b8731b6458b90114e49a0703,
+      type: 2}
   onSelected:
     m_PersistentCalls:
       m_Calls: []

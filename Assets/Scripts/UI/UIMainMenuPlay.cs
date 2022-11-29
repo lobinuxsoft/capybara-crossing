@@ -24,6 +24,11 @@ public class UIMainMenuPlay : MonoBehaviour
     [SerializeField] Gradient fadeInGradient;
     [SerializeField] Gradient fadeOutGradient;
 
+    [Space(10)]
+    [Header("Wwise Settings")]
+    [SerializeField] AK.Wwise.Event playSfx;
+    [SerializeField] AK.Wwise.Event backSfx;
+
     int playersCount = 0;
     UIPopup popup;
 
@@ -51,6 +56,8 @@ public class UIMainMenuPlay : MonoBehaviour
 
     private void ToGameplay()
     {
+        playSfx.Post(this.gameObject);
+
         string nextScene = playersCount > 1 ? multyPlayerSceneName : singlePlayerSceneName;
 
         if(playersCount == 1 && p1Hold.IsSelected)
@@ -70,6 +77,7 @@ public class UIMainMenuPlay : MonoBehaviour
 
     private void BackToMenu()
     {
+        backSfx.Post(this.gameObject);
         popup.Hide(null, ResetAll);
         mainmenuPopup.Show();
     }
