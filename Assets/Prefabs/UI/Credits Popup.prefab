@@ -268,6 +268,21 @@ MonoBehaviour:
     people:
     - name: M. Paula Barbalace
       url: 
+  bank:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b06056119de250145aebca8273161d2a,
+      type: 2}
+  backSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b83a2635af31c0048a0c83d75d6377b2,
+      type: 2}
+  clickSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6770d2ffa1bd4dc4a91c563c77683b01,
+      type: 2}
 --- !u!95 &4711796541734385402
 Animator:
   serializedVersion: 4
@@ -873,7 +888,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

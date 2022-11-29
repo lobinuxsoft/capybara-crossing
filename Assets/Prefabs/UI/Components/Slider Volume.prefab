@@ -123,9 +123,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8131750167460050606}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -446,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 3173187330725935267, guid: 445361cc1c5db0641a8de35830f49cf3,
         type: 3}
       propertyPath: m_fontSize
-      value: 120
+      value: 37.35
       objectReference: {fileID: 0}
     - target: {fileID: 3173187330725935267, guid: 445361cc1c5db0641a8de35830f49cf3,
         type: 3}

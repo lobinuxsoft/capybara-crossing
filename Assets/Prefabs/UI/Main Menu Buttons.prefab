@@ -133,6 +133,21 @@ MonoBehaviour:
   playPopup: {fileID: 0}
   creditsPopup: {fileID: 0}
   settingsPopup: {fileID: 0}
+  bank:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b06056119de250145aebca8273161d2a,
+      type: 2}
+  playSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0af8f71d52661fc4cbbc70e8dc7e3244,
+      type: 2}
+  clickSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6770d2ffa1bd4dc4a91c563c77683b01,
+      type: 2}
 --- !u!114 &7607698071045757751
 MonoBehaviour:
   m_ObjectHideFlags: 0

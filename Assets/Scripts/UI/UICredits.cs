@@ -16,6 +16,11 @@ public class UICredits : MonoBehaviour
     [Header("List of developers")]
     [SerializeField] List<Category> categories = new List<Category>();
 
+    [Space(10)]
+    [Header("Wwise Settings")]
+    [SerializeField] AK.Wwise.Event backSfx;
+    [SerializeField] AK.Wwise.Event clickSfx;
+
     UIPopup popup;
 
     private void Awake()
@@ -28,6 +33,7 @@ public class UICredits : MonoBehaviour
 
     private void ToMainMenu()
     {
+        backSfx.Post(this.gameObject);
         popup.Hide();
         mainMenuPopup.Show();
     }
@@ -51,8 +57,11 @@ public class UICredits : MonoBehaviour
         }
     }
 
-    private void OpenUrl(string url) => Application.OpenURL(url);
-
+    private void OpenUrl(string url)
+    {
+        clickSfx.Post(this.gameObject);
+        Application.OpenURL(url);
+    }
 }
 
 [System.Serializable]

@@ -1427,12 +1427,12 @@ PrefabInstance:
     - target: {fileID: 4711796542393396941, guid: 63f5907b55a21af46a5edadc10026d2b,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4711796542393396941, guid: 63f5907b55a21af46a5edadc10026d2b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 4711796542665008039, guid: 63f5907b55a21af46a5edadc10026d2b,
         type: 3}
@@ -1458,9 +1458,30 @@ PrefabInstance:
       propertyPath: mainmenuPopup
       value: 
       objectReference: {fileID: 1569730493}
+    - target: {fileID: 1356154642510318356, guid: dcbaafdadf1b2b746bf6079553987bec,
+        type: 3}
+      propertyPath: sfxBus.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ec2d9546278dd134ca23f581a1128a49,
+        type: 2}
+    - target: {fileID: 1409867541305928108, guid: dcbaafdadf1b2b746bf6079553987bec,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1409867541305928108, guid: dcbaafdadf1b2b746bf6079553987bec,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409867541305928108, guid: dcbaafdadf1b2b746bf6079553987bec,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492504049150826721, guid: dcbaafdadf1b2b746bf6079553987bec,
+        type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492504049150826721, guid: dcbaafdadf1b2b746bf6079553987bec,
@@ -1468,10 +1489,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1492504049150826721, guid: dcbaafdadf1b2b746bf6079553987bec,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6849715566650022171, guid: dcbaafdadf1b2b746bf6079553987bec,
         type: 3}
       propertyPath: m_Name
       value: Settings Popup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095921690796537972, guid: dcbaafdadf1b2b746bf6079553987bec,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8095921690796537972, guid: dcbaafdadf1b2b746bf6079553987bec,
         type: 3}
@@ -1581,6 +1612,11 @@ PrefabInstance:
     - target: {fileID: 8514628824613321084, guid: dcbaafdadf1b2b746bf6079553987bec,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609992343981754681, guid: dcbaafdadf1b2b746bf6079553987bec,
+        type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8609992343981754681, guid: dcbaafdadf1b2b746bf6079553987bec,

@@ -11,8 +11,12 @@ public class UISelectionHold : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     [SerializeField] Image avatar;
     [SerializeField] Image fillImage;
 
-    private bool isSelected;
+    [Space(10)]
+    [Header("Wwise Settings")]
+    [SerializeField] AK.Wwise.Event holdSfx;
+    [SerializeField] AK.Wwise.Event releaseSfx;
 
+    private bool isSelected;
 
     public bool IsSelected
     {
@@ -46,9 +50,17 @@ public class UISelectionHold : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData) => isHold = true;
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        holdSfx.Post(this.gameObject);
+        isHold = true;
+    }
 
-    public void OnPointerUp(PointerEventData eventData) => isHold = false;
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        releaseSfx.Post(this.gameObject);
+        isHold = false;
+    }
 
     public void ResetAll()
     {
