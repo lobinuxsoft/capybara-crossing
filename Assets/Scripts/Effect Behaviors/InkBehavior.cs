@@ -9,6 +9,8 @@ namespace CapybaraCrossing
     [CreateAssetMenu(menuName = "Effect Behavior/ Ink Behavior")]
     public class InkBehavior : EffectBehavior
     {
+        [Space(10)]
+        [Header("This effect settings")]
         [Tooltip("Effect duration in seconds")]
         [SerializeField] float effectDuration = 5;
 
@@ -17,6 +19,8 @@ namespace CapybaraCrossing
 
         public override void OnInit(EffectBehaviorComponent behaviorComponent)
         {
+            effectSfx.Post(behaviorComponent.gameObject);
+
             volumes = FindObjectsOfType<Volume>()
                             .Where(x => x.transform.parent.gameObject.GetHashCode() != behaviorComponent.gameObject.GetHashCode()).ToArray();
 
