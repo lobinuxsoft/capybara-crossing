@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Movable Obstacle
+  - Resurrect
   layers:
   - Default
   - TransparentFX
@@ -11,11 +13,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - P1 Cam
+  - P2 Cam
+  - Static Obstacle
+  - PowerUp
+  - Dynamic Obstacle
   - 
   - 
   - 

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7ff8375823f8448a97e99c6781695d, type: 3}
+  m_Name: C760A4CA-511C-4DBE-AC9D-F033152A0DEF
+  m_EditorClassIdentifier: 
+  objectName: Play_Menu_Click
+  id: 1357778998
+  guid: C760A4CA-511C-4DBE-AC9D-F033152A0DEF

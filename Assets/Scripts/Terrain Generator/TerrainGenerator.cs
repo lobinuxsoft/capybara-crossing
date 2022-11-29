@@ -1,61 +1,88 @@
+using System.Collections;
 using UnityEngine;
+using System;
 
-[RequireComponent(typeof(ObjectPool))]
-public class TerrainGenerator : MonoBehaviour
+namespace CapybaraCrossing
 {
-    [SerializeField] private int maxTerrainCount;
-    [SerializeField] private int tileWidth = 20;
-    [SerializeField] private TileGenerator terrainPref;
-    [SerializeField] TileData tileData;
-
-    private ObjectPool pool;
-    private Vector3 currentPosition = Vector3.zero;
-
-    private void Start()
+    [RequireComponent(typeof(ObjectPool))]
+    public class TerrainGenerator : MonoBehaviour
     {
-        PlayerMovement.OnJump += CheckSpawnTerrain;
+        [SerializeField] private int maxTerrainCount;
+        [SerializeField] private int tileWidth = 34;
+        [SerializeField] private TileGenerator terrainPref;
+        [SerializeField] TileData tileData;
+        [SerializeField] GameObject lava;
 
-        pool = GetComponent<ObjectPool>();
-        pool.InitPool(terrainPref.gameObject, maxTerrainCount);
+        private ObjectPool pool;
+        private Vector3 currentPosition = Vector3.zero;
 
-        for (int i = 0; i < pool.Size; i++)
+        public static Action<GameObject> OnTileChange;
+
+        private void Start()
         {
-            GameObject temp = pool.GetFromPool();
-            temp.transform.localPosition = currentPosition;
+            InvokeRepeating("SpawnOneTile", 10f, 1f);
 
-            if(temp.TryGetComponent(out TileGenerator tileGenerator))
+            PlayerMovement.OnJump += CheckSpawnTerrain;
+
+            pool = GetComponent<ObjectPool>();
+            pool.InitPool(terrainPref.gameObject, maxTerrainCount);
+
+            for (int i = 0; i < pool.Size; i++)
             {
-                tileGenerator.TileWidth = tileWidth;
-                tileGenerator.TileData = tileData;
-                StartCoroutine(tileGenerator.GenerateTile());
+                GameObject temp = pool.GetFromPool();
+                temp.transform.localPosition = currentPosition;
+
+                if (temp.TryGetComponent(out TileGenerator tileGenerator))
+                {
+                    tileGenerator.TileWidth = tileWidth;
+                    tileGenerator.GenerateTile();
+                    tileGenerator.TileData = tileData;
+                    tileGenerator.UpdateFirstTileData();
+                }
+                pool.ReturnToPool(temp, true);
+                currentPosition.z++;
             }
+        }
 
-            pool.ReturnToPool(temp, true);
+        private void OnDestroy()
+        {
+            PlayerMovement.OnJump -= CheckSpawnTerrain;
+        }
+
+        private IEnumerator SpawnTerrain(int position)
+        {
+            int tilePosition = (int)currentPosition.z - position;
+            int middleOfMap = maxTerrainCount / 2;
+            if (tilePosition < middleOfMap)
+            {
+                for(int i = 0; i < middleOfMap - tilePosition; i++)
+                {
+                    GameObject tile = pool.GetFromPool();
+                    OnTileChange(tile);
+                    tile.transform.position += new Vector3(0, 0, maxTerrainCount);
+                    currentPosition.z++;
+                    tile.GetComponent<TileGenerator>().UpdateTileData();
+                    lava.transform.position += Vector3.forward;
+                    pool.ReturnToPool(tile, true);
+                    yield return new WaitForEndOfFrame();
+                }
+            }
+        }
+
+        void CheckSpawnTerrain(int playerZ)
+        {
+            StartCoroutine(SpawnTerrain(playerZ));
+        }
+
+        private void SpawnOneTile()
+        {
+            GameObject tile = pool.GetFromPool();
+            OnTileChange(tile);
+            tile.transform.position += new Vector3(0, 0, maxTerrainCount);
             currentPosition.z++;
-        }
-    }
-
-    private void SpawnTerrain()
-    {
-        GameObject temp = pool.GetFromPool();
-        temp.transform.localPosition = currentPosition;
-
-        if (temp.TryGetComponent(out TileGenerator tileGenerator))
-        {
-            tileGenerator.TileWidth = tileWidth;
-            tileGenerator.TileData = tileData;
-            StartCoroutine(tileGenerator.GenerateTile());
-        }
-
-        pool.ReturnToPool(temp, true);
-        currentPosition.z++;
-    }
-
-    void CheckSpawnTerrain(int playerZ)
-    {
-        if(transform.GetChild(transform.childCount-1).position.z - playerZ < maxTerrainCount / 2)
-        {
-            SpawnTerrain();
+            tile.GetComponent<TileGenerator>().UpdateTileData();
+            lava.transform.position += Vector3.forward;
+            pool.ReturnToPool(tile, true);
         }
     }
 }

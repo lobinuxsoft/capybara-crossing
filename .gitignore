@@ -58,3 +58,27 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+/Recordings
+
+
+.backup
+.cache
+*.akd
+*.validationcache
+*.wsettings
+*.wem
+*.prof
+# Archivos de instalación
+WwiseUnityIntegration_*_Src.zip
+# Caché temporal de project data (en carpeta de Assets de Unity)
+/[Aa]ssets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+# Sound Banks: NO VERSIONARLOS. REGENERARLOS CADA VEZ.
+*WwiseProject/GeneratedSoundBanks/
+# Documentación: NO VERSIONARLA.
+/[Aa]ssets/Wwise/Documentation.meta
+/[Aa]ssets/Wwise/Documentation/*
+# Carpeta plugins: AL SER MUY PESADA, QUE CADA UNO QUE NECESITE EL
+PROYECTO DE UNITY HAGA LA INTEGRACIÓN DE WWISE DE FORMA PROPIA
+/[Aa]ssets/Wwise/API/Runtime/Plugins.meta
+/[Aa]ssets/Wwise/API/Runtime/Plugins/*

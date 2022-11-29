@@ -15,4 +15,4 @@ MonoBehaviour:
   Target: 13
   extension: .apk
   folderName: Android
-  buildOptions: 0
+  buildOptions: 4

@@ -15,22 +15,16 @@ MonoBehaviour:
   ProjectName: Capybara Crossing
   ReleaseBuilds:
   - {fileID: 11400000, guid: f732fa8f5f100cc4a9358cef0ae51cb7, type: 2}
-  - {fileID: 11400000, guid: 10f62d3b44cdf184dac4f1f716eaf28c, type: 2}
-  - {fileID: 11400000, guid: 9c489ee345435a24fa81daabbea39018, type: 2}
   MajorBuilds:
   - {fileID: 11400000, guid: f732fa8f5f100cc4a9358cef0ae51cb7, type: 2}
-  - {fileID: 11400000, guid: 10f62d3b44cdf184dac4f1f716eaf28c, type: 2}
-  - {fileID: 11400000, guid: 9c489ee345435a24fa81daabbea39018, type: 2}
   MinorBuilds:
   - {fileID: 11400000, guid: f732fa8f5f100cc4a9358cef0ae51cb7, type: 2}
-  - {fileID: 11400000, guid: 10f62d3b44cdf184dac4f1f716eaf28c, type: 2}
-  - {fileID: 11400000, guid: 9c489ee345435a24fa81daabbea39018, type: 2}
   ManualVersionOverride: 0
-  releaseVersion: 0
+  releaseVersion: 1
   majorPatchVersion: 0
-  minorPatchVersion: 1
-  bundleVersion: 1
-  useGlobalDefineSymbols: 1
+  minorPatchVersion: 2
+  bundleVersion: 4
+  useGlobalDefineSymbols: 0
   globalDefineSymbols:
   - CHEATS
   logColor: {r: 1, g: 1, b: 1, a: 1}

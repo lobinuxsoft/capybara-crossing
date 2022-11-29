@@ -2,79 +2,107 @@ using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEditor;
 
-[RequireComponent(typeof(Rigidbody), typeof(GroundDetector))]
-public class PlayerMovement : MonoBehaviour
+namespace CapybaraCrossing
 {
-    [SerializeField] InputActionReference moveAction;
-    [SerializeField] float jumpDuration = 1;
-    [SerializeField] AnimationCurve jumpHeightBehaviour;
-    
-    Rigidbody rb;
-    GroundDetector groundDetector;
-    Vector3 viewDir = Vector3.forward;
-
-    private bool slowMotion;
-    
-    public InputActionReference MoveAction
+    [RequireComponent(typeof(Rigidbody), typeof(GroundDetector))]
+    public class PlayerMovement : MonoBehaviour
     {
-        get
+        int jumpHash = Animator.StringToHash("JumpTime");
+        int onGroundHash = Animator.StringToHash("OnGround");
+
+        [SerializeField] InputActionReference moveAction;
+        [SerializeField] float jumpDuration = 1;
+        [SerializeField] AnimationCurve jumpHeightBehaviour;
+        [SerializeField] LayerMask obstacleMask;
+
+        Rigidbody rb;
+        Animator anim;
+        GroundDetector groundDetector;
+        Vector3 viewDir = Vector3.forward;
+
+        [SerializeField] EffectBehavior effectBehavior;
+        EffectBehaviorComponent effectBehaviorComponent;
+
+        private bool slowMotion;
+
+        public InputActionReference MoveAction
         {
-            return moveAction;
+            get
+            {
+                return moveAction;
+            }
         }
-    }
 
-    public bool SlowMotion
-    {
-        get
+        public bool SlowMotion
         {
-            return slowMotion;
+            get
+            {
+                return slowMotion;
+            }
+            set
+            {
+                slowMotion = value;
+            }
         }
-        set
+
+        public static Action<int> OnJump;
+        public static Action OnDeath;
+
+        private void Awake()
         {
-            slowMotion = value;
+            rb = GetComponent<Rigidbody>();
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+
+            anim = GetComponent<Animator>();
+
+            groundDetector = GetComponent<GroundDetector>();
+
+            moveAction.action.performed += JumpToDirection;
+            moveAction.action.Enable();
         }
-    }
 
-    public static Action<int> OnJump;
-
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.FreezeRotation;
-
-        groundDetector = GetComponent<GroundDetector>();
-
-        moveAction.action.performed += JumpToDirection;
-        moveAction.action.Enable();
-    }
-
-    private void OnDestroy()
-    {
-        moveAction.action.Disable();
-        moveAction.action.performed -= JumpToDirection;
-    }
-
-    public void SubscribeToAction()
-    {
-        moveAction.action.performed += JumpToDirection;
-    }
-
-    public void UnsubscribeToAction()
-    {
-        moveAction.action.performed -= JumpToDirection;
-    }
-
-
-    public void JumpToDirection(InputAction.CallbackContext context)
-    {
-        if (!context.performed || !groundDetector.OnGround) return;
-
-        Vector2 input = context.ReadValue<Vector2>();
-
-        if (input.sqrMagnitude > 0)
+        private void OnDestroy()
         {
-            viewDir = (Mathf.Abs(input.x) > Mathf.Abs(input.y)) ? new Vector3(input.x, 0, 0) : new Vector3(0, 0, input.y);
+            OnDeath?.Invoke();
+            moveAction.action.Disable();
+            moveAction.action.performed -= JumpToDirection;
+        }
+
+        private void LateUpdate()
+        {
+            anim.SetBool(onGroundHash, groundDetector.OnGround);
+        }
+
+        public void SubscribeToAction()
+        {
+            moveAction.action.performed += JumpToDirection;
+        }
+
+        public void UnsubscribeToAction()
+        {
+            moveAction.action.performed -= JumpToDirection;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.transform.CompareTag("Movable Obstacle"))
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        public void JumpToDirection(InputAction.CallbackContext context)
+        {
+            if (!context.performed || !groundDetector.OnGround) return;
+
+            Vector2 input = context.ReadValue<Vector2>();
+
+            // Se fija si el input fue un slide o un tap para decidir como moverse
+            viewDir = input.sqrMagnitude > 0
+                ? (Mathf.Abs(input.x) > Mathf.Abs(input.y)) ? new Vector3(input.x, 0, 0) : new Vector3(0, 0, input.y)
+                : Vector3.forward;
 
             transform.rotation = Quaternion.LookRotation(viewDir, transform.up);
 
@@ -82,43 +110,45 @@ public class PlayerMovement : MonoBehaviour
             destination.x = Mathf.RoundToInt(destination.x);
             destination.z = Mathf.RoundToInt(destination.z);
 
-            StartCoroutine(JumpRoutine(destination, jumpDuration));
+            if (CheckCanJump(rb.position, (destination - rb.position).normalized, 1f) && destination.x >= -9 && destination.x <= 10)
+            {
+                StartCoroutine(JumpRoutine(destination, jumpDuration));
 
-            OnJump?.Invoke((int)rb.position.z);
+                OnJump?.Invoke((int)rb.position.z);
+            }
         }
-        else
+
+        bool CheckCanJump(Vector3 origin, Vector3 direction, float distance)
         {
-            viewDir = new Vector3(0, 0, 1);
+            Ray ray = new Ray(origin, direction);
 
-            transform.rotation = Quaternion.LookRotation(viewDir, transform.up);
-
-            Vector3 destination = rb.position + transform.forward;
-            destination.x = Mathf.RoundToInt(destination.x);
-            destination.z = Mathf.RoundToInt(destination.z);
-
-            StartCoroutine(JumpRoutine(destination, jumpDuration));
-
-            OnJump?.Invoke((int)rb.position.z);
+            return !Physics.SphereCast(ray, .4f, distance, obstacleMask);
         }
-    }
 
-    IEnumerator JumpRoutine(Vector3 destination, float duration)
-    {
-        float lerp = 0;
-        float destHeight = destination.y;
-        Vector3 startPosition = rb.position;
-
-        while (lerp < duration)
+        public IEnumerator JumpRoutine(Vector3 destination, float duration, Action endAction = null)
         {
-            lerp += slowMotion ? Time.deltaTime : Time.unscaledDeltaTime;
-            Vector3 XZ = Vector3.Lerp(startPosition, destination, Mathf.Clamp01(lerp / duration));
-            XZ.y = destHeight + jumpHeightBehaviour.Evaluate(lerp / duration);
+            float lerp = 0;
+            float destHeight = destination.y;
+            Vector3 startPosition = rb.position;
 
-            rb.MovePosition(XZ);
+            while (lerp < duration)
+            {
+                lerp += slowMotion ? Time.unscaledDeltaTime : Time.deltaTime;
+                Vector3 XZ = Vector3.Lerp(startPosition, destination, Mathf.Clamp01(lerp / duration));
+                XZ.y = destHeight + jumpHeightBehaviour.Evaluate(Mathf.Clamp01(lerp / duration));
 
-            yield return null;
+                anim.SetFloat(jumpHash, jumpHeightBehaviour.Evaluate(Mathf.Clamp01(lerp / duration)));
+
+                rb.MovePosition(XZ);
+
+                yield return null;
+            }
+
+            anim.SetFloat(jumpHash, 0f);
+            anim.SetBool(onGroundHash, true);
+
+            rb.MovePosition(destination);
+            endAction?.Invoke();
         }
-
-        rb.MovePosition(destination);
     }
 }

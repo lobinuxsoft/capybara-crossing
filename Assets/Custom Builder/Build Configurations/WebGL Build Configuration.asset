@@ -15,4 +15,4 @@ MonoBehaviour:
   Target: 20
   extension: .html
   folderName: WebGL
-  buildOptions: 0
+  buildOptions: 4
