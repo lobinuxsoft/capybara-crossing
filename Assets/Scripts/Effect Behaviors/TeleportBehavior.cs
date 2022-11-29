@@ -5,6 +5,8 @@ namespace CapybaraCrossing
     [CreateAssetMenu(menuName = "Effect Behavior/ Teleport Behavior")]
     public class TeleportBehavior : EffectBehavior
     {
+        [Space(10)]
+        [Header("This effect settings")]
         [SerializeField] float minDistance = 4;
         [SerializeField] float maxDistance = 10;
         [SerializeField] Vector3 teleportDirection = Vector3.forward;
@@ -15,6 +17,8 @@ namespace CapybaraCrossing
 
         public override void OnInit(EffectBehaviorComponent behaviorComponent)
         {
+            effectSfx.Post(behaviorComponent.gameObject);
+
             this.behaviorComponent = behaviorComponent;
 
             if(this.behaviorComponent.TryGetComponent(out PlayerMovement movement))

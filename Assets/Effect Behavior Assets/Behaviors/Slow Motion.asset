@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: Slow Motion
   m_EditorClassIdentifier: 
   effectIcon: {fileID: 21300000, guid: 3f8edaf3cbfb17042b987e424981f766, type: 3}
+  effectSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d37b5ddd23565c1428f7aa8ef4618995,
+      type: 2}
   effectDuration: 5

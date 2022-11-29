@@ -6,6 +6,8 @@ namespace CapybaraCrossing
     [CreateAssetMenu(menuName = "Effect Behavior/ Swap Positions Behavior")]
     public class SwapPositionsBehavior : EffectBehavior
     {
+        [Space(10)]
+        [Header("This effect settings")]
         [Tooltip("Tag of the other players with whom an exchange of positions could be made.")]
         [SerializeField] string otherPlayersTag = "Player";
         [SerializeField] GameObject effectPref;
@@ -14,6 +16,8 @@ namespace CapybaraCrossing
 
         public override void OnInit(EffectBehaviorComponent behaviorComponent)
         {
+            effectSfx.Post(behaviorComponent.gameObject);
+
             othersPlayers = GameObject
                             .FindGameObjectsWithTag(otherPlayersTag)
                             .Where(x => x.GetHashCode() != behaviorComponent.gameObject.GetHashCode()).ToArray();
