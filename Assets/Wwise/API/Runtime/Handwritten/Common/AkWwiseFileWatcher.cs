@@ -77,7 +77,7 @@ public class AkWwiseFileWatcher
 
 		try
 		{
-			if (XmlWatcher != null)
+			if (WprojWatcher != null)
 			{
 				WprojWatcher.Dispose();
 			}
@@ -112,6 +112,10 @@ public class AkWwiseFileWatcher
 
 		if (XmlExceptionOccurred || generatedSoundbanksPath != XmlWatcher?.Path)
 		{
+			if (!System.IO.Directory.Exists(generatedSoundbanksPath))
+			{
+				return;
+			}
 			new Thread(CreateXmlWatcher).Start();
 		}
 		
@@ -138,6 +142,10 @@ public class AkWwiseFileWatcher
 
 		if (ProjectExceptionOccurred || wwiseProjectPath != WprojWatcher?.Path)
 		{
+			if (!System.IO.Directory.Exists(wwiseProjectPath))
+            {
+				return;
+			}
 			new Thread(CreateProjectWatcher).Start();
 		}
 

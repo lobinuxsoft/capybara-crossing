@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="103" WwiseVersion="v2021.1.8" WwiseBuild="7831">
+<WwiseDocument Type="Project" SchemaVersion="103" WwiseVersion="v2021.1.10" WwiseBuild="7883">
 	<ProjectInfo>
 		<Project Name="capybara-crossing_WwiseProject" ID="{C959A132-C81E-4DBF-8C99-2E56542DA175}">
 			<Platforms>
+				<Platform Name="Android" ReferencePlatform="Android" ID="{A1957A3B-BCA5-454A-96DE-189E16A545B2}" />
 				<Platform Name="Mac" ReferencePlatform="Mac" ID="{0226B527-C913-4667-B9B0-686D6887887B}" />
 				<Platform Name="Windows" ReferencePlatform="Windows" ID="{A0094078-C5A5-4395-9521-2D2E7A06E940}" />
 			</Platforms>
@@ -16,43 +17,53 @@
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
+						<Value Platform="Android"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="ExternalSourcesOutputPath" Type="string">
 					<ValueList>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 					</ValueList>
 				</Property>
-				<Property Name="SoundBankGenerateEstimatedDuration" Type="bool" Value="True" /><Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True" /><Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool" Value="True" /><Property Name="SoundBankHeaderFilePath" Type="string" Value="../../capybara-crossing/Assets/StreamingAssets/Audio/GeneratedSoundBanks" />
+				<Property Name="SoundBankGenerateEstimatedDuration" Type="bool" Value="True" />
+				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True" />
+				<Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool" Value="True" />
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value="../Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/DecodedBanks/English(US)" />
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
 					<ValueList>
 						<Value Platform="Windows">Copy Streamed Files</Value>
+						<Value Platform="Android">Copy Streamed Files</Value>
 						<Value Platform="Mac">Copy Streamed Files</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdLines" Type="string">
 					<ValueList>
 						<Value Platform="Windows">"$(CopyStreamedFilesExePath)" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="Android">"$(CopyStreamedFilesExePath)" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
 						<Value Platform="Mac">"$(CopyStreamedFilesExePath)" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPreGenerateCustomCmdDescription" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
+						<Value Platform="Android"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPreGenerateCustomCmdLines" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
+						<Value Platform="Android"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>

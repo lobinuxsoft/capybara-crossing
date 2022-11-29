@@ -42,6 +42,8 @@ public class AkInitializer : UnityEngine.MonoBehaviour
 		ms_Instance = this;
 
 #if UNITY_EDITOR
+		UnityEditor.EditorApplication.quitting += OnApplicationQuit;
+
 		if (!UnityEditor.EditorApplication.isPlaying)
 			return;
 
@@ -74,7 +76,12 @@ public class AkInitializer : UnityEngine.MonoBehaviour
 	private void OnDestroy()
 	{
 		if (ms_Instance == this)
+		{
+#if UNITY_EDITOR
+			UnityEditor.EditorApplication.quitting -= OnApplicationQuit;
+#endif
 			ms_Instance = null;
+		}
 	}
 
 	private void OnApplicationPause(bool pauseStatus)

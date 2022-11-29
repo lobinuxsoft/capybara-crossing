@@ -110,7 +110,13 @@ public class AkAmbient : AkEvent
 
 	private void OnDisable()
 	{
-		if (multiPositionTypeLabel == MultiPositionTypeLabel.MultiPosition_Mode)
+#if UNITY_EDITOR
+        if (UnityEngine.Application.isBatchMode)
+        {
+            return;
+        }
+#endif
+        if (multiPositionTypeLabel == MultiPositionTypeLabel.MultiPosition_Mode)
 		{
 			var eventPosList = multiPosEventTree[data.Id];
 

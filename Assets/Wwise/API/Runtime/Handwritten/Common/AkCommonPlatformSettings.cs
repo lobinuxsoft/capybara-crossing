@@ -310,7 +310,7 @@ public partial class AkCommonUserSettings
 		public uint m_MaxSoundPropagationDepth = AkSoundEngine.AK_MAX_SOUND_PROPAGATION_DEPTH;
 
 		[UnityEngine.Tooltip("Distance (in game units) that an emitter or listener has to move to trigger a recalculation of reflections/diffraction. Larger values can reduce the CPU load at the cost of reduced accuracy.")]
-		public float m_MovementThreshold = 1.0f;
+		public float m_MovementThreshold = 0.1f;
 
 		[UnityEngine.Tooltip("The number of primary rays used in stochastic ray casting.")]
 		/// The number of primary rays used in stochastic ray casting.

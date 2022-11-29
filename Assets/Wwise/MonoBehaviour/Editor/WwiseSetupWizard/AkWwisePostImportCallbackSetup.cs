@@ -222,30 +222,48 @@ public class AkWwisePostImportCallbackSetup
 		string className = null;
 		string methodName = null;
 
-		var r = new System.Text.RegularExpressions.Regex("(.+)\\.(.+)",
+		var regex = new System.Text.RegularExpressions.Regex("(.+)\\.(.+)",
 			System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
-		var m = r.Match(method);
+		var regexMatchResult = regex.Match(method);
 
-		if (!m.Success || m.Groups.Count < 3 || m.Groups[1].Captures.Count < 1 || m.Groups[2].Captures.Count < 1)
+		if (!regexMatchResult.Success || regexMatchResult.Groups.Count < 3 || regexMatchResult.Groups[1].Captures.Count < 1 || regexMatchResult.Groups[2].Captures.Count < 1)
 		{
 			UnityEngine.Debug.LogError("WwiseUnity: Error parsing wwiseExecuteMethod parameter: " + method);
 			return;
 		}
 
-		className = m.Groups[1].Captures[0].ToString();
-		methodName = m.Groups[2].Captures[0].ToString();
+		className = regexMatchResult.Groups[1].Captures[0].ToString();
+		methodName = regexMatchResult.Groups[2].Captures[0].ToString();
 
 		try
 		{
-			var type = System.Type.GetType(className);
-			if(type == null)
+			System.Reflection.MethodInfo methodToExecute = null;
+
+			if (className == "AkTestUtilities")
 			{
-				type = System.Type.GetType(className + ", Assembly-CSharp-Editor");
+				var assembly = System.Reflection.Assembly.Load("Ak.Wwise.IntegrationTestsEditor");
+				methodToExecute = assembly.GetType(className).GetMethod(methodName,
+					System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
 			}
-			var clearMethod = type.GetMethod(methodName,
-				System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
-			clearMethod.Invoke(null, null);
+			else
+			{
+				var type = System.Type.GetType(className);
+				if (type == null)
+				{
+					type = System.Type.GetType(className + ", Assembly-CSharp-Editor");
+				}
+				methodToExecute = type.GetMethod(methodName,
+					System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
+			}
+
+			if (methodToExecute == null)
+			{
+				UnityEngine.Debug.LogError("WwiseUnity: Error in AkWwisePostImportCallbackSetup::ExecuteMethod(): Could not find method: " + method);
+				return;
+			}
+
+			methodToExecute.Invoke(null, null);
 		}
 		catch (System.Exception e)
 		{
