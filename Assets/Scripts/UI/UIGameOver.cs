@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using CryingOnionTools.ScriptableVariables;
+using GooglePlayGames;
 
 public class UIGameOver : MonoBehaviour
 {
@@ -24,7 +25,6 @@ public class UIGameOver : MonoBehaviour
     [Space(10)]
     [Header("Change Scene Setting")]
     [SerializeField] string mainmenuSceneName = "MainMenu";
-    [SerializeField] string leaderboardSceneName = "Leaderboard";
     [SerializeField] Gradient fadeInGradient;
     [SerializeField] Gradient fadeOutGradient;
 
@@ -39,7 +39,7 @@ public class UIGameOver : MonoBehaviour
         popup = GetComponent<UIPopup>();
 
         retryButton.onClick.AddListener(PlayAgain);
-        leaderboardButton.onClick.AddListener(ToLeaderboard);
+        leaderboardButton.onClick.AddListener(ShowLeaderboard);
         exitButton.onClick.AddListener(ToMainMenu);
     }
 
@@ -75,13 +75,21 @@ public class UIGameOver : MonoBehaviour
         for (int i = 0; i < turnOffObjects.Length; i++)
             turnOffObjects[i].gameObject.SetActive(false);
 
+#if UNITY_ANDROID
+        // Achievements
+        PlayGamesPlatform.Instance.ReportProgress(GPGSIds.achievement_step_by_step, highScore.Value, (bool success) => { });
+
+        // Leaderboard
+        PlayGamesPlatform.Instance.ReportScore(highScore.Value, GPGSIds.leaderboard_capybara_board, (bool success) => { });
+#endif
+
         popup.Show();
     }
 
     private void OnDestroy()
     {
         retryButton.onClick.RemoveListener(PlayAgain);
-        leaderboardButton.onClick.RemoveListener(ToLeaderboard);
+        leaderboardButton.onClick.RemoveListener(ShowLeaderboard);
         exitButton.onClick.RemoveListener(ToMainMenu);
     }
 
@@ -95,14 +103,13 @@ public class UIGameOver : MonoBehaviour
         });
     }
 
-    private void ToLeaderboard()
+    private void ShowLeaderboard()
     {
-        popup.Hide();
         Time.timeScale = 1;
-        TimelineUITransition.Instance.FadeStart(fadeInGradient, fadeOutGradient, 1.25f, () =>
-        {
-            SceneManager.LoadScene(leaderboardSceneName);
-        });
+
+        #if UNITY_ANDROID
+        PlayGamesPlatform.Instance.ShowLeaderboardUI();
+        #endif
     }
 
     private void ToMainMenu()

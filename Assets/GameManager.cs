@@ -1,4 +1,5 @@
 using Cinemachine;
+using GooglePlayGames;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,12 @@ public class GameManager : MonoBehaviour
     private void FindExistingPlayers()
     {
         players = GameObject.FindGameObjectsWithTag("Player").ToList();
+
+        #if UNITY_ANDROID
+        if (players.Count > 1)
+            PlayGamesPlatform.Instance.ReportProgress(GPGSIds.achievement_eternal_rivals, 100.0, (bool success) => { });
+        #endif
+
         cameraBrains = FindObjectsOfType<CinemachineBrain>().ToList();
     }
 

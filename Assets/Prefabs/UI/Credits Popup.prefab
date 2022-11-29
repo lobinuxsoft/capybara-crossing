@@ -248,15 +248,25 @@ MonoBehaviour:
       url: https://linktr.ee/rouxy
     - name: Juan Brutti
       url: https://www.linkedin.com/in/juanbrutti/
-  - name: Team QA
+  - name: Music Composer
     people:
-    - name: Maria Barbalace
-      url: 
+    - name: "Aldo D\xEC Paolo"
+      url: https://open.spotify.com/artist/36MRVC5qtBZ9E8rE58IY2a
+  - name: SFX implementation
+    people:
+    - name: "Emiliano Leonel L\xF3pez"
+      url: https://www.linkedin.com/in/emiliano-leonel-l%C3%B3pez
+  - name: QA-POC
+    people:
+    - name: Diego Pablo Acosta
+      url: linkedin.com/in/diego-pablo-acosta
+  - name: QA-Reviewer
+    people:
     - name: Andres Corvetto
       url: 
-    - name: Maximiliano Vrancken
-      url: 
-    - name: Diego Acosta
+  - name: QA-Tester
+    people:
+    - name: M. Paula Barbalace
       url: 
 --- !u!95 &4711796541734385402
 Animator:

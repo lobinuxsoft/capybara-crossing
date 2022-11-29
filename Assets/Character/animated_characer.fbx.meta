@@ -45,7 +45,7 @@ ModelImporter:
       name: anim_salto
       takeName: Take 001
       internalID: 0
-      firstFrame: 1
+      firstFrame: 6
       lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0

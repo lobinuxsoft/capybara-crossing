@@ -9,12 +9,16 @@ namespace CapybaraCrossing
     [RequireComponent(typeof(Rigidbody), typeof(GroundDetector))]
     public class PlayerMovement : MonoBehaviour
     {
+        int jumpHash = Animator.StringToHash("JumpTime");
+        int onGroundHash = Animator.StringToHash("OnGround");
+
         [SerializeField] InputActionReference moveAction;
         [SerializeField] float jumpDuration = 1;
         [SerializeField] AnimationCurve jumpHeightBehaviour;
         [SerializeField] LayerMask obstacleMask;
 
         Rigidbody rb;
+        Animator anim;
         GroundDetector groundDetector;
         Vector3 viewDir = Vector3.forward;
 
@@ -51,6 +55,8 @@ namespace CapybaraCrossing
             rb = GetComponent<Rigidbody>();
             rb.constraints = RigidbodyConstraints.FreezeRotation;
 
+            anim = GetComponent<Animator>();
+
             groundDetector = GetComponent<GroundDetector>();
 
             moveAction.action.performed += JumpToDirection;
@@ -62,6 +68,11 @@ namespace CapybaraCrossing
             OnDeath?.Invoke();
             moveAction.action.Disable();
             moveAction.action.performed -= JumpToDirection;
+        }
+
+        private void LateUpdate()
+        {
+            anim.SetBool(onGroundHash, groundDetector.OnGround);
         }
 
         public void SubscribeToAction()
@@ -126,10 +137,15 @@ namespace CapybaraCrossing
                 Vector3 XZ = Vector3.Lerp(startPosition, destination, Mathf.Clamp01(lerp / duration));
                 XZ.y = destHeight + jumpHeightBehaviour.Evaluate(Mathf.Clamp01(lerp / duration));
 
+                anim.SetFloat(jumpHash, jumpHeightBehaviour.Evaluate(Mathf.Clamp01(lerp / duration)));
+
                 rb.MovePosition(XZ);
 
                 yield return null;
             }
+
+            anim.SetFloat(jumpHash, 0f);
+            anim.SetBool(onGroundHash, true);
 
             rb.MovePosition(destination);
             endAction?.Invoke();
