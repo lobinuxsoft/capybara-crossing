@@ -238,16 +238,16 @@ MonoBehaviour:
   categories:
   - name: Developers
     people:
-    - name: Matias Galarza
-      url: https://www.linkedin.com/in/lobinux/
     - name: Francisco Cavenaghi
       url: https://www.linkedin.com/in/cavenaghidev/
+    - name: Matias Galarza
+      url: https://www.linkedin.com/in/lobinux/
   - name: 2D / 3D Art
     people:
-    - name: Rocio Gimenez
-      url: https://linktr.ee/rouxy
     - name: Juan Brutti
       url: https://www.linkedin.com/in/juanbrutti/
+    - name: Rocio Gimenez
+      url: https://linktr.ee/rouxy
   - name: Music Composer
     people:
     - name: "Aldo D\xEC Paolo"
@@ -268,11 +268,6 @@ MonoBehaviour:
     people:
     - name: M. Paula Barbalace
       url: 
-  bank:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b06056119de250145aebca8273161d2a,
-      type: 2}
   backSfx:
     idInternal: 0
     valueGuidInternal: 
