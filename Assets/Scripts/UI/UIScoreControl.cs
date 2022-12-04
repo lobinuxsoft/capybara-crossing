@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class UIScoreControl : MonoBehaviour
 {
+    [SerializeField] float maxTextScale = 2f;
     [SerializeField] List<ScoreData> scores = new List<ScoreData>();
 
     private void Update()
@@ -15,7 +16,7 @@ public class UIScoreControl : MonoBehaviour
         scores.Sort((ScoreData a, ScoreData b) => a.Score.CompareTo(b.Score));
 
         for (int i = 0; i < scores.Count; i++)
-            scores[i].SetScaleText(i == scores.Count-1 ? Vector3.one * 1.25f : Vector3.one);
+            scores[i].SetScaleText(i == scores.Count-1 ? Vector3.one * maxTextScale : Vector3.one);
     }
 }
 
