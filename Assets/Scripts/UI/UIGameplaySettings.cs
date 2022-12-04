@@ -16,6 +16,7 @@ public class UIGameplaySettings : MonoBehaviour
 
     [Space(10)]
     [Header("Wwise Settings")]
+    [SerializeField] AK.Wwise.Event clickSfx;
     [SerializeField] AK.Wwise.Event backSfx;
     [SerializeField] AK.Wwise.RTPC musicVolume;
     [SerializeField] AK.Wwise.RTPC sfxVolume;
@@ -60,7 +61,7 @@ public class UIGameplaySettings : MonoBehaviour
 
     private void OpenSettings()
     {
-        backSfx.Post(this.gameObject);
+        clickSfx.Post(this.gameObject);
         backupTime = Time.timeScale;
         Time.timeScale = 0;
         popup.Show(() => { pauseButton.gameObject.SetActive(false); });
@@ -68,13 +69,14 @@ public class UIGameplaySettings : MonoBehaviour
 
     private void CloseSettings()
     {
-        backSfx.Post(this.gameObject);
+        clickSfx.Post(this.gameObject);
         Time.timeScale = backupTime;
         popup.Hide(() => { pauseButton.gameObject.SetActive(true); });
     }
 
     private void ToMainMenu()
     {
+        backSfx.Post(this.gameObject);
         TimelineUITransition.Instance.FadeStart(fadeInGradient, fadeOutGradient, 1.25f, () =>
         {
             Time.timeScale = 1;

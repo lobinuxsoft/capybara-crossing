@@ -23,6 +23,12 @@ public class UIGameOver : MonoBehaviour
     [SerializeField] Button exitButton;
 
     [Space(10)]
+    [Header("Wwise Settings")]
+    [SerializeField] AK.Wwise.Event retrySfx;
+    [SerializeField] AK.Wwise.Event clickSfx;
+    [SerializeField] AK.Wwise.Event backSfx;
+
+    [Space(10)]
     [Header("Change Scene Setting")]
     [SerializeField] string mainmenuSceneName = "MainMenu";
     [SerializeField] Gradient fadeInGradient;
@@ -95,6 +101,8 @@ public class UIGameOver : MonoBehaviour
 
     private void PlayAgain()
     {
+        retrySfx.Post(this.gameObject);
+
         popup.Hide();
         Time.timeScale = 1;
         TimelineUITransition.Instance.FadeStart(fadeInGradient, fadeOutGradient, 1.25f, () =>
@@ -105,6 +113,8 @@ public class UIGameOver : MonoBehaviour
 
     private void ShowLeaderboard()
     {
+        clickSfx.Post(this.gameObject);
+
         Time.timeScale = 1;
 
         #if UNITY_ANDROID
@@ -114,6 +124,7 @@ public class UIGameOver : MonoBehaviour
 
     private void ToMainMenu()
     {
+        backSfx.Post(this.gameObject);
         popup.Hide();
         Time.timeScale = 1;
         TimelineUITransition.Instance.FadeStart(fadeInGradient, fadeOutGradient, 1.25f, () =>
