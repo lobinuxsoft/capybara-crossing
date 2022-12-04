@@ -1,6 +1,459 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{75D51002-5D19-4646-BAA9-EF660E8E01C7}" SchemaVersion="103">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{75D51002-5D19-4646-BAA9-EF660E8E01C7}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{75D51002-5D19-4646-BAA9-EF660E8E01C7}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Gameplay" ID="{BB0F9F08-0508-4820-A307-BFAE0EA5D5D9}" ShortID="500976102">
+					<ChildrenList>
+						<MusicSegment Name="Game Over 1" ID="{FEAEC1E6-6496-4C6F-88F5-AE3C63B1E53A}" ShortID="490811406">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="7000.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Game Over 1" ID="{06732091-5549-4B5E-AFD6-6B9AD03F6D14}" ShortID="422689563">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Game Over 1" ID="{CCBBA65A-A60F-47A4-9546-CB967AC32537}">
+											<Language>SFX</Language>
+											<AudioFile>Game Over 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="309135254"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{5BBBB3B8-B237-4326-8943-1E4E96EB06A9}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{77C28769-4D5E-4FCB-A472-4DB54C2FFFE0}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Game Over 1" ID="{51013333-A7CA-46F5-A249-44309A29BDC8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="7000.5"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Game Over 1" ID="{CCBBA65A-A60F-47A4-9546-CB967AC32537}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{63B478EB-1DEC-4CA1-9E12-D29790019DE1}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{343236DC-6DA2-4BFA-B1A0-7E9CBCBDDC44}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="7000.5"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSwitchContainer Name="New Music Switch Container" ID="{3761DA92-95EF-4CFC-9601-C3DF22E9BD04}" ShortID="856712796">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Gameplay L1 Capybara" ID="{C8F7BAAD-1C03-4577-B782-B61EE5FF5307}" ShortID="1007579819">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="31998.625"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Gameplay L1 Capybara" ID="{13EE705A-2C18-4159-85D3-97AFD6566521}" ShortID="10648170">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Gameplay L1 Capybara" ID="{4C6372C5-03DB-494C-AB09-6013D290A6B1}">
+													<Language>SFX</Language>
+													<AudioFile>Gameplay L1 Capybara.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="661990860"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{FBDAE2E2-68F6-419A-8723-4F0A74A6EA21}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{E3C29408-6745-4238-B825-43EE7FFC5D1A}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Gameplay L1 Capybara" ID="{D79DCFC3-2917-4272-A7E6-BFFFC975AA35}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="31998.625"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Gameplay L1 Capybara" ID="{4C6372C5-03DB-494C-AB09-6013D290A6B1}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{9DC73250-D4F0-48A9-9322-D69AF94210CB}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{B9C389E6-F35D-4BE7-9312-D492A38EB7A6}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="31998.625"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="Gameplay L3 Capybara" ID="{2C3F3DE3-87C6-4E05-B372-A39AFE4DC605}" ShortID="591651577">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="31998.625"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Gameplay L3 Capybara" ID="{D1CED3A4-6182-424C-9E25-747AC020107E}" ShortID="449949059">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Gameplay L3 Capybara" ID="{28D466F9-6D5A-4238-AFA8-F6FA58E09E2E}">
+													<Language>SFX</Language>
+													<AudioFile>Gameplay L3 Capybara.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="450448987"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{6AFA05F6-D7C1-4738-9960-E4F0A5A0966E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{1CCD922E-80C3-4FE3-907F-AD9B7197D45F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Gameplay L3 Capybara" ID="{9AC8718D-EBEA-4557-AFC1-3670CAF959A6}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="31998.625"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Gameplay L3 Capybara" ID="{28D466F9-6D5A-4238-AFA8-F6FA58E09E2E}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{FB10AF8A-FECF-453E-A7B2-EC99703ECB41}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{D4AC8A24-D7E1-4813-9C28-2DC1DB13D83D}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="31998.625"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="Gameplay L4 Capybara" ID="{466C99FD-4FF0-416F-82A5-08FD4CF2BBD2}" ShortID="439406351">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="31998.625"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Gameplay L4 Capybara" ID="{84C8A7C1-5740-4621-BC6D-B0D4271A41FA}" ShortID="417014076">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Gameplay L4 Capybara" ID="{6B3677FA-E6C3-49FF-9094-8F79D37A39CD}">
+													<Language>SFX</Language>
+													<AudioFile>Gameplay L4 Capybara.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="746056295"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{70ADE24E-845E-450D-BB89-055034B8B077}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{86828A42-813A-473E-8F33-6E7D0EE81689}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Gameplay L4 Capybara" ID="{483566E9-4C29-45C8-A760-3B15B5DF7EA1}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="31998.625"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Gameplay L4 Capybara" ID="{6B3677FA-E6C3-49FF-9094-8F79D37A39CD}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{8704A781-6BD0-49A0-95D2-2A6715ED8E79}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{4F220F60-62BA-4858-BE6E-DDC1E850C4A4}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="31998.625"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="Gameplay L2 Capybara" ID="{3289BF83-EC3A-441E-8E6D-F81C5B042AA4}" ShortID="716782746">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="31998.625"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Gameplay L2 Capybara" ID="{F9A83AF3-3003-43CA-94B3-6D45D50755A5}" ShortID="313942864">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Gameplay L2 Capybara" ID="{0AF784DF-6F2F-466D-94E6-4B93EC8313D5}">
+													<Language>SFX</Language>
+													<AudioFile>Gameplay L2 Capybara.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="899336610"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{C0B90BED-7A00-4C8B-A6F6-17415CCB87BB}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{96DC41A9-5967-433B-A15E-2088CB13105B}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Gameplay L2 Capybara" ID="{4E3F0760-E50E-4FBA-84D3-84D123CAFF0E}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="31998.625"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Gameplay L2 Capybara" ID="{0AF784DF-6F2F-466D-94E6-4B93EC8313D5}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{742D9C0A-EFB0-481C-A0FF-78A7506A2589}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{FDBD64BE-1DAD-429A-AE7C-465C5E5667BB}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="31998.625"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{6DFB638F-81E3-4344-836C-B932AF869A8E}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{2C10B52C-DF73-4B7A-A38A-F72E7636FEAD}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+						</MusicSwitchContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

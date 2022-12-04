@@ -435,6 +435,312 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Capybara" ID="{B23B8E62-22D2-42F7-BB6D-671F4DA28C3E}" ShortID="531453772">
+					<ChildrenList>
+						<RandomSequenceContainer Name="VOX" ID="{31201865-41F7-454F-8FBD-DAC87D08D25E}" ShortID="638152327">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Carpincho Sound 1" ID="{44B85905-F43D-4C66-A31F-B3141A6918A7}" ShortID="14490012">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpincho Sound 1" ID="{77E6D2D3-DC50-4CD9-A822-A1FC4B53F0F2}">
+											<Language>SFX</Language>
+											<AudioFile>Carpincho Sound 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="950910304"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpincho Sound 1" ID="{77E6D2D3-DC50-4CD9-A822-A1FC4B53F0F2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpincho Sound 2" ID="{8A409758-0FC3-4E9F-B711-CDF597B0AF53}" ShortID="860624347">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpincho Sound 2" ID="{753BA40E-57F1-463B-8A36-292DE51A408D}">
+											<Language>SFX</Language>
+											<AudioFile>Carpincho Sound 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="547418752"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpincho Sound 2" ID="{753BA40E-57F1-463B-8A36-292DE51A408D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpincho Sound 3" ID="{EB2F5DEA-B84A-4696-A398-2D5B15543F4B}" ShortID="39750524">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpincho Sound 3" ID="{3AE71E1D-546B-4FD1-8495-6799CA6CE499}">
+											<Language>SFX</Language>
+											<AudioFile>Carpincho Sound 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="427049004"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpincho Sound 3" ID="{3AE71E1D-546B-4FD1-8495-6799CA6CE499}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpincho Sound 4" ID="{EEA8A344-492B-495E-A296-66BACDA02874}" ShortID="993414613">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpincho Sound 4" ID="{5D82D5C2-4D24-4908-8D6B-FF3129D7CBF0}">
+											<Language>SFX</Language>
+											<AudioFile>Carpincho Sound 4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="519932181"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpincho Sound 4" ID="{5D82D5C2-4D24-4908-8D6B-FF3129D7CBF0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpincho Sound 5" ID="{E75C54A7-2CFD-485B-9EE5-681277644FDF}" ShortID="762760998">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpincho Sound 5" ID="{353D65B7-99AE-40AE-B473-E86697254B41}">
+											<Language>SFX</Language>
+											<AudioFile>Carpincho Sound 5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="320331462"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpincho Sound 5" ID="{353D65B7-99AE-40AE-B473-E86697254B41}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpincho Sound 6" ID="{5F3D4CD7-3717-46B5-89C4-10B7B4709378}" ShortID="616738050">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpincho Sound 6" ID="{25776AB3-9F32-46E8-8E44-15BD243103A8}">
+											<Language>SFX</Language>
+											<AudioFile>Carpincho Sound 6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="112497241"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpincho Sound 6" ID="{25776AB3-9F32-46E8-8E44-15BD243103A8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpincho Sound 7" ID="{8C7D4C86-D17F-4885-9E74-592CCCF229E2}" ShortID="912825506">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpincho Sound 7" ID="{E08823C2-D805-4C79-9D4D-B2B81EA4E0A3}">
+											<Language>SFX</Language>
+											<AudioFile>Carpincho Sound 7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="919015150"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpincho Sound 7" ID="{E08823C2-D805-4C79-9D4D-B2B81EA4E0A3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Footsteps" ID="{E21702D5-6B16-4904-91D1-7DF1ABAD314B}" ShortID="255585944">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Step 1" ID="{D2AC7D1B-B99A-4C86-94A3-95738A930020}" ShortID="963062956">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Step 1" ID="{03131B4F-4ED5-49C7-ADA5-76135EF789EC}">
+											<Language>SFX</Language>
+											<AudioFile>Step 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="568573390"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Step 1" ID="{03131B4F-4ED5-49C7-ADA5-76135EF789EC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Step 2" ID="{B5CDBA8C-44EB-4EBF-99DE-1A8AB32D12A3}" ShortID="781163882">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Step 2" ID="{EB5FFAC5-F99B-44DB-B02C-6A46FACC6B97}">
+											<Language>SFX</Language>
+											<AudioFile>Step 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="541094325"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Step 2" ID="{EB5FFAC5-F99B-44DB-B02C-6A46FACC6B97}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Steps 0" ID="{D0A6BE82-A3AC-4EDB-8556-E05BF5214F42}" ShortID="772946381">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Steps" ID="{2E7E8FFD-2873-4E36-B389-24AFACD32875}">
+											<Language>SFX</Language>
+											<AudioFile>Steps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="704460549"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Steps" ID="{2E7E8FFD-2873-4E36-B389-24AFACD32875}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<Sound Name="Splash" ID="{234B6A09-E1D6-48D7-9C00-F0CBBBE15E33}" ShortID="314551296">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Splash" ID="{252985BD-A05A-4F44-A986-F343EC86841C}">
+									<Language>SFX</Language>
+									<AudioFile>Splash.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="223518856"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Splash" ID="{252985BD-A05A-4F44-A986-F343EC86841C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Woosh" ID="{981ACC07-D22E-4F42-92CB-3CB2D37E44C2}" ShortID="418367589">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Woosh" ID="{EDF10D19-F29D-468E-A938-46E5D3E4889A}">
+									<Language>SFX</Language>
+									<AudioFile>Woosh.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="929652384"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Woosh" ID="{EDF10D19-F29D-468E-A938-46E5D3E4889A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
