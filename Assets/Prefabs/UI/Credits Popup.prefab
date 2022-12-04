@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ccad05e3f6195459cec25919279a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plainTextPref: {fileID: 3173187330725935267, guid: 445361cc1c5db0641a8de35830f49cf3,
+  plainTextPref: {fileID: 3173187330725935267, guid: 9e563acd96717014fb489c315c5c8f68,
     type: 3}
   textButtonPref: {fileID: 5220695730499230438, guid: 4e8e54e999caa734d826c04c46db36b0,
     type: 3}
@@ -806,8 +806,8 @@ RectTransform:
   m_Father: {fileID: 4711796541734385397}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.12180992}
-  m_AnchorMax: {x: 0.9, y: 0.63342136}
+  m_AnchorMin: {x: 0.041374654, y: 0.058082163}
+  m_AnchorMax: {x: 0.9586253, y: 0.7519217}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
