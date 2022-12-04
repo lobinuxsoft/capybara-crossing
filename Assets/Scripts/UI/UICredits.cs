@@ -45,7 +45,7 @@ public class UICredits : MonoBehaviour
             foreach(var category in categories)
             {
                 var tempCategory = Instantiate(plainTextPref, container);
-                tempCategory.text = category.name;
+                tempCategory.text = $"\n{category.name}";
 
                 foreach(var person in category.people)
                 {
