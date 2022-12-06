@@ -18,6 +18,7 @@
 						<ObjectRef Name="Play_Menu_Click" ID="{C760A4CA-511C-4DBE-AC9D-F033152A0DEF}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slow_Mo" ID="{B697FA5C-9F68-4EEE-AD73-7527BA31E07E}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Menu_Hover_Click" ID="{C934CA8A-1322-4FB7-849A-36A23D480C6A}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{7FB6A874-4DA3-4FC3-8F93-C473336B8FB1}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

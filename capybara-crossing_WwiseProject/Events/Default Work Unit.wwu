@@ -146,6 +146,105 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Music" ID="{7FB6A874-4DA3-4FC3-8F93-C473336B8FB1}" ShortID="506699524">
+					<ChildrenList>
+						<Event Name="GameOver" ID="{7F2A90CE-5B7F-4A51-9C6C-D056EDF34ED5}">
+							<ChildrenList>
+								<Action Name="" ID="{94E672C1-6F25-480D-ABEB-08A02444893D}" ShortID="672966599">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="GameOver" ID="{F9F8739E-6C35-4F3B-848F-D2268B81F5E7}" WorkUnitID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Music_Menu" ID="{83F184D1-4F6D-4DB2-B3DD-0BE8B1DAEF8C}">
+							<ChildrenList>
+								<Action Name="" ID="{50A62D40-A87A-4BA6-9BF6-477BE5317C15}" ShortID="949144364">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu" ID="{31A25B44-C237-427E-8C8E-1EE494925AB1}" WorkUnitID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stem3" ID="{8554C3B4-EBC0-4729-97C7-6FCFCCF5D247}">
+							<ChildrenList>
+								<Action Name="" ID="{6E43A933-77D5-4FCC-846A-78D396FDFD28}" ShortID="522826536">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stem3" ID="{02F530ED-BDD7-4E88-95BF-A197359FF6AA}" WorkUnitID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stem4" ID="{4D10CE9F-3E0D-414D-BDE1-8148CA451F3A}">
+							<ChildrenList>
+								<Action Name="" ID="{39754130-90B9-4D52-93E4-18CB12D695CD}" ShortID="68097883">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stem4" ID="{00CD4F55-B552-44CA-8ADB-A8B21EF2457E}" WorkUnitID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stem2" ID="{0E29BE85-E823-498B-BC32-9A64AE1ED97F}">
+							<ChildrenList>
+								<Action Name="" ID="{CEC4EBC2-06EB-45D3-A426-8B97B951AF87}" ShortID="500761616">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stem2" ID="{FEB1A22A-EDCC-4B11-8B3E-1FD7B56424DC}" WorkUnitID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stem1" ID="{0A93EFC9-728B-4E36-A240-8FD1EB5BA3BD}">
+							<ChildrenList>
+								<Action Name="" ID="{C381D249-A9CB-4D4A-8808-D32C4645AC1E}" ShortID="287227476">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stem1" ID="{4F1C66AB-2C77-4EE1-96EB-3AE38F259CF2}" WorkUnitID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="mx" ID="{29B379DF-18E7-46F3-9795-AE7A18F4E50F}">
+							<ChildrenList>
+								<Action Name="" ID="{857812EC-495B-4407-B18E-DCBD961FC078}" ShortID="783462946">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mx" ID="{1287DB83-61B7-41AB-A5E2-4243AFB874F4}" WorkUnitID="{75D51002-5D19-4646-BAA9-EF660E8E01C7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID GAMEOVER = 4158285989U;
+        static const AkUniqueID MUSIC_MENU = 1598298728U;
         static const AkUniqueID PLAY_CAR_CRASH = 2838070904U;
         static const AkUniqueID PLAY_CAR_ENGINE = 2832155465U;
         static const AkUniqueID PLAY_FREEZE = 1505496975U;
@@ -26,7 +28,30 @@ namespace AK
         static const AkUniqueID PLAY_RESURRECTION = 895541995U;
         static const AkUniqueID PLAY_SLOW_MO = 1400896344U;
         static const AkUniqueID PLAY_TELEPORT = 3785065891U;
+        static const AkUniqueID STEM1 = 1232066327U;
+        static const AkUniqueID STEM2 = 1232066324U;
+        static const AkUniqueID STEM3 = 1232066325U;
+        static const AkUniqueID STEM4 = 1232066322U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace MX
+        {
+            static const AkUniqueID GROUP = 1685527054U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID GAMEOVER = 4158285989U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID STEM1 = 1232066327U;
+                static const AkUniqueID STEM2 = 1232066324U;
+                static const AkUniqueID STEM3 = 1232066325U;
+                static const AkUniqueID STEM4 = 1232066322U;
+            } // namespace SWITCH
+        } // namespace MX
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {
