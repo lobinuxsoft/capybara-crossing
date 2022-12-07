@@ -7,12 +7,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tile
+      name: Tile2
     second: {fileID: 2100000, guid: 752274033e1686e4ba8e1c87b68c560d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Vegetacion
+      name: Vegetacion2
     second: {fileID: 2100000, guid: 4ee24e2c04c3fb840b85fb9e245c62b6, type: 2}
   materials:
     materialImportMode: 2
