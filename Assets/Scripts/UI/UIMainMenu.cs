@@ -25,6 +25,8 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] AK.Wwise.Bank bank;
     [SerializeField] AK.Wwise.Event playSfx;
     [SerializeField] AK.Wwise.Event clickSfx;
+    [SerializeField] AK.Wwise.Switch musicSwitch;
+    [SerializeField] AK.Wwise.Event musicEvent;
 
     UIPopup popup;
 
@@ -57,7 +59,9 @@ public class UIMainMenu : MonoBehaviour
         #if UNITY_ANDROID
         PlayGamesPlatform.Activate();
         PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
-        #endif
+#endif
+        musicSwitch.SetValue(this.gameObject);
+        musicEvent.Post(this.gameObject);
     }
 
     private void ToGamePlay()

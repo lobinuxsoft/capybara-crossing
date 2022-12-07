@@ -1428,12 +1428,12 @@ PrefabInstance:
     - target: {fileID: 4711796542393396941, guid: 63f5907b55a21af46a5edadc10026d2b,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4711796542393396941, guid: 63f5907b55a21af46a5edadc10026d2b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 4711796542665008039, guid: 63f5907b55a21af46a5edadc10026d2b,
         type: 3}
@@ -1804,6 +1804,12 @@ PrefabInstance:
       propertyPath: settingsPopup
       value: 
       objectReference: {fileID: 7860401305987239704}
+    - target: {fileID: 7607698071045757749, guid: 7797634edabd8174fbb6609bfdfc9be8,
+        type: 3}
+      propertyPath: musicEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 18b18537c8c4ec94b895ec3f0a88c381,
+        type: 2}
     - target: {fileID: 7607698071045757758, guid: 7797634edabd8174fbb6609bfdfc9be8,
         type: 3}
       propertyPath: m_Pivot.x
