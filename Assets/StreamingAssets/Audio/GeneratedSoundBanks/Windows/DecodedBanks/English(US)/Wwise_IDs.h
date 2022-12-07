@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID GAMEOVER = 4158285989U;
         static const AkUniqueID MUSIC_MENU = 1598298728U;
+        static const AkUniqueID MX = 1685527054U;
         static const AkUniqueID PLAY_CAR_CRASH = 2838070904U;
         static const AkUniqueID PLAY_CAR_ENGINE = 2832155465U;
         static const AkUniqueID PLAY_FREEZE = 1505496975U;

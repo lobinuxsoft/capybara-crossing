@@ -11,7 +11,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+									<ObjectRef Name="Music Bus" ID="{A9476066-081A-4C97-A489-AFB7BCC78F34}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
