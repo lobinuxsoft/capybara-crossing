@@ -341,6 +341,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572336fdce89d4a4abdb608512e34853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 27124b91f3076b44695b59b9a84ac5bc,
+      type: 2}
+  visibleSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: aad3144e84bd891489e14c1e38e3ea04,
+      type: 2}
+  triggerEnterSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4c555d740b919934ab0f2cfe6f5d6eb5,
+      type: 2}
 --- !u!1001 &4354387727607465215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -587,3 +602,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572336fdce89d4a4abdb608512e34853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 27124b91f3076b44695b59b9a84ac5bc,
+      type: 2}
+  visibleSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: aad3144e84bd891489e14c1e38e3ea04,
+      type: 2}
+  triggerEnterSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4c555d740b919934ab0f2cfe6f5d6eb5,
+      type: 2}
