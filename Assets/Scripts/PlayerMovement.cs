@@ -85,14 +85,6 @@ namespace CapybaraCrossing
             moveAction.action.performed -= JumpToDirection;
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.transform.CompareTag("Movable Obstacle"))
-            {
-                Destroy(gameObject);
-            }
-        }
-
         public void JumpToDirection(InputAction.CallbackContext context)
         {
             if (!context.performed || !groundDetector.OnGround) return;

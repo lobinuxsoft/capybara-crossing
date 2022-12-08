@@ -19,10 +19,6 @@ namespace CapybaraCrossing
         public GameObject SpawnObstacle(Vector3 pos, bool IsRotated)
         {
             GameObject obstacle = obstaclePool.GetFromPool();
-            if(obstacle.name == "Arbol(Clone)")
-            {
-                pos -= new Vector3(-0.5f, 0, 0);
-            }
             obstacle.transform.position = pos;
             if(IsRotated)
                 obstacle.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);

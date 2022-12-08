@@ -2007,7 +2007,7 @@ GameObject:
   - component: {fileID: 2089683208}
   - component: {fileID: 2089683207}
   m_Layer: 0
-  m_Name: CamalotePool
+  m_Name: WaterPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2042,6 +2042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obs:
   - {fileID: 1986816624281021881, guid: 94a5a6d91eae25445a2d3d267fce6762, type: 3}
+  - {fileID: 3788786228620183521, guid: 7734e530276af254ca3a5a8fb9ba928b, type: 3}
   maxSize: 90
 --- !u!114 &2089683208
 MonoBehaviour:

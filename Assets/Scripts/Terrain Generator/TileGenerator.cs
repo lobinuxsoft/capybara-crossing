@@ -156,12 +156,40 @@ namespace CapybaraCrossing
                                 }
                                 else
                                 {
-                                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
+                                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("WaterPool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
+                                    if (obstacles[obstacles.Count - 1] != null && obstacles[obstacles.Count - 1].name == "Tronco(Clone)")
+                                    {
+                                        obstacles[obstacles.Count - 1].transform.position += new Vector3(0.4f, 0.65f, 0);
+                                        obstacles[obstacles.Count - 1].transform.rotation = Quaternion.Euler(0, 90, 0);
+                                        i++;
+                                        if (transform.GetChild(i).TryGetComponent(out filter))
+                                        {
+                                            filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
+                                        }
+                                        if (transform.GetChild(i).TryGetComponent(out renderer))
+                                        {
+                                            renderer.materials = tileData.TileObjects[(int)type].material;
+                                        }
+                                    }
                                 }
                             }
                             else
                             {
-                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("WaterPool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
+                                if (obstacles[obstacles.Count - 1] != null && obstacles[obstacles.Count - 1].name == "Tronco(Clone)")
+                                {
+                                    obstacles[obstacles.Count - 1].transform.position += new Vector3(0.4f, 0.65f, 0);
+                                    obstacles[obstacles.Count - 1].transform.rotation = Quaternion.Euler(0, 90, 0);
+                                    i++;
+                                    if (transform.GetChild(i).TryGetComponent(out filter))
+                                    {
+                                        filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
+                                    }
+                                    if (transform.GetChild(i).TryGetComponent(out renderer))
+                                    {
+                                        renderer.materials = tileData.TileObjects[(int)type].material;
+                                    }
+                                }
                             }
                         }
                         break;
@@ -201,7 +229,7 @@ namespace CapybaraCrossing
                         ObstacleSpawnerManager.Instance.DespawnObstacle("CarPool", obstacles);
                         break;
                     case TypeOfTile.WATER:
-                        ObstacleSpawnerManager.Instance.DespawnObstacle("CamalotePool", obstacles);
+                        ObstacleSpawnerManager.Instance.DespawnObstacle("WaterPool", obstacles);
                         foreach (GameObject deepWater in deepWaters)
                         {
                             deepWater.transform.GetComponent<Collider>().isTrigger = false;
