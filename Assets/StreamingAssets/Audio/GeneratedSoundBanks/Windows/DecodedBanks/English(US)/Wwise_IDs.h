@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID MX = 1685527054U;
         static const AkUniqueID PLAY_CAR_CRASH = 2838070904U;
         static const AkUniqueID PLAY_CAR_ENGINE = 2832155465U;
+        static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_FREEZE = 1505496975U;
         static const AkUniqueID PLAY_HONK = 2486471960U;
         static const AkUniqueID PLAY_MENU_BACK_CLICK = 113434238U;
@@ -28,7 +29,10 @@ namespace AK
         static const AkUniqueID PLAY_MENU_PLAY = 3198441892U;
         static const AkUniqueID PLAY_RESURRECTION = 895541995U;
         static const AkUniqueID PLAY_SLOW_MO = 1400896344U;
+        static const AkUniqueID PLAY_SPLASH = 3948925255U;
         static const AkUniqueID PLAY_TELEPORT = 3785065891U;
+        static const AkUniqueID PLAY_VOX = 2452511941U;
+        static const AkUniqueID PLAY_WOOSH = 1725216094U;
         static const AkUniqueID STEM1 = 1232066327U;
         static const AkUniqueID STEM2 = 1232066324U;
         static const AkUniqueID STEM3 = 1232066325U;
