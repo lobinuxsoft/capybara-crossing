@@ -221,7 +221,16 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 256
-  effectBehavior: {fileID: 0}
+  jumpSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 063dd4487ee9b654cbba118420571a49,
+      type: 2}
+  stepsSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 108efdac6b9dfaf46b610f444eeee93d,
+      type: 2}
 --- !u!114 &4941338294814037868
 MonoBehaviour:
   m_ObjectHideFlags: 0

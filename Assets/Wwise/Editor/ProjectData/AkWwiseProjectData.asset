@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 793a940ccb1e5d4e91e456a03326af56
     GuidInternal: 
-    m_lastTime: -8585310792550351875
+    m_lastTime: -8585310686026753717
     List:
     - name: Main
       guid: 7c191c00e7594c4bafb395d509a9ef03
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d90fd038f49632498ff3de4c5fff3957
     GuidInternal: 
-    m_lastTime: -8585310792550366877
+    m_lastTime: -8585310686026748720
     List:
     - name: GameOver
       guid: ce902a7f7f5b514a9c6cd056edf34ed5
@@ -241,6 +241,23 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
+    - name: Play_Footsteps
+      guid: eff7d5c84675f8428da0f3b811e3100d
+      id: 3854155799
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d90fd038f49632498ff3de4c5fff3957
+      - ElementName: Play_Footsteps
+        ObjectType: 3
+        guid: eff7d5c84675f8428da0f3b811e3100d
+      Path: Events\Default Work Unit\Play_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.485079
+      minDuration: 0.311134
     - name: Play_Freeze
       guid: 60119367d7432d44928aa41f120fd200
       id: 1505496975
@@ -411,6 +428,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.550688
       minDuration: 2.550688
+    - name: Play_Splash
+      guid: 2dbf2100f30d7a48a6dd1b4a1fe4a1a0
+      id: 3948925255
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d90fd038f49632498ff3de4c5fff3957
+      - ElementName: Play_Splash
+        ObjectType: 3
+        guid: 2dbf2100f30d7a48a6dd1b4a1fe4a1a0
+      Path: Events\Default Work Unit\Play_Splash
+      maxAttenuation: 0
+      maxDuration: 0.434875
+      minDuration: 0.434875
     - name: Play_Teleport
       guid: e535ac5b258ed04aaaa3a8faf18d801a
       id: 3785065891
@@ -428,6 +462,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 4
       minDuration: 4
+    - name: Play_VOX
+      guid: bf3dbb8b3885064b86d61ece798cd705
+      id: 2452511941
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d90fd038f49632498ff3de4c5fff3957
+      - ElementName: Play_VOX
+        ObjectType: 3
+        guid: bf3dbb8b3885064b86d61ece798cd705
+      Path: Events\Default Work Unit\Play_VOX
+      maxAttenuation: 0
+      maxDuration: 3.263787
+      minDuration: 1.042313
+    - name: Play_Woosh
+      guid: ca8e5dcd7724fe478b625f55b7c75592
+      id: 1725216094
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d90fd038f49632498ff3de4c5fff3957
+      - ElementName: Play_Woosh
+        ObjectType: 3
+        guid: ca8e5dcd7724fe478b625f55b7c75592
+      Path: Events\Default Work Unit\Play_Woosh
+      maxAttenuation: 0
+      maxDuration: 0.916304
+      minDuration: 0.916304
     - name: Stem1
       guid: c9ef930a8b72364ea2408fd1eb5ba3bd
       id: 1232066327
@@ -596,8 +664,74 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: cb5268559473b94cbf0f4f31862c59b2
     GuidInternal: 
-    m_lastTime: -8585310792550361870
+    m_lastTime: -8585310686026748720
     List:
+    - name: Footsteps
+      guid: 995fda7c1a248646893efc04f271b82c
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cb5268559473b94cbf0f4f31862c59b2
+      - ElementName: Footsteps
+        ObjectType: 11
+        guid: 995fda7c1a248646893efc04f271b82c
+      Path: Switches\Default Work Unit\Footsteps
+      values:
+      - name: Concrete
+        guid: 6f1cfe61ea075c44979c45338b68cc78
+        id: 841620460
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: cb5268559473b94cbf0f4f31862c59b2
+        - ElementName: Footsteps
+          ObjectType: 11
+          guid: 995fda7c1a248646893efc04f271b82c
+        - ElementName: Concrete
+          ObjectType: 10
+          guid: 6f1cfe61ea075c44979c45338b68cc78
+      - name: Grass
+        guid: 96b8799ec0709f4193e6fa89a2aa897a
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: cb5268559473b94cbf0f4f31862c59b2
+        - ElementName: Footsteps
+          ObjectType: 11
+          guid: 995fda7c1a248646893efc04f271b82c
+        - ElementName: Grass
+          ObjectType: 10
+          guid: 96b8799ec0709f4193e6fa89a2aa897a
+      - name: Leaf
+        guid: e98e2ad623c07c48a21fb1f1f4bdc77e
+        id: 54442137
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: cb5268559473b94cbf0f4f31862c59b2
+        - ElementName: Footsteps
+          ObjectType: 11
+          guid: 995fda7c1a248646893efc04f271b82c
+        - ElementName: Leaf
+          ObjectType: 10
+          guid: e98e2ad623c07c48a21fb1f1f4bdc77e
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: mx
       guid: ccd1eb77f9ee454e9356e9df1a4ed107
       id: 1685527054

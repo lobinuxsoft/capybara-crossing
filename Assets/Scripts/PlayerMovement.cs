@@ -17,13 +17,15 @@ namespace CapybaraCrossing
         [SerializeField] AnimationCurve jumpHeightBehaviour;
         [SerializeField] LayerMask obstacleMask;
 
+        [Space(10)]
+        [Header("Wwise Settings")]
+        [SerializeField] AK.Wwise.Event jumpSfx;
+        [SerializeField] AK.Wwise.Event stepsSfx;
+
         Rigidbody rb;
         Animator anim;
         GroundDetector groundDetector;
         Vector3 viewDir = Vector3.forward;
-
-        [SerializeField] EffectBehavior effectBehavior;
-        EffectBehaviorComponent effectBehaviorComponent;
 
         private bool slowMotion;
 
@@ -127,6 +129,8 @@ namespace CapybaraCrossing
 
         public IEnumerator JumpRoutine(Vector3 destination, float duration, Action endAction = null)
         {
+            jumpSfx.Post(this.gameObject);
+
             float lerp = 0;
             float destHeight = destination.y;
             Vector3 startPosition = rb.position;
@@ -149,6 +153,8 @@ namespace CapybaraCrossing
 
             rb.MovePosition(destination);
             endAction?.Invoke();
+
+            stepsSfx.Post(this.gameObject);
         }
     }
 }
