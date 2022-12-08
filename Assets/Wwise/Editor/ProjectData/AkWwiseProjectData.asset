@@ -494,8 +494,8 @@ MonoBehaviour:
         guid: ca8e5dcd7724fe478b625f55b7c75592
       Path: Events\Default Work Unit\Play_Woosh
       maxAttenuation: 0
-      maxDuration: 0.916304
-      minDuration: 0.916304
+      maxDuration: 1.089675
+      minDuration: 0.770517
     - name: Stem1
       guid: c9ef930a8b72364ea2408fd1eb5ba3bd
       id: 1232066327
