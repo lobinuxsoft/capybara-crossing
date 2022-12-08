@@ -612,6 +612,13 @@
 							<ObjectLists/>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Footsteps" ID="{E21702D5-6B16-4904-91D1-7DF1ABAD314B}" ShortID="255585944">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
@@ -638,6 +645,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Step 2" ID="{B5CDBA8C-44EB-4EBF-99DE-1A8AB32D12A3}" ShortID="781163882">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
@@ -684,6 +698,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Steps 0" ID="{D0A6BE82-A3AC-4EDB-8556-E05BF5214F42}" ShortID="772946381">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
@@ -769,6 +790,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Woosh" ID="{981ACC07-D22E-4F42-92CB-3CB2D37E44C2}" ShortID="418367589">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>

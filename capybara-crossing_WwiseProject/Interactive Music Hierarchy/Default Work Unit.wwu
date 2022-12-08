@@ -6,6 +6,13 @@
 				<Folder Name="Gameplay" ID="{BB0F9F08-0508-4820-A307-BFAE0EA5D5D9}" ShortID="500976102">
 					<ChildrenList>
 						<MusicSwitchContainer Name="mx" ID="{1287DB83-61B7-41AB-A5E2-4243AFB874F4}" ShortID="533661474">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
