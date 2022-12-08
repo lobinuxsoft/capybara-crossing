@@ -369,7 +369,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175595654}
-  m_LocalRotation: {x: 0.34727672, y: -0.21462883, z: 0.081980914, w: 0.9091823}
+  m_LocalRotation: {x: 0.34727675, y: -0.21462885, z: 0.08198093, w: 0.9091823}
   m_LocalPosition: {x: 6, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1733,7 +1733,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946864533}
-  m_LocalRotation: {x: 0.34727672, y: -0.21462883, z: 0.081980914, w: 0.9091823}
+  m_LocalRotation: {x: 0.34727675, y: -0.21462885, z: 0.08198093, w: 0.9091823}
   m_LocalPosition: {x: 6, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2377,7 +2377,7 @@ GameObject:
   - component: {fileID: 1925008683}
   - component: {fileID: 1925008685}
   m_Layer: 0
-  m_Name: RockPool
+  m_Name: GrassPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2430,6 +2430,8 @@ MonoBehaviour:
   - {fileID: 4006194398642424516, guid: e233ddc8c2ee18c4d83a7c930a1edd8c, type: 3}
   - {fileID: 7168930029963498276, guid: 7c65398fbb362dd4ab5581c2f81efa15, type: 3}
   - {fileID: 6175537151150262382, guid: d7a1685f14c3e154a9c8f2581523ec66, type: 3}
+  - {fileID: 1990953586430713606, guid: 22f92c421fccd2f4faba22fb5d5b4d75, type: 3}
+  - {fileID: 1990953586430713606, guid: 22f92c421fccd2f4faba22fb5d5b4d75, type: 3}
   maxSize: 150
 --- !u!1 &1929591833
 GameObject:

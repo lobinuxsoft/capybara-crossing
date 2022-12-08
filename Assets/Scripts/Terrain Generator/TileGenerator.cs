@@ -76,18 +76,20 @@ namespace CapybaraCrossing
                 if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
                 {
                     renderer.materials = tileData.TileObjects[(int)type].material;
+                    renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                    renderer.receiveShadows = false;
                 }
                 if (currentAmountOfObstacles < maxObstaclePerLine && transform.position.z != 0 && transform.GetChild(i).position.x >= -9 && transform.GetChild(i).position.x <= 10)
                 {
                     if (Random.Range(0, 5) == 1)
                     {
-                        obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z),true));
+                        obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("GrassPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z),true));
                         currentAmountOfObstacles++;
                     }
                 }
                 else if(transform.GetChild(i).position.x == -10 || transform.GetChild(i).position.x == 11)
                 {
-                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
+                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("GrassPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
                 }
             }
         }
@@ -125,13 +127,13 @@ namespace CapybaraCrossing
                         {
                             if(Random.Range(0, 5) == 1)
                             {
-                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("GrassPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
                                 currentAmountOfRock++;
                             }
                         }
                         else if(transform.GetChild(i).position.x == -10 || transform.GetChild(i).position.x == 11) 
                         {
-                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
+                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("GrassPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
                         }
                         break;
                     case TypeOfTile.ROAD:
@@ -189,7 +191,7 @@ namespace CapybaraCrossing
                 switch (type)
                 {
                     case TypeOfTile.GRASS:
-                        ObstacleSpawnerManager.Instance.DespawnObstacle("RockPool", obstacles);
+                        ObstacleSpawnerManager.Instance.DespawnObstacle("GrassPool", obstacles);
                         if (powerUp)
                         {
                             PowerUpSpawner.DespawnPowerUp(powerUp);
