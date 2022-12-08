@@ -791,9 +791,27 @@
 						</Sound>
 						<Sound Name="Woosh" ID="{981ACC07-D22E-4F42-92CB-3CB2D37E44C2}" ShortID="418367589">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>58</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{298FBB64-F303-45F9-B0E2-2A497A917384}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="300"/>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
