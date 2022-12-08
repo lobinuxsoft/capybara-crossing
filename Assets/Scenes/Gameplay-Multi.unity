@@ -2377,7 +2377,7 @@ GameObject:
   - component: {fileID: 1925008683}
   - component: {fileID: 1925008685}
   m_Layer: 0
-  m_Name: RockPool
+  m_Name: GrassPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2430,6 +2430,8 @@ MonoBehaviour:
   - {fileID: 4006194398642424516, guid: e233ddc8c2ee18c4d83a7c930a1edd8c, type: 3}
   - {fileID: 7168930029963498276, guid: 7c65398fbb362dd4ab5581c2f81efa15, type: 3}
   - {fileID: 6175537151150262382, guid: d7a1685f14c3e154a9c8f2581523ec66, type: 3}
+  - {fileID: 1990953586430713606, guid: 22f92c421fccd2f4faba22fb5d5b4d75, type: 3}
+  - {fileID: 1990953586430713606, guid: 22f92c421fccd2f4faba22fb5d5b4d75, type: 3}
   maxSize: 150
 --- !u!1 &1929591833
 GameObject:
@@ -2636,7 +2638,7 @@ GameObject:
   - component: {fileID: 2089683208}
   - component: {fileID: 2089683207}
   m_Layer: 0
-  m_Name: CamalotePool
+  m_Name: WaterPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2671,6 +2673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obs:
   - {fileID: 1986816624281021881, guid: 94a5a6d91eae25445a2d3d267fce6762, type: 3}
+  - {fileID: 3788786228620183521, guid: 7734e530276af254ca3a5a8fb9ba928b, type: 3}
   maxSize: 90
 --- !u!114 &2089683208
 MonoBehaviour:
