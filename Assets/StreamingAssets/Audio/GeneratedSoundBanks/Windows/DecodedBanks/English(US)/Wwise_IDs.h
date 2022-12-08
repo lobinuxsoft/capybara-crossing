@@ -41,6 +41,18 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace FOOTSTEPS
+        {
+            static const AkUniqueID GROUP = 2385628198U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CONCRETE = 841620460U;
+                static const AkUniqueID GRASS = 4248645337U;
+                static const AkUniqueID LEAF = 54442137U;
+            } // namespace SWITCH
+        } // namespace FOOTSTEPS
+
         namespace MX
         {
             static const AkUniqueID GROUP = 1685527054U;

@@ -13,6 +13,13 @@
 						<Switch Name="Menu" ID="{31A25B44-C237-427E-8C8E-1EE494925AB1}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Footsteps" ID="{7CDA5F99-241A-4686-893E-FC04F271B82C}">
+					<ChildrenList>
+						<Switch Name="Grass" ID="{9E79B896-70C0-419F-93E6-FA89A2AA897A}"/>
+						<Switch Name="Concrete" ID="{61FE1C6F-07EA-445C-979C-45338B68CC78}"/>
+						<Switch Name="Leaf" ID="{D62A8EE9-C023-487C-A21F-B1F1F4BDC77E}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

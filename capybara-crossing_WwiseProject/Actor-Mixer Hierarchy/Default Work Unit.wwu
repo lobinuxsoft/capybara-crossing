@@ -621,75 +621,127 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Step 1" ID="{D2AC7D1B-B99A-4C86-94A3-95738A930020}" ShortID="963062956">
+								<SwitchContainer Name="Material" ID="{812F7340-BFEA-466D-A14A-257AB327201B}" ShortID="279016965">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
 										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Step 1" ID="{03131B4F-4ED5-49C7-ADA5-76135EF789EC}">
-											<Language>SFX</Language>
-											<AudioFile>Step 1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="568573390"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Step 1" ID="{03131B4F-4ED5-49C7-ADA5-76135EF789EC}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Step 2" ID="{B5CDBA8C-44EB-4EBF-99DE-1A8AB32D12A3}" ShortID="781163882">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Grass" ID="{9E79B896-70C0-419F-93E6-FA89A2AA897A}" WorkUnitID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
 										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Step 2" ID="{EB5FFAC5-F99B-44DB-B02C-6A46FACC6B97}">
-											<Language>SFX</Language>
-											<AudioFile>Step 2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="541094325"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Step 2" ID="{EB5FFAC5-F99B-44DB-B02C-6A46FACC6B97}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Steps 0" ID="{D0A6BE82-A3AC-4EDB-8556-E05BF5214F42}" ShortID="772946381">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Footsteps" ID="{7CDA5F99-241A-4686-893E-FC04F271B82C}" WorkUnitID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Steps" ID="{2E7E8FFD-2873-4E36-B389-24AFACD32875}">
-											<Language>SFX</Language>
-											<AudioFile>Steps.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="704460549"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Step 2" ID="{B5CDBA8C-44EB-4EBF-99DE-1A8AB32D12A3}" ShortID="781163882">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX Bus" ID="{F8CAA6BF-A78B-4719-862A-98C88142F180}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Step 2" ID="{EB5FFAC5-F99B-44DB-B02C-6A46FACC6B97}">
+													<Language>SFX</Language>
+													<AudioFile>Step 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="541094325"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Step 2" ID="{EB5FFAC5-F99B-44DB-B02C-6A46FACC6B97}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Step 1" ID="{D2AC7D1B-B99A-4C86-94A3-95738A930020}" ShortID="963062956">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX Bus" ID="{F8CAA6BF-A78B-4719-862A-98C88142F180}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Step 1" ID="{03131B4F-4ED5-49C7-ADA5-76135EF789EC}">
+													<Language>SFX</Language>
+													<AudioFile>Step 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="568573390"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Step 1" ID="{03131B4F-4ED5-49C7-ADA5-76135EF789EC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Steps 0" ID="{D0A6BE82-A3AC-4EDB-8556-E05BF5214F42}" ShortID="772946381">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BBD971BD-B443-441B-BAF0-0C2BA0A64CD5}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX Bus" ID="{F8CAA6BF-A78B-4719-862A-98C88142F180}" WorkUnitID="{C8E8563C-B513-42DF-AD8A-DE85E26CE332}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Steps" ID="{2E7E8FFD-2873-4E36-B389-24AFACD32875}">
+													<Language>SFX</Language>
+													<AudioFile>Steps.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="704460549"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Steps" ID="{2E7E8FFD-2873-4E36-B389-24AFACD32875}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Steps" ID="{2E7E8FFD-2873-4E36-B389-24AFACD32875}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Step 1" ID="{D2AC7D1B-B99A-4C86-94A3-95738A930020}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Steps 0" ID="{D0A6BE82-A3AC-4EDB-8556-E05BF5214F42}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Step 2" ID="{B5CDBA8C-44EB-4EBF-99DE-1A8AB32D12A3}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Concrete" ID="{61FE1C6F-07EA-445C-979C-45338B68CC78}"/>
+												<ItemList>
+													<ItemRef Name="Step 2" ID="{B5CDBA8C-44EB-4EBF-99DE-1A8AB32D12A3}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Grass" ID="{9E79B896-70C0-419F-93E6-FA89A2AA897A}"/>
+												<ItemList>
+													<ItemRef Name="Steps 0" ID="{D0A6BE82-A3AC-4EDB-8556-E05BF5214F42}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Leaf" ID="{D62A8EE9-C023-487C-A21F-B1F1F4BDC77E}"/>
+												<ItemList>
+													<ItemRef Name="Step 1" ID="{D2AC7D1B-B99A-4C86-94A3-95738A930020}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
 							</ChildrenList>
 							<ObjectLists/>
 						</RandomSequenceContainer>

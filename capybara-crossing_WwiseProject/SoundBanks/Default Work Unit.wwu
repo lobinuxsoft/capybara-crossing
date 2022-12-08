@@ -5,17 +5,28 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{001C197C-59E7-4B4C-AFB3-95D509A9EF03}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Stem4" ID="{4D10CE9F-3E0D-414D-BDE1-8148CA451F3A}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Footsteps" ID="{C8D5F7EF-7546-42F8-8DA0-F3B811E3100D}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Menu_Play" ID="{91AC002D-D627-42FD-9651-FCE1E81B1017}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Freeze" ID="{67931160-43D7-442D-928A-A41F120FD200}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Resurrection" ID="{F2B763F7-07E9-450D-9D96-6B5222FD9990}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Honk" ID="{A0C841EE-C8F2-452E-B884-E431A71EE845}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Menu_Hold_to_Play" ID="{80100D87-1D99-453A-9D61-3C5CA936BF7D}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Car_Crash" ID="{36B9A495-292E-46D3-99B9-F47BE328A7AD}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="mx" ID="{29B379DF-18E7-46F3-9795-AE7A18F4E50F}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stem3" ID="{8554C3B4-EBC0-4729-97C7-6FCFCCF5D247}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Woosh" ID="{CD5D8ECA-2477-47FE-8B62-5F55B7C75592}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Splash" ID="{0021BF2D-0DF3-487A-A6DD-1B4A1FE4A1A0}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Menu_Back_Click" ID="{0F69C996-03B8-488D-B890-F27B392FA62B}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Car_Engine" ID="{9148AF35-2553-48F4-BD11-A797DD14E0B9}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stem2" ID="{0E29BE85-E823-498B-BC32-9A64AE1ED97F}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Menu_Hold_to_Play_Reverse" ID="{54355EE0-7582-498D-AD03-D5C7253C2C69}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="GameOver" ID="{7F2A90CE-5B7F-4A51-9C6C-D056EDF34ED5}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Teleport" ID="{5BAC35E5-8E25-4AD0-AAA3-A8FAF18D801A}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_VOX" ID="{8BBB3DBF-8538-4B06-86D6-1ECE798CD705}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music_Menu" ID="{83F184D1-4F6D-4DB2-B3DD-0BE8B1DAEF8C}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Menu_Click" ID="{C760A4CA-511C-4DBE-AC9D-F033152A0DEF}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stem1" ID="{0A93EFC9-728B-4E36-A240-8FD1EB5BA3BD}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slow_Mo" ID="{B697FA5C-9F68-4EEE-AD73-7527BA31E07E}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Menu_Hover_Click" ID="{C934CA8A-1322-4FB7-849A-36A23D480C6A}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{7FB6A874-4DA3-4FC3-8F93-C473336B8FB1}" WorkUnitID="{38D00FD9-96F4-4932-8FF3-DE4C5FFF3957}" Origin="Manual" Filter="7"/>

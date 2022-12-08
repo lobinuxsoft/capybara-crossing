@@ -245,6 +245,50 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_Footsteps" ID="{C8D5F7EF-7546-42F8-8DA0-F3B811E3100D}">
+					<ChildrenList>
+						<Action Name="" ID="{D796FF43-1809-4D36-B8EF-C3C45A7E2AB6}" ShortID="946344252">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{E21702D5-6B16-4904-91D1-7DF1ABAD314B}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VOX" ID="{8BBB3DBF-8538-4B06-86D6-1ECE798CD705}">
+					<ChildrenList>
+						<Action Name="" ID="{A5327813-73A2-4FBA-9376-A28B11AA4F0E}" ShortID="554276829">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOX" ID="{31201865-41F7-454F-8FBD-DAC87D08D25E}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Splash" ID="{0021BF2D-0DF3-487A-A6DD-1B4A1FE4A1A0}">
+					<ChildrenList>
+						<Action Name="" ID="{60B6F33F-3113-46A3-A4A4-66DD8D0EE405}" ShortID="354684850">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Splash" ID="{234B6A09-E1D6-48D7-9C00-F0CBBBE15E33}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Woosh" ID="{CD5D8ECA-2477-47FE-8B62-5F55B7C75592}">
+					<ChildrenList>
+						<Action Name="" ID="{8352AC3B-9F9C-4F1B-BA0E-2E0192C030DE}" ShortID="117091017">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Woosh" ID="{981ACC07-D22E-4F42-92CB-3CB2D37E44C2}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
