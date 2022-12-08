@@ -51,6 +51,8 @@ public class UIGameOver : MonoBehaviour
 
     public void Show()
     {
+        MusicManager.Instance.PlayGameoverMusic();
+
         highScore.Value = 0;
 
         if(SceneManager.GetActiveScene().name == singlePlayerSceneName)

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a610f30a8a6424a972ed00100c3cec, type: 3}
+  m_Name: 4F1C66AB-2C77-4EE1-96EB-3AE38F259CF2
+  m_EditorClassIdentifier: 
+  objectName: Stem1
+  id: 1232066327
+  guid: 4F1C66AB-2C77-4EE1-96EB-3AE38F259CF2
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: c600b6bbe500b404a945d7e36db4bda5,
+    type: 2}

@@ -147,13 +147,6 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6770d2ffa1bd4dc4a91c563c77683b01,
       type: 2}
-  musicSwitch:
-    idInternal: 0
-    valueGuidInternal: 
-    groupIdInternal: 0
-    groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1f1b067d999ab61428048ae0ed55e33b,
-      type: 2}
 --- !u!1 &7607698072370918187
 GameObject:
   m_ObjectHideFlags: 0

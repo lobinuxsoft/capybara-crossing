@@ -22,18 +22,13 @@ public class UIMainMenu : MonoBehaviour
 
     [Space(10)]
     [Header("Wwise settings")]
-    [SerializeField] AK.Wwise.Bank bank;
     [SerializeField] AK.Wwise.Event playSfx;
     [SerializeField] AK.Wwise.Event clickSfx;
-    [SerializeField] AK.Wwise.Switch musicSwitch;
-    [SerializeField] AK.Wwise.Event musicEvent;
 
     UIPopup popup;
 
     private void Awake()
     {
-        bank.Load();
-
         popup = GetComponent<UIPopup>();
 
         playButton.onClick.AddListener(ToGamePlay);
@@ -60,8 +55,8 @@ public class UIMainMenu : MonoBehaviour
         PlayGamesPlatform.Activate();
         PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
 #endif
-        musicSwitch.SetValue(this.gameObject);
-        musicEvent.Post(this.gameObject);
+
+        MusicManager.Instance.PlayMainMenuMusic();
     }
 
     private void ToGamePlay()
