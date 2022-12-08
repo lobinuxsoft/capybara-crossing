@@ -17,7 +17,7 @@ namespace CapybaraCrossing
     [System.Serializable]
     public struct TileStruct
     {
-        public Mesh mesh;
+        public Mesh[] mesh;
         public Material[] material;
     }
 }

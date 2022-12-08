@@ -71,7 +71,7 @@ namespace CapybaraCrossing
             {
                 if (transform.GetChild(i).TryGetComponent(out MeshFilter filter))
                 {
-                    filter.mesh = tileData.TileObjects[(int)type].mesh;
+                    filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
                 }
                 if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
                 {
@@ -101,10 +101,10 @@ namespace CapybaraCrossing
             int maxDeepWaterPerLine = 6;
             int currentAmountOfDeepWaters = 0;
             for (int i = 0; i < TileWidth; i++)
-            { 
-                if(transform.GetChild(i).TryGetComponent(out MeshFilter filter))
+            {
+                if (transform.GetChild(i).TryGetComponent(out MeshFilter filter))
                 {
-                    filter.mesh = tileData.TileObjects[(int)type].mesh;
+                    filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
                 }
                 if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
                 {
