@@ -1,0 +1,77 @@
+Event	ID	Name			Wwise Object Path	Notes
+	113434238	Play_Menu_Back_Click			\Default Work Unit\Play_Menu_Back_Click	
+	454546127	Play_Menu_Hold_to_Play_Reverse			\Default Work Unit\Play_Menu_Hold_to_Play_Reverse	
+	685607017	Play_Menu_Hover_Click			\Default Work Unit\Play_Menu_Hover_Click	
+	895541995	Play_Resurrection			\Default Work Unit\Play_Resurrection	
+	1149661472	Play_Menu_Hold_to_Play			\Default Work Unit\Play_Menu_Hold_to_Play	
+	1232066322	Stem4			\Default Work Unit\Music\Stem4	
+	1232066324	Stem2			\Default Work Unit\Music\Stem2	
+	1232066325	Stem3			\Default Work Unit\Music\Stem3	
+	1232066327	Stem1			\Default Work Unit\Music\Stem1	
+	1357778998	Play_Menu_Click			\Default Work Unit\Play_Menu_Click	
+	1400896344	Play_Slow_Mo			\Default Work Unit\Play_Slow_Mo	
+	1505496975	Play_Freeze			\Default Work Unit\Play_Freeze	
+	1598298728	Music_Menu			\Default Work Unit\Music\Music_Menu	
+	1685527054	mx			\Default Work Unit\Music\mx	
+	1725216094	Play_Woosh			\Default Work Unit\Play_Woosh	
+	2452511941	Play_VOX			\Default Work Unit\Play_VOX	
+	2486471960	Play_Honk			\Default Work Unit\Play_Honk	
+	2832155465	Play_Car_Engine			\Default Work Unit\Play_Car_Engine	
+	2838070904	Play_Car_Crash			\Default Work Unit\Play_Car_Crash	
+	3198441892	Play_Menu_Play			\Default Work Unit\Play_Menu_Play	
+	3785065891	Play_Teleport			\Default Work Unit\Play_Teleport	
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+	3948925255	Play_Splash			\Default Work Unit\Play_Splash	
+	4158285989	GameOver			\Default Work Unit\Music\GameOver	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1685527054	mx			\Default Work Unit\mx	
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+
+Switch	ID	Name	Switch Group			Notes
+	1232066322	Stem4	mx			
+	1232066324	Stem2	mx			
+	1232066325	Stem3	mx			
+	1232066327	Stem1	mx			
+	2607556080	Menu	mx			
+	4158285989	GameOver	mx			
+	54442137	Leaf	Footsteps			
+	841620460	Concrete	Footsteps			
+	4248645337	Grass	Footsteps			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	46543522	Menu_Hold to Play Reverse	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Menu_Hold to Play Reverse_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Menu_Hold to Play Reverse		441064
+	81961824	Car_Crash	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Car Crash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Car\Car_Crash		574804
+	112497241	Carpincho Sound 6	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Carpincho Sound 6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\VOX\Carpincho Sound 6		536748
+	187027503	Menu_Play	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Menu_Play_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Menu_Play		617464
+	223518856	Splash	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Splash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\Splash		76776
+	240289798	Slow_Mo	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Slow_Mo_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power_Ups\Slow_Mo		489796
+	309135254	Game Over 1	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Game Over 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Gameplay\mx\Game Over\Game Over 1\Game Over 1		1344160
+	320331462	Carpincho Sound 5	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Carpincho Sound 5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\VOX\Carpincho Sound 5		183928
+	377828086	Car_Engine	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Car_Loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Car\Car_Engine		3526464
+	400322400	Capybara Crossing Menu	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Capybara Crossing Menu_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Gameplay\mx\Menu\Capybara Crossing Menu\Capybara Crossing Menu		30720064
+	413848803	Honk_1	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Honk_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Car\Honk\Honk_1		101860
+	427049004	Carpincho Sound 3	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Carpincho Sound 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\VOX\Carpincho Sound 3		392696
+	436602675	Teleport	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Teleport_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power_Ups\Teleport		705664
+	450448987	Gameplay L3 Capybara	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Gameplay L3 Capybara_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Gameplay\mx\Stem 3\Gameplay L3 Capybara\Gameplay L3 Capybara		6143800
+	519932181	Carpincho Sound 4	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Carpincho Sound 4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\VOX\Carpincho Sound 4		421324
+	537660211	Honk_4	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Honk_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Car\Honk\Honk_4		226760
+	541094325	Step 2	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Step 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\Footsteps\Material\Step 2		60112
+	547418752	Carpincho Sound 2	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Carpincho Sound 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\VOX\Carpincho Sound 2		575796
+	568573390	Step 1	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Step 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\Footsteps\Material\Step 1		54948
+	571318240	Menu_Click	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Menu_Click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Menu_Click		176464
+	580263710	Honk_2	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Honk_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Car\Honk\Honk_2		142900
+	589257309	Resurrection	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Resurrection_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power_Ups\Resurrection		882064
+	626581502	Menu_Hold to Play	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Menu_Hold to Play_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Menu_Hold to Play		441064
+	632710624	Honk_3	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Honk_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Car\Honk\Honk_3		190476
+	661990860	Gameplay L1 Capybara	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Gameplay L1 Capybara_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Gameplay\mx\Stem 1\Gameplay L1 Capybara\Gameplay L1 Capybara		6143800
+	704460549	Steps 0	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Steps_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\Footsteps\Material\Steps 0		85632
+	746056295	Gameplay L4 Capybara	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Gameplay L4 Capybara_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Gameplay\mx\Stem 4\Gameplay L4 Capybara\Gameplay L4 Capybara		6143800
+	771702473	Menu_Back Click	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Menu_Back Click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Menu_Back Click		176464
+	792070828	Freeze	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Freeze_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power_Ups\Freeze		579124
+	899336610	Gameplay L2 Capybara	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Gameplay L2 Capybara_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Gameplay\mx\Stem 2\Gameplay L2 Capybara\Gameplay L2 Capybara		6143800
+	919015150	Carpincho Sound 7	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Carpincho Sound 7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\VOX\Carpincho Sound 7		352452
+	929652384	Woosh	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Woosh_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\Woosh		161700
+	950910304	Carpincho Sound 1	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Carpincho Sound 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Capybara\VOX\Carpincho Sound 1		532856
+	1002946215	Menu_Hover Click	D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\SFX\Menu_Hover Click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Menu_Hover Click		176464
+

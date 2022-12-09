@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Repositorios\capybara-crossing\capybara-crossing_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="680440567">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="4166251941">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4158285989" Name="GameOver" ObjectPath="\Events\Default Work Unit\Music\GameOver" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="4158285989" Name="GameOver" ObjectPath="\Switches\Default Work Unit\mx\GameOver"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1598298728" Name="Music_Menu" ObjectPath="\Events\Default Work Unit\Music\Music_Menu" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="2607556080" Name="Menu" ObjectPath="\Switches\Default Work Unit\mx\Menu"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1685527054" Name="mx" ObjectPath="\Events\Default Work Unit\Music\mx" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="309135254" Language="SFX">
+							<ShortName>Game Over 1.wav</ShortName>
+							<Path>SFX\Game Over 1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="400322400" Language="SFX">
+							<ShortName>Capybara Crossing Menu.wav</ShortName>
+							<Path>SFX\Capybara Crossing Menu_D79FB2B7.wem</Path>
+						</File>
+						<File Id="450448987" Language="SFX">
+							<ShortName>Gameplay L3 Capybara.wav</ShortName>
+							<Path>SFX\Gameplay L3 Capybara_D79FB2B7.wem</Path>
+						</File>
+						<File Id="661990860" Language="SFX">
+							<ShortName>Gameplay L1 Capybara.wav</ShortName>
+							<Path>SFX\Gameplay L1 Capybara_D79FB2B7.wem</Path>
+						</File>
+						<File Id="746056295" Language="SFX">
+							<ShortName>Gameplay L4 Capybara.wav</ShortName>
+							<Path>SFX\Gameplay L4 Capybara_D79FB2B7.wem</Path>
+						</File>
+						<File Id="899336610" Language="SFX">
+							<ShortName>Gameplay L2 Capybara.wav</ShortName>
+							<Path>SFX\Gameplay L2 Capybara_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{4F1C66AB-2C77-4EE1-96EB-3AE38F259CF2}">
+							<Media>
+								<File Id="661990860"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{FEB1A22A-EDCC-4B11-8B3E-1FD7B56424DC}">
+							<Media>
+								<File Id="899336610"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{02F530ED-BDD7-4E88-95BF-A197359FF6AA}">
+							<Media>
+								<File Id="450448987"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{00CD4F55-B552-44CA-8ADB-A8B21EF2457E}">
+							<Media>
+								<File Id="746056295"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{F9F8739E-6C35-4F3B-848F-D2268B81F5E7}">
+							<Media>
+								<File Id="309135254"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{31A25B44-C237-427E-8C8E-1EE494925AB1}">
+							<Media>
+								<File Id="400322400"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2838070904" Name="Play_Car_Crash" ObjectPath="\Events\Default Work Unit\Play_Car_Crash" DurationType="OneShot" DurationMin="2.517171" DurationMax="3.559817">
+					<IncludedMemoryFiles>
+						<File Id="81961824" Language="SFX">
+							<ShortName>Car Crash.wav</ShortName>
+							<Path>SFX\Car Crash_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2832155465" Name="Play_Car_Engine" ObjectPath="\Events\Default Work Unit\Play_Car_Engine" MaxAttenuation="100." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="377828086" Language="SFX">
+							<ShortName>Car_Loop.wav</ShortName>
+							<Path>SFX\Car_Loop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.261631" DurationMax="0.57686">
+					<IncludedMemoryFiles>
+						<File Id="541094325" Language="SFX">
+							<ShortName>Step 2.wav</ShortName>
+							<Path>SFX\Step 2_10C4C929.wem</Path>
+						</File>
+						<File Id="568573390" Language="SFX">
+							<ShortName>Step 1.wav</ShortName>
+							<Path>SFX\Step 1_10C4C929.wem</Path>
+						</File>
+						<File Id="704460549" Language="SFX">
+							<ShortName>Steps.wav</ShortName>
+							<Path>SFX\Steps_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{D62A8EE9-C023-487C-A21F-B1F1F4BDC77E}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{61FE1C6F-07EA-445C-979C-45338B68CC78}">
+							<Media>
+								<File Id="541094325"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{9E79B896-70C0-419F-93E6-FA89A2AA897A}">
+							<Media>
+								<File Id="704460549"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{D62A8EE9-C023-487C-A21F-B1F1F4BDC77E}">
+							<Media>
+								<File Id="568573390"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1505496975" Name="Play_Freeze" ObjectPath="\Events\Default Work Unit\Play_Freeze" DurationType="OneShot" DurationMin="3.015938" DurationMax="3.015938">
+					<IncludedMemoryFiles>
+						<File Id="792070828" Language="SFX">
+							<ShortName>Freeze.wav</ShortName>
+							<Path>SFX\Freeze_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2486471960" Name="Play_Honk" ObjectPath="\Events\Default Work Unit\Play_Honk" DurationType="OneShot" DurationMin="0.530187" DurationMax="1.180708">
+					<IncludedMemoryFiles>
+						<File Id="413848803" Language="SFX">
+							<ShortName>Honk_1.wav</ShortName>
+							<Path>SFX\Honk_1_10C4C929.wem</Path>
+						</File>
+						<File Id="537660211" Language="SFX">
+							<ShortName>Honk_4.wav</ShortName>
+							<Path>SFX\Honk_4_10C4C929.wem</Path>
+						</File>
+						<File Id="580263710" Language="SFX">
+							<ShortName>Honk_2.wav</ShortName>
+							<Path>SFX\Honk_2_10C4C929.wem</Path>
+						</File>
+						<File Id="632710624" Language="SFX">
+							<ShortName>Honk_3.wav</ShortName>
+							<Path>SFX\Honk_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="113434238" Name="Play_Menu_Back_Click" ObjectPath="\Events\Default Work Unit\Play_Menu_Back_Click" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="771702473" Language="SFX">
+							<ShortName>Menu_Back Click.wav</ShortName>
+							<Path>SFX\Menu_Back Click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1357778998" Name="Play_Menu_Click" ObjectPath="\Events\Default Work Unit\Play_Menu_Click" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="571318240" Language="SFX">
+							<ShortName>Menu_Click.wav</ShortName>
+							<Path>SFX\Menu_Click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1149661472" Name="Play_Menu_Hold_to_Play" ObjectPath="\Events\Default Work Unit\Play_Menu_Hold_to_Play" DurationType="OneShot" DurationMin="2.5" DurationMax="2.5">
+					<IncludedMemoryFiles>
+						<File Id="626581502" Language="SFX">
+							<ShortName>Menu_Hold to Play.wav</ShortName>
+							<Path>SFX\Menu_Hold to Play_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="454546127" Name="Play_Menu_Hold_to_Play_Reverse" ObjectPath="\Events\Default Work Unit\Play_Menu_Hold_to_Play_Reverse" DurationType="OneShot" DurationMin="2.5" DurationMax="2.5">
+					<IncludedMemoryFiles>
+						<File Id="46543522" Language="SFX">
+							<ShortName>Menu_Hold to Play Reverse.wav</ShortName>
+							<Path>SFX\Menu_Hold to Play Reverse_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="685607017" Name="Play_Menu_Hover_Click" ObjectPath="\Events\Default Work Unit\Play_Menu_Hover_Click" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="1002946215" Language="SFX">
+							<ShortName>Menu_Hover Click.wav</ShortName>
+							<Path>SFX\Menu_Hover Click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3198441892" Name="Play_Menu_Play" ObjectPath="\Events\Default Work Unit\Play_Menu_Play" DurationType="OneShot" DurationMin="3.5" DurationMax="3.5">
+					<IncludedMemoryFiles>
+						<File Id="187027503" Language="SFX">
+							<ShortName>Menu_Play.wav</ShortName>
+							<Path>SFX\Menu_Play_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="895541995" Name="Play_Resurrection" ObjectPath="\Events\Default Work Unit\Play_Resurrection" DurationType="OneShot" DurationMin="5." DurationMax="5.">
+					<IncludedMemoryFiles>
+						<File Id="589257309" Language="SFX">
+							<ShortName>Resurrection.wav</ShortName>
+							<Path>SFX\Resurrection_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1400896344" Name="Play_Slow_Mo" ObjectPath="\Events\Default Work Unit\Play_Slow_Mo" DurationType="OneShot" DurationMin="2.550688" DurationMax="2.550688">
+					<IncludedMemoryFiles>
+						<File Id="240289798" Language="SFX">
+							<ShortName>Slow_Mo.wav</ShortName>
+							<Path>SFX\Slow_Mo_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3948925255" Name="Play_Splash" ObjectPath="\Events\Default Work Unit\Play_Splash" DurationType="OneShot" DurationMin="0.434875" DurationMax="0.434875">
+					<IncludedMemoryFiles>
+						<File Id="223518856" Language="SFX">
+							<ShortName>Splash.wav</ShortName>
+							<Path>SFX\Splash_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3785065891" Name="Play_Teleport" ObjectPath="\Events\Default Work Unit\Play_Teleport" DurationType="OneShot" DurationMin="4." DurationMax="4.">
+					<IncludedMemoryFiles>
+						<File Id="436602675" Language="SFX">
+							<ShortName>Teleport.wav</ShortName>
+							<Path>SFX\Teleport_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2452511941" Name="Play_VOX" ObjectPath="\Events\Default Work Unit\Play_VOX" DurationType="OneShot" DurationMin="1.042313" DurationMax="3.263787">
+					<IncludedMemoryFiles>
+						<File Id="112497241" Language="SFX">
+							<ShortName>Carpincho Sound 6.wav</ShortName>
+							<Path>SFX\Carpincho Sound 6_10C4C929.wem</Path>
+						</File>
+						<File Id="320331462" Language="SFX">
+							<ShortName>Carpincho Sound 5.wav</ShortName>
+							<Path>SFX\Carpincho Sound 5_10C4C929.wem</Path>
+						</File>
+						<File Id="427049004" Language="SFX">
+							<ShortName>Carpincho Sound 3.wav</ShortName>
+							<Path>SFX\Carpincho Sound 3_10C4C929.wem</Path>
+						</File>
+						<File Id="519932181" Language="SFX">
+							<ShortName>Carpincho Sound 4.wav</ShortName>
+							<Path>SFX\Carpincho Sound 4_10C4C929.wem</Path>
+						</File>
+						<File Id="547418752" Language="SFX">
+							<ShortName>Carpincho Sound 2.wav</ShortName>
+							<Path>SFX\Carpincho Sound 2_10C4C929.wem</Path>
+						</File>
+						<File Id="919015150" Language="SFX">
+							<ShortName>Carpincho Sound 7.wav</ShortName>
+							<Path>SFX\Carpincho Sound 7_10C4C929.wem</Path>
+						</File>
+						<File Id="950910304" Language="SFX">
+							<ShortName>Carpincho Sound 1.wav</ShortName>
+							<Path>SFX\Carpincho Sound 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1725216094" Name="Play_Woosh" ObjectPath="\Events\Default Work Unit\Play_Woosh" DurationType="OneShot" DurationMin="0.770517" DurationMax="1.089675">
+					<IncludedMemoryFiles>
+						<File Id="929652384" Language="SFX">
+							<ShortName>Woosh.wav</ShortName>
+							<Path>SFX\Woosh_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1232066327" Name="Stem1" ObjectPath="\Events\Default Work Unit\Music\Stem1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="1232066327" Name="Stem1" ObjectPath="\Switches\Default Work Unit\mx\Stem1"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1232066324" Name="Stem2" ObjectPath="\Events\Default Work Unit\Music\Stem2" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="1232066324" Name="Stem2" ObjectPath="\Switches\Default Work Unit\mx\Stem2"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1232066325" Name="Stem3" ObjectPath="\Events\Default Work Unit\Music\Stem3" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="1232066325" Name="Stem3" ObjectPath="\Switches\Default Work Unit\mx\Stem3"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1232066322" Name="Stem4" ObjectPath="\Events\Default Work Unit\Music\Stem4" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="1232066322" Name="Stem4" ObjectPath="\Switches\Default Work Unit\mx\Stem4"/>
+					</ActionSetSwitch>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="1232066322" Name="Stem4" ObjectPath="\Switches\Default Work Unit\mx\Stem4" GUID="{00CD4F55-B552-44CA-8ADB-A8B21EF2457E}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="1232066324" Name="Stem2" ObjectPath="\Switches\Default Work Unit\mx\Stem2" GUID="{FEB1A22A-EDCC-4B11-8B3E-1FD7B56424DC}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="1232066325" Name="Stem3" ObjectPath="\Switches\Default Work Unit\mx\Stem3" GUID="{02F530ED-BDD7-4E88-95BF-A197359FF6AA}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="1232066327" Name="Stem1" ObjectPath="\Switches\Default Work Unit\mx\Stem1" GUID="{4F1C66AB-2C77-4EE1-96EB-3AE38F259CF2}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="1685527054" Name="mx" ObjectPath="\Switches\Default Work Unit\mx" GUID="{77EBD1CC-EEF9-4E45-9356-E9DF1A4ED107}">
+					<Switches>
+						<Switch Id="1232066327" Name="Stem1" ObjectPath="\Switches\Default Work Unit\mx\Stem1" GUID="{4F1C66AB-2C77-4EE1-96EB-3AE38F259CF2}"/>
+						<Switch Id="1232066324" Name="Stem2" ObjectPath="\Switches\Default Work Unit\mx\Stem2" GUID="{FEB1A22A-EDCC-4B11-8B3E-1FD7B56424DC}"/>
+						<Switch Id="1232066325" Name="Stem3" ObjectPath="\Switches\Default Work Unit\mx\Stem3" GUID="{02F530ED-BDD7-4E88-95BF-A197359FF6AA}"/>
+						<Switch Id="1232066322" Name="Stem4" ObjectPath="\Switches\Default Work Unit\mx\Stem4" GUID="{00CD4F55-B552-44CA-8ADB-A8B21EF2457E}"/>
+						<Switch Id="4158285989" Name="GameOver" ObjectPath="\Switches\Default Work Unit\mx\GameOver" GUID="{F9F8739E-6C35-4F3B-848F-D2268B81F5E7}"/>
+						<Switch Id="2607556080" Name="Menu" ObjectPath="\Switches\Default Work Unit\mx\Menu" GUID="{31A25B44-C237-427E-8C8E-1EE494925AB1}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2385628198" Name="Footsteps" ObjectPath="\Switches\Default Work Unit\Footsteps" GUID="{7CDA5F99-241A-4686-893E-FC04F271B82C}">
+					<Switches>
+						<Switch Id="4248645337" Name="Grass" ObjectPath="\Switches\Default Work Unit\Footsteps\Grass" GUID="{9E79B896-70C0-419F-93E6-FA89A2AA897A}"/>
+						<Switch Id="841620460" Name="Concrete" ObjectPath="\Switches\Default Work Unit\Footsteps\Concrete" GUID="{61FE1C6F-07EA-445C-979C-45338B68CC78}"/>
+						<Switch Id="54442137" Name="Leaf" ObjectPath="\Switches\Default Work Unit\Footsteps\Leaf" GUID="{D62A8EE9-C023-487C-A21F-B1F1F4BDC77E}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2607556080" Name="Menu" ObjectPath="\Switches\Default Work Unit\mx\Menu" GUID="{31A25B44-C237-427E-8C8E-1EE494925AB1}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="4158285989" Name="GameOver" ObjectPath="\Switches\Default Work Unit\mx\GameOver" GUID="{F9F8739E-6C35-4F3B-848F-D2268B81F5E7}">
+					<Switches/>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
