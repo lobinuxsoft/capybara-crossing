@@ -236,7 +236,7 @@ MonoBehaviour:
   backButton: {fileID: 3285044803076397948}
   mainMenuPopup: {fileID: 0}
   categories:
-  - name: Developers
+  - name: Programming
     people:
     - name: Francisco Cavenaghi
       url: https://www.linkedin.com/in/cavenaghidev/
@@ -248,25 +248,25 @@ MonoBehaviour:
       url: https://www.linkedin.com/in/juanbrutti/
     - name: Rocio Gimenez
       url: https://linktr.ee/rouxy
-  - name: Music Composer
+  - name: SFX & Music
     people:
     - name: "Aldo D\xEC Paolo"
       url: https://open.spotify.com/artist/36MRVC5qtBZ9E8rE58IY2a
-  - name: SFX implementation
-    people:
     - name: "Emiliano Leonel L\xF3pez"
       url: https://www.linkedin.com/in/emiliano-leonel-l%C3%B3pez
-  - name: QA-POC
+    - name: "Mart\xEDn Huergo"
+      url: https://www.likuidaudio.com
+    - name: Paula Miranda
+      url: 
+  - name: QA
     people:
     - name: Diego Pablo Acosta
       url: linkedin.com/in/diego-pablo-acosta
-  - name: QA-Reviewer
-    people:
-    - name: Andres Corvetto
-      url: 
-  - name: QA-Tester
-    people:
     - name: M. Paula Barbalace
+      url: 
+    - name: "Andr\xE9s Corvetto"
+      url: 
+    - name: "Maximiliano Dar\xEDo Vrancken"
       url: 
   backSfx:
     idInternal: 0
