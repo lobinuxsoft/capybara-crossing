@@ -35,36 +35,44 @@ This is a game being developed by students from <a href="https://www.imagecampus
 </p>
 
 
-## Credits
-
-- **Francisco Cavenaghi** - *Developer*
-- **Matías Galarza** - *Developer*
-- **Juan Brutti** - *2D / 3D Artist*
-- **Rocío Gimenez** - *2D / 3D Artist*
-- **Aldo Di Paolo** - *Music Composer*
-- **Emiliano Leonel López** - *SFX Implementator*
-- **Diego Pablo Acosta** - *QA-Poc*
-- **Andres Corvetto** - *QA Reviewer*
-- **M. Paula Barbalace** - *QA Tester*
-
-
-This game was also possible thanks to the support of these professors:
-
-- **Sergio Baretto**
-- **Ramiro Cabrera**
-- **Ignacio Mosconi**
-- **Lucía Inés Patetta**
-- **Nazareno Rivero**
-- **Eugenio Taboada**
-
-
-## Acknowledgements
-
-- **Ramón Bunge**
-- **Juan Cruz Tourret**
-- **Nicolás Jimenez Lamberti**
-- **Federico Olivé**
-
+<p><br></p>
+<h2>Credits</h2>
+<p><strong>Programming</strong></p>
+<ul><li>Francisco Cavenaghi
+</li><li>Matías Galarza
+</li></ul>
+<p><strong>2D / 3D Art</strong></p>
+<ul><li>Juan Brutti
+</li><li>Rocío Victoria Giménez</li></ul>
+<p><span style="color: inherit; font-family: inherit; font-size: inherit;"><strong>SFX & Music</strong></span></p>
+<ul><li>Aldo Dì Paolo
+</li><li>Martín Huergo<br>
+</li><li>Emiliano Lionel López
+</li><li>Paula Miranda</li></ul>
+<ul></ul>
+<p><strong>QA</strong></p>
+<ul><li>Diego Pablo Acosta
+</li><li>M. Paula Barbalce
+</li><li>Andrés Corvetto
+</li><li>Maximiliano Darío Vrancken
+</li></ul>
+<p><span></span></p>
+<p>This game was also possible thanks to the support of these professors:</p>
+<ul>
+<li>Sergio Baretto</li>
+<li>Ramiro Cabrera</li>
+<li>Ignacio Mosconi</li>
+<li>Lucía Inés Patetta</li>
+<li>Nazareno Rivero</li>
+<li>Eugenio Taboada</li>
+</ul>
+<h2>Acknowledgements</h2>
+<ul>
+<li>Ramón Bunge</li><li>Nicolás Jimenez Lamberti<br>
+</li><li>Federico Olivé<br>
+</li>
+<li>Juan Cruz Tourret</li></ul>
+<p><br></p>
 
 ## Links
 
