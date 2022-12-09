@@ -1369,6 +1369,71 @@ PrefabInstance:
       propertyPath: mainMenuPopup
       value: 
       objectReference: {fileID: 1569730493}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].name
+      value: ACKNOWLEDGEMENTS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.data[0].name
+      value: Sergio Baretto
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.data[1].name
+      value: "Ram\xF3n Bunge"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.data[2].name
+      value: Ramiro Cabrera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.data[3].name
+      value: "Nicol\xE1s Jimenez Lamberti"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.data[4].name
+      value: Ignacio Mosconi
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.data[5].name
+      value: "Federico Oliv\xE9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.data[6].name
+      value: "Luc\xEDa In\xE9s Patetta"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.data[7].name
+      value: Nazareno Rivero
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.data[8].name
+      value: Eugenio Taboada
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711796541734385393, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: categories.Array.data[4].people.Array.data[9].name
+      value: Juan Cruz Tourret
+      objectReference: {fileID: 0}
     - target: {fileID: 4711796541734385396, guid: 63f5907b55a21af46a5edadc10026d2b,
         type: 3}
       propertyPath: m_Name
@@ -1513,6 +1578,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668747611516850312, guid: 63f5907b55a21af46a5edadc10026d2b,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f5907b55a21af46a5edadc10026d2b, type: 3}
