@@ -369,7 +369,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175595654}
-  m_LocalRotation: {x: 0.34727672, y: -0.21462883, z: 0.0819809, w: 0.90918237}
+  m_LocalRotation: {x: 0.34727672, y: -0.21462883, z: 0.081980914, w: 0.9091823}
   m_LocalPosition: {x: 6, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1733,7 +1733,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946864533}
-  m_LocalRotation: {x: 0.34727672, y: -0.21462883, z: 0.0819809, w: 0.90918237}
+  m_LocalRotation: {x: 0.34727672, y: -0.21462883, z: 0.081980914, w: 0.9091823}
   m_LocalPosition: {x: 6, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2021,6 +2021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIGameOver: {fileID: 2111150961}
   cameraBrains: []
+  shader: {fileID: 2100000, guid: 4ee24e2c04c3fb840b85fb9e245c62b6, type: 2}
 --- !u!4 &1502742593
 Transform:
   m_ObjectHideFlags: 0

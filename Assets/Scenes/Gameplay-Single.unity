@@ -1489,6 +1489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIGameOver: {fileID: 1287416917}
   cameraBrains: []
+  shader: {fileID: 2100000, guid: 4ee24e2c04c3fb840b85fb9e245c62b6, type: 2}
 --- !u!4 &1502742593
 Transform:
   m_ObjectHideFlags: 0
