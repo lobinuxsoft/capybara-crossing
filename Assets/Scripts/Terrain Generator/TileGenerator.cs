@@ -86,6 +86,24 @@ namespace CapybaraCrossing
                         obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("GrassPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z),true));
                         currentAmountOfObstacles++;
                     }
+                    if (obstacles[obstacles.Count - 1] != null && obstacles[obstacles.Count - 1].name == "Arbol1(Clone)")
+                    {
+                        currentAmountOfObstacles += 2;
+                        for (int j = 0; j < 2; j++)
+                        {
+                            i++;
+                            if (transform.GetChild(i).TryGetComponent(out filter))
+                            {
+                                filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
+                            }
+                            if (transform.GetChild(i).TryGetComponent(out renderer))
+                            {
+                                renderer.materials = tileData.TileObjects[(int)type].material;
+                            }
+                        }
+                        obstacles[obstacles.Count - 1].transform.position += new Vector3(0.2f, 0, 0);
+                        obstacles[obstacles.Count - 1].transform.rotation = Quaternion.Euler(0, 0, 0);
+                    }
                 }
                 else if(transform.GetChild(i).position.x == -10 || transform.GetChild(i).position.x == 11)
                 {
@@ -129,6 +147,24 @@ namespace CapybaraCrossing
                             {
                                 obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("GrassPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
                                 currentAmountOfRock++;
+                            }
+                            if (obstacles[obstacles.Count - 1] != null && obstacles[obstacles.Count - 1].name == "Arbol1(Clone)")
+                            {
+                                currentAmountOfRock += 2;
+                                for(int j = 0; j < 2; j++)
+                                {
+                                    i++;
+                                    if (transform.GetChild(i).TryGetComponent(out filter))
+                                    {
+                                        filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
+                                    }
+                                    if (transform.GetChild(i).TryGetComponent(out renderer))
+                                    {
+                                        renderer.materials = tileData.TileObjects[(int)type].material;
+                                    }
+                                }
+                                obstacles[obstacles.Count - 1].transform.position += new Vector3(1f, 0, 0);
+                                obstacles[obstacles.Count - 1].transform.rotation = Quaternion.Euler(0, 0, 0);
                             }
                         }
                         else if(transform.GetChild(i).position.x == -10 || transform.GetChild(i).position.x == 11) 
