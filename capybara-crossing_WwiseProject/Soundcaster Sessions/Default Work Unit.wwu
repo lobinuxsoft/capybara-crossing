@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{BF42C814-79F8-4B32-B16C-FC2E10A64EAF}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{BF42C814-79F8-4B32-B16C-FC2E10A64EAF}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{BF42C814-79F8-4B32-B16C-FC2E10A64EAF}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{9D753BA1-D2B5-42AA-BA0F-C6B23E0322F2}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Footsteps" ID="{E21702D5-6B16-4904-91D1-7DF1ABAD314B}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Woosh" ID="{981ACC07-D22E-4F42-92CB-3CB2D37E44C2}" WorkUnitID="{C1C3F980-A60A-496C-98F1-469544D21D40}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="SFXVolume" ID="{12EF680D-7699-484F-B5DB-292F8E5A58A8}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MusicVolume" ID="{B14CAECE-C382-4B30-92E6-0C8943CE8058}"/>
+							<Value>100</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Leaf" ID="{D62A8EE9-C023-487C-A21F-B1F1F4BDC77E}"/>
+						<CurrentSwitchRef Name="Stem1" ID="{4F1C66AB-2C77-4EE1-96EB-3AE38F259CF2}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

@@ -22,7 +22,6 @@ public class UIMainMenu : MonoBehaviour
 
     [Space(10)]
     [Header("Wwise settings")]
-    [SerializeField] AK.Wwise.Bank bank;
     [SerializeField] AK.Wwise.Event playSfx;
     [SerializeField] AK.Wwise.Event clickSfx;
 
@@ -30,8 +29,6 @@ public class UIMainMenu : MonoBehaviour
 
     private void Awake()
     {
-        bank.Load();
-
         popup = GetComponent<UIPopup>();
 
         playButton.onClick.AddListener(ToGamePlay);
@@ -57,7 +54,9 @@ public class UIMainMenu : MonoBehaviour
         #if UNITY_ANDROID
         PlayGamesPlatform.Activate();
         PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
-        #endif
+#endif
+
+        MusicManager.Instance.PlayMainMenuMusic();
     }
 
     private void ToGamePlay()

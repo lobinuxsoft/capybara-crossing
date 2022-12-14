@@ -1,5 +1,81 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2962265244933303580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3223971589072124700}
+  - component: {fileID: 9036905070615764788}
+  - component: {fileID: 8668747611516850312}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3223971589072124700
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2962265244933303580}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4711796542978262854}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.1223656, y: 0.75}
+  m_AnchorMax: {x: 0.8776343, y: 0.8489129}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &9036905070615764788
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2962265244933303580}
+  m_CullTransparentMesh: 1
+--- !u!114 &8668747611516850312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2962265244933303580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 29c46d3cc714b11458654378c3257520, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4711796541623129874
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ccad05e3f6195459cec25919279a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plainTextPref: {fileID: 3173187330725935267, guid: 445361cc1c5db0641a8de35830f49cf3,
+  plainTextPref: {fileID: 3173187330725935267, guid: 9e563acd96717014fb489c315c5c8f68,
     type: 3}
   textButtonPref: {fileID: 5220695730499230438, guid: 4e8e54e999caa734d826c04c46db36b0,
     type: 3}
@@ -236,43 +312,38 @@ MonoBehaviour:
   backButton: {fileID: 3285044803076397948}
   mainMenuPopup: {fileID: 0}
   categories:
-  - name: Developers
+  - name: Programming
     people:
-    - name: Matias Galarza
-      url: https://www.linkedin.com/in/lobinux/
     - name: Francisco Cavenaghi
       url: https://www.linkedin.com/in/cavenaghidev/
+    - name: Matias Galarza
+      url: https://www.linkedin.com/in/lobinux/
   - name: 2D / 3D Art
     people:
-    - name: Rocio Gimenez
-      url: https://linktr.ee/rouxy
     - name: Juan Brutti
       url: https://www.linkedin.com/in/juanbrutti/
-  - name: Music Composer
+    - name: Rocio Gimenez
+      url: https://linktr.ee/rouxy
+  - name: SFX & Music
     people:
     - name: "Aldo D\xEC Paolo"
       url: https://open.spotify.com/artist/36MRVC5qtBZ9E8rE58IY2a
-  - name: SFX implementation
-    people:
     - name: "Emiliano Leonel L\xF3pez"
       url: https://www.linkedin.com/in/emiliano-leonel-l%C3%B3pez
-  - name: QA-POC
+    - name: "Mart\xEDn Huergo"
+      url: https://www.likuidaudio.com
+    - name: Paula Miranda
+      url: 
+  - name: QA
     people:
     - name: Diego Pablo Acosta
       url: linkedin.com/in/diego-pablo-acosta
-  - name: QA-Reviewer
-    people:
-    - name: Andres Corvetto
-      url: 
-  - name: QA-Tester
-    people:
     - name: M. Paula Barbalace
       url: 
-  bank:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b06056119de250145aebca8273161d2a,
-      type: 2}
+    - name: "Andr\xE9s Corvetto"
+      url: 
+    - name: "Maximiliano Dar\xEDo Vrancken"
+      url: 
   backSfx:
     idInternal: 0
     valueGuidInternal: 
@@ -806,13 +877,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7884330620787779937}
+  - {fileID: 3223971589072124700}
   - {fileID: 4711796543283051055}
   - {fileID: 3285044803076397946}
   m_Father: {fileID: 4711796541734385397}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.12180992}
-  m_AnchorMax: {x: 0.9, y: 0.63342136}
+  m_AnchorMin: {x: 0.041374654, y: 0.058082163}
+  m_AnchorMax: {x: 0.9586253, y: 0.7519217}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -965,10 +1037,10 @@ RectTransform:
   - {fileID: 4711796542393396941}
   - {fileID: 4711796542673552541}
   m_Father: {fileID: 4711796542978262854}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12236564, y: 0.19013926}
-  m_AnchorMax: {x: 0.87763435, y: 0.848956}
+  m_AnchorMax: {x: 0.87763435, y: 0.75}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1252,7 +1324,7 @@ PrefabInstance:
     - target: {fileID: 7851316947263151607, guid: e06e7f2a8cbee364a91dcb1ee41b7014,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7851316947263151607, guid: e06e7f2a8cbee364a91dcb1ee41b7014,
         type: 3}

@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}" SchemaVersion="103">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{556852CB-7394-4CB9-BF0F-4F31862C59B2}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="mx" ID="{77EBD1CC-EEF9-4E45-9356-E9DF1A4ED107}">
+					<ChildrenList>
+						<Switch Name="Stem1" ID="{4F1C66AB-2C77-4EE1-96EB-3AE38F259CF2}"/>
+						<Switch Name="Stem2" ID="{FEB1A22A-EDCC-4B11-8B3E-1FD7B56424DC}"/>
+						<Switch Name="Stem3" ID="{02F530ED-BDD7-4E88-95BF-A197359FF6AA}"/>
+						<Switch Name="Stem4" ID="{00CD4F55-B552-44CA-8ADB-A8B21EF2457E}"/>
+						<Switch Name="GameOver" ID="{F9F8739E-6C35-4F3B-848F-D2268B81F5E7}"/>
+						<Switch Name="Menu" ID="{31A25B44-C237-427E-8C8E-1EE494925AB1}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Footsteps" ID="{7CDA5F99-241A-4686-893E-FC04F271B82C}">
+					<ChildrenList>
+						<Switch Name="Grass" ID="{9E79B896-70C0-419F-93E6-FA89A2AA897A}"/>
+						<Switch Name="Concrete" ID="{61FE1C6F-07EA-445C-979C-45338B68CC78}"/>
+						<Switch Name="Leaf" ID="{D62A8EE9-C023-487C-A21F-B1F1F4BDC77E}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

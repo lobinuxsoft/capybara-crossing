@@ -6,6 +6,8 @@ namespace CapybaraCrossing
     [CreateAssetMenu(menuName = "Effect Behavior/ Slow Motion Behavior")]
     public class SlowMotionBehavior : EffectBehavior
     {
+        [Space(10)]
+        [Header("This effect settings")]
         [Tooltip("Effect duration in seconds")]
         [SerializeField] float effectDuration = 5;
         EffectBehaviorComponent behaviorComponent;
@@ -13,6 +15,8 @@ namespace CapybaraCrossing
 
         public override void OnInit(EffectBehaviorComponent behaviorComponent)
         {
+            effectSfx.Post(behaviorComponent.gameObject);
+
             Time.timeScale = 0.1f;
             this.behaviorComponent = behaviorComponent;
             playerMovement = behaviorComponent.GetComponent<PlayerMovement>();

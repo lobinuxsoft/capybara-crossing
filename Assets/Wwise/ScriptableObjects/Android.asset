@@ -61,6 +61,8 @@ MonoBehaviour:
   - AdvancedSettings.m_DebugOutOfRangeLimit
   - AdvancedSettings.m_MemoryAllocationSizeLimit
   - AdvancedSettings.m_MemoryDebugLevel
+  - UserSettings.m_MainOutputSettings.m_PanningRule
+  - CommsSettings.m_commSystem
   UserSettings:
     m_BasePath: Audio\GeneratedSoundBanks
     m_StartupLanguage: English(US)
@@ -71,7 +73,7 @@ MonoBehaviour:
     m_MainOutputSettings:
       m_AudioDeviceShareset: 
       m_DeviceID: 0
-      m_PanningRule: 1
+      m_PanningRule: 0
       m_ChannelConfig:
         m_ChannelConfigType: 1
         m_ChannelMask: 3

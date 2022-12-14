@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: Swap Positions
   m_EditorClassIdentifier: 
   effectIcon: {fileID: 21300000, guid: 7997b1241c8d7f147b13060a1edf69da, type: 3}
+  effectSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 55382f8f7a2cf6d4ea51eb889dec29dd,
+      type: 2}
   otherPlayersTag: Player
   effectPref: {fileID: 243285023758227321, guid: 7398ac0c14bba0c48b04aac626f34f55,
     type: 3}

@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Freezing
   m_EditorClassIdentifier: 
   effectIcon: {fileID: 21300000, guid: 8020950e24c4695498210ceea69f24fd, type: 3}
+  effectSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 00f1ce4ea5e08c8469322f47f0ffd92c,
+      type: 2}
   interactionAmount: 5
   effect: {fileID: 4897396681203023112, guid: 7f072bfc3b552d744bb10f01d4a1d8a9, type: 3}

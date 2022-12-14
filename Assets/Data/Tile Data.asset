@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: Tile Data
   m_EditorClassIdentifier: 
   tileObjects:
-  - mesh: {fileID: -9192915431466503631, guid: a11cf69ecdc342440a9e7507e94acdd6, type: 3}
+  - mesh:
+    - {fileID: -9192915431466503631, guid: a11cf69ecdc342440a9e7507e94acdd6, type: 3}
     material:
     - {fileID: 2100000, guid: 70e84cae0376b1441b2215ae48a0b83d, type: 2}
-  - mesh: {fileID: -5781240365698342874, guid: d28650aacb4865949821b2ea8da67e1e, type: 3}
+  - mesh:
+    - {fileID: -5781240365698342874, guid: 6a2973aa1c7edee4580706c6571a8a4b, type: 3}
+    - {fileID: -2516142376390418293, guid: 05dbf68c86f6b364e87b8ff72b8c1f0b, type: 3}
+    - {fileID: -7437513106893365675, guid: f6baaea6279294c4aa5f170bf5e5caaa, type: 3}
     material:
     - {fileID: 2100000, guid: 4ee24e2c04c3fb840b85fb9e245c62b6, type: 2}
     - {fileID: 2100000, guid: 752274033e1686e4ba8e1c87b68c560d, type: 2}
-  - mesh: {fileID: -6042154445682792472, guid: 6429de35e3b826642a7185ccb0a651c9, type: 3}
+  - mesh:
+    - {fileID: -6042154445682792472, guid: 6429de35e3b826642a7185ccb0a651c9, type: 3}
     material:
     - {fileID: 2100000, guid: ebf65c03d10174a44a15cff3f271bee4, type: 2}

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     private static List<GameObject> players = new List<GameObject>();
     [SerializeField] private List<CinemachineBrain> cameraBrains = new List<CinemachineBrain>();
+    [SerializeField] private Material shader;
 
     static public List<GameObject> Players
     {
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        shader.SetColor("_RedChannelColor", new Color(Random.Range(0.0f,1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), 1));
         FindExistingPlayers();
     }
 

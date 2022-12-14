@@ -82,3 +82,4 @@ WwiseUnityIntegration_*_Src.zip
 PROYECTO DE UNITY HAGA LA INTEGRACIÓN DE WWISE DE FORMA PROPIA
 /[Aa]ssets/Wwise/API/Runtime/Plugins.meta
 /[Aa]ssets/Wwise/API/Runtime/Plugins/*
+!/[Aa]ssets/Wwise/API/Runtime/Plugins/Android

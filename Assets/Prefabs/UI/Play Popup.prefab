@@ -303,6 +303,11 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: b83a2635af31c0048a0c83d75d6377b2,
       type: 2}
+  musicEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 18b18537c8c4ec94b895ec3f0a88c381,
+      type: 2}
 --- !u!1001 &349368063230848625
 PrefabInstance:
   m_ObjectHideFlags: 0

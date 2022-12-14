@@ -71,23 +71,43 @@ namespace CapybaraCrossing
             {
                 if (transform.GetChild(i).TryGetComponent(out MeshFilter filter))
                 {
-                    filter.mesh = tileData.TileObjects[(int)type].mesh;
+                    filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
                 }
                 if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
                 {
                     renderer.materials = tileData.TileObjects[(int)type].material;
+                    renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                    renderer.receiveShadows = false;
                 }
                 if (currentAmountOfObstacles < maxObstaclePerLine && transform.position.z != 0 && transform.GetChild(i).position.x >= -9 && transform.GetChild(i).position.x <= 10)
                 {
                     if (Random.Range(0, 5) == 1)
                     {
-                        obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z),true));
+                        obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("GrassPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z),true));
                         currentAmountOfObstacles++;
+                    }
+                    if (obstacles[obstacles.Count - 1] != null && obstacles[obstacles.Count - 1].name == "Arbol1(Clone)")
+                    {
+                        currentAmountOfObstacles += 2;
+                        for (int j = 0; j < 2; j++)
+                        {
+                            i++;
+                            if (transform.GetChild(i).TryGetComponent(out filter))
+                            {
+                                filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
+                            }
+                            if (transform.GetChild(i).TryGetComponent(out renderer))
+                            {
+                                renderer.materials = tileData.TileObjects[(int)type].material;
+                            }
+                        }
+                        obstacles[obstacles.Count - 1].transform.position += new Vector3(0.2f, 0, 0);
+                        obstacles[obstacles.Count - 1].transform.rotation = Quaternion.Euler(0, 0, 0);
                     }
                 }
                 else if(transform.GetChild(i).position.x == -10 || transform.GetChild(i).position.x == 11)
                 {
-                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
+                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("GrassPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
                 }
             }
         }
@@ -101,10 +121,10 @@ namespace CapybaraCrossing
             int maxDeepWaterPerLine = 6;
             int currentAmountOfDeepWaters = 0;
             for (int i = 0; i < TileWidth; i++)
-            { 
-                if(transform.GetChild(i).TryGetComponent(out MeshFilter filter))
+            {
+                if (transform.GetChild(i).TryGetComponent(out MeshFilter filter))
                 {
-                    filter.mesh = tileData.TileObjects[(int)type].mesh;
+                    filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
                 }
                 if (transform.GetChild(i).TryGetComponent(out MeshRenderer renderer))
                 {
@@ -125,13 +145,31 @@ namespace CapybaraCrossing
                         {
                             if(Random.Range(0, 5) == 1)
                             {
-                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("GrassPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
                                 currentAmountOfRock++;
+                            }
+                            if (obstacles[obstacles.Count - 1] != null && obstacles[obstacles.Count - 1].name == "Arbol1(Clone)")
+                            {
+                                currentAmountOfRock += 2;
+                                for(int j = 0; j < 2; j++)
+                                {
+                                    i++;
+                                    if (transform.GetChild(i).TryGetComponent(out filter))
+                                    {
+                                        filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
+                                    }
+                                    if (transform.GetChild(i).TryGetComponent(out renderer))
+                                    {
+                                        renderer.materials = tileData.TileObjects[(int)type].material;
+                                    }
+                                }
+                                obstacles[obstacles.Count - 1].transform.position += new Vector3(1f, 0, 0);
+                                obstacles[obstacles.Count - 1].transform.rotation = Quaternion.Euler(0, 0, 0);
                             }
                         }
                         else if(transform.GetChild(i).position.x == -10 || transform.GetChild(i).position.x == 11) 
                         {
-                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("RockPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
+                            obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("GrassPool", new Vector3(transform.GetChild(i).position.x, 0.55f, transform.position.z), true));
                         }
                         break;
                     case TypeOfTile.ROAD:
@@ -154,12 +192,40 @@ namespace CapybaraCrossing
                                 }
                                 else
                                 {
-                                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
+                                    obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("WaterPool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
+                                    if (obstacles[obstacles.Count - 1] != null && obstacles[obstacles.Count - 1].name == "Tronco(Clone)")
+                                    {
+                                        obstacles[obstacles.Count - 1].transform.position += new Vector3(0.4f, 0.65f, 0);
+                                        obstacles[obstacles.Count - 1].transform.rotation = Quaternion.Euler(0, 90, 0);
+                                        i++;
+                                        if (transform.GetChild(i).TryGetComponent(out filter))
+                                        {
+                                            filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
+                                        }
+                                        if (transform.GetChild(i).TryGetComponent(out renderer))
+                                        {
+                                            renderer.materials = tileData.TileObjects[(int)type].material;
+                                        }
+                                    }
                                 }
                             }
                             else
                             {
-                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("CamalotePool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
+                                obstacles.Add(ObstacleSpawnerManager.Instance.SpawnObstacle("WaterPool", new Vector3(transform.GetChild(i).position.x, -0.44f, transform.position.z), true));
+                                if (obstacles[obstacles.Count - 1] != null && obstacles[obstacles.Count - 1].name == "Tronco(Clone)")
+                                {
+                                    obstacles[obstacles.Count - 1].transform.position += new Vector3(0.4f, 0.65f, 0);
+                                    obstacles[obstacles.Count - 1].transform.rotation = Quaternion.Euler(0, 90, 0);
+                                    i++;
+                                    if (transform.GetChild(i).TryGetComponent(out filter))
+                                    {
+                                        filter.mesh = tileData.TileObjects[(int)type].mesh[Random.Range(0, tileData.TileObjects[(int)type].mesh.Length)];
+                                    }
+                                    if (transform.GetChild(i).TryGetComponent(out renderer))
+                                    {
+                                        renderer.materials = tileData.TileObjects[(int)type].material;
+                                    }
+                                }
                             }
                         }
                         break;
@@ -189,7 +255,7 @@ namespace CapybaraCrossing
                 switch (type)
                 {
                     case TypeOfTile.GRASS:
-                        ObstacleSpawnerManager.Instance.DespawnObstacle("RockPool", obstacles);
+                        ObstacleSpawnerManager.Instance.DespawnObstacle("GrassPool", obstacles);
                         if (powerUp)
                         {
                             PowerUpSpawner.DespawnPowerUp(powerUp);
@@ -199,7 +265,7 @@ namespace CapybaraCrossing
                         ObstacleSpawnerManager.Instance.DespawnObstacle("CarPool", obstacles);
                         break;
                     case TypeOfTile.WATER:
-                        ObstacleSpawnerManager.Instance.DespawnObstacle("CamalotePool", obstacles);
+                        ObstacleSpawnerManager.Instance.DespawnObstacle("WaterPool", obstacles);
                         foreach (GameObject deepWater in deepWaters)
                         {
                             deepWater.transform.GetComponent<Collider>().isTrigger = false;
