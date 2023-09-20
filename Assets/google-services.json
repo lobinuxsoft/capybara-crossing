@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "574163453663",
+    "project_id": "capybara-crossing-92276121",
+    "storage_bucket": "capybara-crossing-92276121.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574163453663:android:b2e95011baa8efe1988b6a",
+        "android_client_info": {
+          "package_name": "com.cryingonion.cc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKHxsk2Izl_6m1HIP6UpcudAkpKRJ6M2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

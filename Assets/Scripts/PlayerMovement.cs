@@ -1,8 +1,7 @@
-using UnityEngine;
 using System;
-using UnityEngine.InputSystem;
 using System.Collections;
-using UnityEditor;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace CapybaraCrossing
 {
@@ -98,9 +97,9 @@ namespace CapybaraCrossing
                 ? (Mathf.Abs(input.x) > Mathf.Abs(input.y)) ? new Vector3(input.x, 0, 0) : new Vector3(0, 0, input.y)
                 : Vector3.forward;
 
-            transform.rotation = Quaternion.LookRotation(viewDir, transform.up);
+            rb.rotation = Quaternion.LookRotation(viewDir, transform.up);
 
-            Vector3 destination = rb.position + transform.forward;
+            Vector3 destination = rb.position + viewDir.normalized;
             destination.x = Mathf.RoundToInt(destination.x);
             destination.z = Mathf.RoundToInt(destination.z);
 
